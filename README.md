@@ -26,3 +26,10 @@ Tema de Wordpress oficial para Inspira.ac.
 ### Home > Facebook
 * Es un custom post, se encuentra en el sidebar bajo el nombre de `Facebook Posts`.
 * Es importante que todas las imágenes de los custom posts de Facebook sean del mismo tamaño. Recomiendo 1000x350. Pueden usar el mismo editor de WR para generar estos tamaños, pero es muy importante que al momento de agregarlas sean del mismo tamaño.
+
+### Home > Logros
+* Es un custom post, se encuentra en el sidebar bajo el nombre de `Logros`.
+* Todos los campos son requeridos. Las imagenes cambian de tamaño automáticamente, pueden subir cualquier foto.
+
+## Blog
+* Es importante que todos los posts tengan una imágen. El diseño depende mucho de ello.

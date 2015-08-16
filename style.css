@@ -279,6 +279,13 @@ input[type="submit"] {
     border-radius: 5px;
 }
 
+.button.pink {
+    background: #9c268f;
+}
+.button.pink:hover {
+    background: #86227b;
+}
+
 button:hover,
 .button:hover,
 input[type="button"]:hover,
@@ -1308,6 +1315,55 @@ html, body {height: 100%; margin: 0;}
 
 
  /**
+ * 11.6 - Home Logros
+ */
+
+.home-logros {
+    padding: 50px 0 70px;
+    text-align: center;
+}
+
+.home-logros h1 {
+    color: #7b1275;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 1.5em;
+    text-transform: uppercase;
+}
+
+.home-logros h1 small {
+    display: block;
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.logros-list {
+    line-height: 1;
+    list-style: none;
+    margin: 0;
+}
+
+.logros-list li {
+    color: #8e1587;
+    display: inline-block;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0 0 1em;
+    width: 24.5%;
+}
+
+.logros-list img {
+    display: block;
+    margin: 0 auto;
+}
+
+.logros-list .cantidad {
+    font-size: 79.75px;
+    font-weight: 700;
+}
+
+  /**
  * 11.7 - Home FB
  */
 

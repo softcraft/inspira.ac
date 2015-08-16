@@ -121,6 +121,43 @@ get_header(); ?>
         ?>
     </div></section>
 
+    <section class="home-logros"><div class="contents">
+        <h1>
+            Logros que inspiran
+            <small>El mundo no es mejor si no lo construyes</small>
+        </h1>
+
+        <?php
+            $args = array(
+                        'post_type'      => 'inspira_logros',
+                        'post_status'    => 'publish',
+                        'order'          => 'asc',
+                        'posts_per_page' => 8
+                    );
+            $query = new WP_Query($args);
+
+            if ( $query->have_posts() ) { ?>
+                <ul class="logros-list">
+                    <?php while ($query->have_posts()) : $query->the_post();
+                        $image = get_field('imagen');
+                    ?>
+                        <li>
+                            <?php if( !empty($image) ): ?>
+                                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                            <?php endif; ?>
+
+                            <strong class="cantidad"><?php echo get_field('cantidad'); ?></strong>
+                            <?php echo get_field('etiqueta'); ?>
+                        </li>
+                    <?php endwhile; ?>
+                </ul>
+            <?php }
+            wp_reset_query();
+        ?>
+
+        <a href="#" class="button pink">Conoce Más</a>
+    </div></section>
+
     <section class="home-facebook"><div class="contents">
         <h1>Nuestro facebook está lleno de <strong>Inspiración</strong></h1>
 
