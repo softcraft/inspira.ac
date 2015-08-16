@@ -955,7 +955,7 @@ html, body {height: 100%; margin: 0;}
 .page-intro img {
     display: block;
     height: auto;
-    max-width: 100%;
+    width: 100%;
 }
 
 .page-intro h1 {
@@ -999,8 +999,18 @@ html, body {height: 100%; margin: 0;}
  * 11.2 - Home Video
  */
 
+
+ /**
+ * 11.7 - Home FB
+ */
+
+.home-facebook {
+    border-bottom: 1px solid #fff;
+}
+
 .home-facebook h1 {
     background: #7b1275;
+    border-bottom: 1px solid #fff;
     color: #fff;
     font-size: 26.88px;
     font-weight: 300;
@@ -1019,9 +1029,15 @@ html, body {height: 100%; margin: 0;}
     display: block !important;
 }
 
+
 /**
  * 11.8 - Home Footer
  */
+
+.home-footer .contents {
+    border-bottom: 8px solid #333132;
+}
+
 .home-footer .text {
     background: rgba(0, 0, 0, 0.7);
     bottom: 0;
