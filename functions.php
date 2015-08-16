@@ -45,7 +45,7 @@ if ( ! function_exists('inspira_setup') ) :
         add_theme_support('post-thumbnails');
         set_post_thumbnail_size(660, 320, false);
         add_image_size('index-thumb', 500, 300, true);
-        add_image_size('mini-thumb', 150, 150, true);
+        add_image_size('facebook-thumb', 1000, 350, true);
 
         register_nav_menus( array(
             'primary' => __('Main Nav', 'inspira')
@@ -57,12 +57,48 @@ add_action('after_setup_theme', 'inspira_setup');
 
 function inspira_scripts() {
     wp_enqueue_style('inspira-fonts', '//fonts.googleapis.com/css?family=Raleway:100,300,900,700,400,600,500|Lato:300,700,400,900|Josefin+Sans:400');
+    wp_enqueue_style('inspira-accordion', get_template_directory_uri().'/css/raccordion.css');
     wp_enqueue_style('inspira-styles', get_stylesheet_uri());
 
-    wp_register_script('inspira-scripts', get_template_directory_uri().'/js/scripts.js');
+    wp_register_script('inspira-accordion', get_template_directory_uri().'/js/jquery.raccordion.js', array('jquery'));
+    wp_register_script('inspira-easing', get_template_directory_uri().'/js/jquery.animation.easing.js', array('jquery'));
+    wp_register_script('inspira-scripts', get_template_directory_uri().'/js/scripts.js', array('jquery'));
+    wp_enqueue_script('inspira-accordion');
+    wp_enqueue_script('inspira-easing');
     wp_enqueue_script('inspira-scripts');
 }
 add_action('wp_enqueue_scripts', 'inspira_scripts');
+
+function create_fb() {
+    $labels = array(
+        'name'               => _x('Facebook Posts', 'post type general name'),
+        'singular_name'      => _x('Facebook Post', 'post type singular name'),
+        'add_new'            => _x('Add New', 'events'),
+        'add_new_item'       => __('Add New Value'),
+        'edit_item'          => __('Edit Value'),
+        'new_item'           => __('New Value'),
+        'view_item'          => __('View Value'),
+        'search_items'       => __('Search Values'),
+        'not_found'          =>  __('No values found'),
+        'not_found_in_trash' => __('No values found in Trash'),
+        'parent_item_colon'  => ''
+    );
+    $args = array(
+        'label'             => __('Facebook Posts'),
+        'labels'            => $labels,
+        'public'            => false,
+        'can_export'        => true,
+        'show_ui'           => true,
+        '_builtin'          => false,
+        'capability_type'   => 'post',
+        'hierarchical'      => false,
+        'rewrite'           => array('slug' => 'fb'),
+        'supports'          => array('title', 'editor'),
+        'show_in_nav_menus' => false
+    );
+    register_post_type('inspira_fb', $args);
+}
+add_action('init', 'create_fb');
 
 if ( function_exists('register_field_group') ) {
     register_field_group(array (

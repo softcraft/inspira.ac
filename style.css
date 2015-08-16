@@ -29,6 +29,15 @@ Text Domain: inspira
  *    10.1 - Index
  *    10.2 - Single
  *    10.3 - Comments
+ * 11.0 - Homepage
+ *    11.1 - Home Intro
+ *    11.2 - Home Video
+ *    11.3 - Home Cultura
+ *    11.4 - Home Amplía
+ *    11.5 - Home Presencia
+ *    11.6 - Home Logros
+ *    11.7 - Home FB
+ *    11.8 - Home Footer
  */
 
 
@@ -932,4 +941,105 @@ html, body {height: 100%; margin: 0;}
 
 .sidebar-box ul a {
     color: #0a404b;
+}
+
+
+/**
+ * 11.0 - Homepage
+ */
+
+.page-intro .contents {
+    position: relative;
+}
+
+.page-intro img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.page-intro h1 {
+    font-size: 52.99px;
+}
+
+
+/**
+ * 11.1 - Home Intro
+ */
+
+ .home-inspira .text {
+    background: rgba(0, 0, 0, 0.85);
+    bottom: 0;
+    color: #fff;
+    font-size: 23px;
+    line-height: 1.2;
+    padding: 0 1%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+    width: 45%;
+    z-index: 2;
+}
+
+.home-inspira .text div {
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+.home-inspira .text strong {
+    font-size: 43.36px;
+    font-weight: 100;
+}
+
+
+/**
+ * 11.2 - Home Video
+ */
+
+.home-facebook h1 {
+    background: #7b1275;
+    color: #fff;
+    font-size: 26.88px;
+    font-weight: 300;
+    line-height: 1;
+    padding: 30px 0 15px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.home-facebook h1 strong {
+    display: block;
+    font-size: 57.84px;
+    font-weight: 700;
+}
+
+.home-facebook .facebook-list {
+    display: block !important;
+}
+
+/**
+ * 11.8 - Home Footer
+ */
+.home-footer .text {
+    background: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.2;
+    padding: 0 10%;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+    width: 32%;
+    z-index: 2;
+}
+
+.home-footer .text div {
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
 }

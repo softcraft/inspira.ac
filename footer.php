@@ -26,7 +26,7 @@
             <strong>Con tus donativos</strong>
         </a>
 
-        <a href="#" class="inspirate">
+        <a href="<?php echo get_permalink( get_page_by_path('blog') ); ?>" class="inspirate">
             <img src="<?php echo get_template_directory_uri() ?>/img/footer-inspirate.jpg" alt="Inspírate" />
             <strong>En nuestro blog</strong>
         </a>

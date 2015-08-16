@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+.accordion-wrapper {
+	overflow:hidden;
+	display:block;
+	position:relative;
+	display:inline-block;
+}
+.slide {
+	overflow: hidden;
+	display:block;
+	position:absolute;
+	cursor: pointer;
+	float:left;
+	display: inline-block;
+	zoom: 1;
+}
+.slide img {
+	position:relative;
+}
+.caption {
+	position:absolute;
+	background:rgba(1, 1, 1, 0.4);
+	padding:20px;
+	left:0;
+}
+.caption p {
+	color:#FFF;
+	font-family:Arial, Helvetica, sans-serif;
+	margin:0px;
+	font-size:12px;
+	line-height:1.6;
+}
+.caption h1 {
+	color:#CCC;
+	font-size:16px;
+	font-weight:normal;
+	font-family:Arial, Helvetica, sans-serif;
+	margin:0px;
+	margin-bottom:5px;
+}
+.caption a {
+	text-decoration:none;
+}
