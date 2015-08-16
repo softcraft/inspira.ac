@@ -7,6 +7,8 @@
 
 get_header(); ?>
 
+<div>
 OLATAROLA
+</div>
 
 <?php get_footer(); ?>
