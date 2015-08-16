@@ -19,8 +19,40 @@ get_header(); ?>
         </div>
     </div></section>
 
+    <section class="home-video"><div class="contents">
+    </div></section>
+
     <section class="nuestra-cultura"><div class="contents">
         <h1>Nuestra Cultura</h1>
+
+        <figure>
+            <img src="<?php echo get_template_directory_uri() ?>/img/cultura-vive.jpg" alt="" />
+        </figure>
+
+        <ul class="cultura-atributos">
+            <li class="alegria">La Alegría</li>
+            <li class="libertad">La Libertad</li>
+            <li class="conocimiento">El Conocimiento</li>
+            <li class="respeto">El Respeto</li>
+            <li class="amor">El Amor</li>
+        </ul>
+    </div></section>
+
+    <section class="home-amplia"><div class="contents">
+        <div class="content">
+            <h1>
+                Amplía
+                <small>tu perspectiva de la vida</small>
+            </h1>
+
+            <p>A los seres humanos se nos <strong>dificulta confiar</strong> en nosotros mismos, en los demás y <strong>en la vida</strong>. Esto es porque nos hemos permitido que <strong>el miedo nos limite</strong> y no asumimos un compromiso real <strong>con nuestras decisiones</strong>.</p>
+
+            <a href="#" class="button">Ver Más</a>
+        </div>
+
+        <figure>
+            <img src="<?php echo get_template_directory_uri() ?>/img/amplia.jpg" alt="" />
+        </figure>
     </div></section>
 
     <section class="home-facebook"><div class="contents">
