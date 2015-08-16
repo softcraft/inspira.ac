@@ -20,6 +20,22 @@ get_header(); ?>
     </div></section>
 
     <section class="home-video"><div class="contents">
+        <h1>
+            En Inspira, estamos comprometidos con la
+            <strong>creación de una nueva cultura</strong>
+        </h1>
+
+        <div class="cont clear">
+            <figure>
+                <iframe width="308" height="208" src="https://www.youtube.com/embed/6gbiyDHnKx8?list=PLprzt7qzv68xth8M9JXO_Y4BpE8wcSgzr&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </figure>
+
+            <div class="content">
+                <p>que mejore las relaciones con las <em>personas</em>, la <em>naturaleza</em> y la <em>vida</em>, eligiendo vivir desde principios y valores claros para generar realidades positivas.</p>
+            </div>
+        </div>
+
+        <a href="#" class="button">¿Quienes somos?</a>
     </div></section>
 
     <section class="nuestra-cultura"><div class="contents">
@@ -53,6 +69,56 @@ get_header(); ?>
         <figure>
             <img src="<?php echo get_template_directory_uri() ?>/img/amplia.jpg" alt="" />
         </figure>
+    </div></section>
+
+    <section class="home-presencia"><div class="contents">
+        <header>
+            <hgroup>
+                <h1>
+                    <strong>Tu presencia en inspira</strong>
+                    tiene un gran impacto en el mundo
+                </h1>
+                <h2>¿Cómo colaborar?</h2>
+            </hgroup>
+        </header>
+
+        <?php
+            $args = array(
+                        'post_type'      => 'inspira_acciones',
+                        'post_status'    => 'publish',
+                        'order'          => 'asc',
+                        'posts_per_page' => 4
+                    );
+            $query = new WP_Query($args);
+
+            if ( $query->have_posts() ) { ?>
+                <ul class="inspira-actions">
+                    <?php while ($query->have_posts()) : $query->the_post(); ?>
+                        <?php
+                            $class = strtolower(get_the_title());
+                        ?>
+                        <li class="action-<?php echo  $class; ?>" data-big="bigaction-<?php echo  $class; ?>">
+                            <strong><?php the_title(); ?></strong>
+                        </li>
+                    <?php endwhile; ?>
+                </ul>
+
+                <div class="full">
+                    <?php while ($query->have_posts()) : $query->the_post(); ?>
+                        <?php
+                            $class = strtolower(get_the_title());
+                        ?>
+                        <div class="bigaction bigaction-<?php echo  $class; ?>">
+                            <strong><?php the_title(); ?></strong>
+                            <div class="content">
+                                <?php the_content(); ?>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                </div>
+            <?php }
+            wp_reset_query();
+        ?>
     </div></section>
 
     <section class="home-facebook"><div class="contents">

@@ -1014,6 +1014,53 @@ html, body {height: 100%; margin: 0;}
  * 11.2 - Home Video
  */
 
+.home-video {
+    font-family: 'Lato', sans-serif;
+    padding: 80px 0 30px;
+    text-align: center;
+}
+
+.home-video h1 {
+    color: #333;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0 auto 1.5em;
+    text-align: center;
+    width: 60%;
+}
+
+.home-video h1 strong {
+    color: #9f1897;
+    display: block;
+    font-size: 64.38px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.home-video .cont {
+    text-align: left;
+    margin: 0 auto 3em;
+    width: 80%;
+}
+
+.home-video figure {
+    float: left;
+}
+
+.home-video .content {
+    float: right;
+    font-size: 23px;
+    font-weight: 400;
+    padding: 30px 0 0;
+    width: 53%;
+}
+
+.home-video .content em {
+    color: #9f1897;
+    font-style: normal;
+}
+
 
 /**
  * 11.3 - Home Cultura
@@ -1091,37 +1138,174 @@ html, body {height: 100%; margin: 0;}
  * 11.4 - Home Amplia
  */
 
- .home-amplia .content {
+.home-amplia .content {
     font-size: 18px;
     float: left;
     line-height: 1.2;
     padding: 30px 10% 0;
     text-align: center;
     width: 30%;
- }
+}
 
- .home-amplia figure {
+.home-amplia figure {
     float: right;
     width: 50%;
- }
+}
 
- .home-amplia figure img {
+.home-amplia figure img {
     display: block;
- }
+}
 
- .home-amplia h1 {
+.home-amplia h1 {
     color: #1c798c;
     font-size: 68px;
     font-weight: 700;
     margin: 0 0 0.5em;
     line-height: 1;
     text-transform: uppercase;
- }
+}
 
- .home-amplia small {
+.home-amplia small {
     display: block;
     font-size: 31px;
- }
+}
+
+
+/**
+ * 11.5 - Home Presencia
+ */
+
+.home-presencia {
+    background: #1d798c;
+    color: #fff;
+    line-height: 1;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.home-presencia h1 {
+    font-size: 34px;
+    font-weight: 300;
+    margin: 0 0 25px;
+    text-transform: uppercase;
+}
+
+.home-presencia h2 {
+    border-top: 1px solid #fff;
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0 0 50px;
+    padding: 15px 1em;
+}
+
+.home-presencia h1 strong {
+    display: block;
+    font-weight: 500;
+}
+
+.home-presencia .inspira-actions {
+    float: left;
+    margin-left: 50px;
+    margin-top: 30px;
+    width: 400px;
+}
+
+.inspira-actions {
+    list-style: none;
+    margin: 0;
+}
+
+.home-presencia .inspira-actions li {
+    background: url('./img/ico-acciones.png') no-repeat 0 0;
+    color: #1d798c;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 21.4px;
+    height: 63px;
+    margin: 0 10px 35px;
+    padding: 97px 0 0;
+    text-transform: uppercase;
+    width: 172px;
+}
+.home-presencia .inspira-actions li.active,
+.home-presencia .inspira-actions li:hover {color: #fff;}
+
+.home-presencia .inspira-actions .action-inspira {background-position: 0 0;}
+.home-presencia .inspira-actions .action-inspira.active,
+.home-presencia .inspira-actions .action-inspira:hover {background-position: -344px 0;}
+
+.home-presencia .inspira-actions .action-dona {background-position: -170px 0;}
+.home-presencia .inspira-actions .action-dona.active,
+.home-presencia .inspira-actions .action-dona:hover {background-position: -514px 0;}
+
+.home-presencia .inspira-actions .action-participa {background-position: 0 -161px;}
+.home-presencia .inspira-actions .action-participa.active,
+.home-presencia .inspira-actions .action-participa:hover {background-position: -344px -161px;}
+
+
+.home-presencia .inspira-actions .action-difunde {background-position: -170px -161px;}
+.home-presencia .inspira-actions .action-difunde.active,
+.home-presencia .inspira-actions .action-difunde:hover {background-position: -514px -161px;}
+
+.home-presencia .full {
+    color: #5b5958;
+    float: right;
+    height: 425px;
+    overflow: hidden;
+    position: relative;
+    width: 425px;
+}
+
+.home-presencia .full .bigaction {
+    background: #fff;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 30px 20px;
+    position: absolute;
+    top: 0;
+    transform: scale(5);
+    transition: all 1s ease 0s;
+}
+
+.home-presencia .full .bigaction.active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 2s ease 0s;
+    z-index: 10 !important;
+}
+
+.home-presencia .full strong {
+    background: url('./img/ico-acciones-grande.png') no-repeat 0 0;
+    color: #fff;
+    display: block;
+    font-size: 36px;
+    height: 109px;
+    margin: 0 auto 20px;
+    padding: 173px 0 0;
+    text-transform: uppercase;
+    width: 301px;
+}
+
+.home-presencia .full .bigaction-inspira strong {
+    background-position: 0 0;
+}
+
+.home-presencia .full .bigaction-dona strong {
+    background-position: -303px 0;
+}
+
+
+.home-presencia .full .bigaction-participa strong {
+    background-position: 0 -282px;
+}
+
+.home-presencia .full .bigaction-difunde strong {
+    background-position: -303px -282px;
+}
+
 
  /**
  * 11.7 - Home FB

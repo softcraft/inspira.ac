@@ -100,6 +100,37 @@ function create_fb() {
 }
 add_action('init', 'create_fb');
 
+function create_acciones() {
+    $labels = array(
+        'name'               => _x('Acciones', 'post type general name'),
+        'singular_name'      => _x('Acción', 'post type singular name'),
+        'add_new'            => _x('Add New', 'events'),
+        'add_new_item'       => __('Add New Value'),
+        'edit_item'          => __('Edit Value'),
+        'new_item'           => __('New Value'),
+        'view_item'          => __('View Value'),
+        'search_items'       => __('Search Values'),
+        'not_found'          =>  __('No values found'),
+        'not_found_in_trash' => __('No values found in Trash'),
+        'parent_item_colon'  => ''
+    );
+    $args = array(
+        'label'             => __('Acciones'),
+        'labels'            => $labels,
+        'public'            => false,
+        'can_export'        => true,
+        'show_ui'           => true,
+        '_builtin'          => false,
+        'capability_type'   => 'post',
+        'hierarchical'      => false,
+        'rewrite'           => array('slug' => 'fb'),
+        'supports'          => array('title', 'editor'),
+        'show_in_nav_menus' => false
+    );
+    register_post_type('inspira_acciones', $args);
+}
+add_action('init', 'create_acciones');
+
 if ( function_exists('register_field_group') ) {
     register_field_group(array (
         'id'     => 'acf_links-externos',

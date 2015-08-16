@@ -16,5 +16,13 @@ Tema de Wordpress oficial para Inspira.ac.
 6. En la barra lateral, hasta abajo habrá un menú que dice "Options". Aquí encontrarán los campos para poner la URL de Facebook y Twitter de la organización. Estos aparecen en el footer.
 7. Crear dos páginas estáticas: `Home` (no olviden asignar la plantilla de '`Home`') y `Blog`. Después, en las opciones de `Lectura` seleccionar que la página frontal muestre una página estática, seleccionando `Home`, y `Blog` como la página de entradas.
 
-## Notas:
+## Agregando contenido:
+
+### Home > Presencia
+* Es un custom post, se encuentra en el sidebar bajo el nombre de `Acciones`.
+* El título de cada post es el "label" que aparece. Es importante para que las imágenes salgan adecuadamente que estos sean: `Difunde`, `Dona`, `Participa` e `Inspira`. La capitalización no importa.
+* El contenido de cada post es el texto que aparece en la parte de la derecha en grande. No debe tomar más de 2 líneas.
+
+### Home > Facebook
+* Es un custom post, se encuentra en el sidebar bajo el nombre de `Facebook Posts`.
 * Es importante que todas las imágenes de los custom posts de Facebook sean del mismo tamaño. Recomiendo 1000x350. Pueden usar el mismo editor de WR para generar estos tamaños, pero es muy importante que al momento de agregarlas sean del mismo tamaño.
