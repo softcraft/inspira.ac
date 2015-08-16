@@ -129,7 +129,7 @@ get_header(); ?>
 
         <?php
             $args = array(
-                        'post_type'      => 'inspira_logros',
+                        'post_type'      => 'inspira_logros_home',
                         'post_status'    => 'publish',
                         'order'          => 'asc',
                         'posts_per_page' => 8

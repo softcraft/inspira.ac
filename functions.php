@@ -134,7 +134,7 @@ add_action('init', 'create_acciones');
 
 function create_logros() {
     $labels = array(
-        'name'               => _x('Logros', 'post type general name'),
+        'name'               => _x('Logros Home', 'post type general name'),
         'singular_name'      => _x('Logro', 'post type singular name'),
         'add_new'            => _x('Add New', 'events'),
         'add_new_item'       => __('Add New Value'),
@@ -147,7 +147,7 @@ function create_logros() {
         'parent_item_colon'  => ''
     );
     $args = array(
-        'label'             => __('Logros'),
+        'label'             => __('Logros Home'),
         'labels'            => $labels,
         'public'            => false,
         'can_export'        => true,
@@ -159,7 +159,7 @@ function create_logros() {
         'supports'          => array(null),
         'show_in_nav_menus' => false
     );
-    register_post_type('inspira_logros', $args);
+    register_post_type('inspira_logros_home', $args);
 }
 add_action('init', 'create_logros');
 
@@ -210,7 +210,7 @@ if ( function_exists('register_field_group') ) {
                 array (
                     'param' => 'post_type',
                     'operator' => '==',
-                    'value' => 'inspira_logros',
+                    'value' => 'inspira_logros_home',
                     'order_no' => 0,
                     'group_no' => 0,
                 ),
