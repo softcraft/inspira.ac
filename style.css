@@ -172,7 +172,7 @@ del {
 
 .contents {
     margin: 0 auto;
-    width: 900px;
+    width: 950px;
 }
 .clear::after,
 .contents::after {
@@ -534,7 +534,175 @@ html, body {height: 100%; margin: 0;}
 /**
  * 10.1 - Index
  */
+.blog-header {
+    background: url('./img/header-blog.jpg') no-repeat bottom center;
+    color: #7a2775;
+    font-weight: 100;
+    height: 400px;
+    font-size: 47.33px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase
+}
 
+.blog-header .text {
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.blog-header small {
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.blog-header strong {
+    font-size: 90px;
+    font-weight: 700;
+}
+
+.home-search {
+    padding: 30px 0 0;
+}
+
+.simple-posts {
+    list-style: none;
+    margin: 0;
+}
+
+.simple-posts a {color: #fff;}
+
+.simple-posts li {
+    background: #1c798c;
+    color: #fff;
+    height: 300px;
+    overflow: hidden;
+}
+
+.simple-posts figure {
+    float: right;
+    height: 300px;
+    width: 50%;
+}
+
+.simple-posts figure img {
+    height: 100%;
+    width: 100%;
+}
+
+.simple-posts .content {
+    float: left;
+    height: 300px;
+    line-height: 1.4;
+    padding: 20px 5%;
+    position: relative;
+    width: 40%;
+}
+
+.simple-posts li .content::after {
+    border: solid transparent;
+    border-color: rgba(255, 0, 0, 0);
+    border-left-color: #1c798c;
+    border-width: 15px;
+    content: " ";
+    height: 0;
+    left: 100%;
+    margin-top: -15px;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    width: 0;
+}
+
+.simple-posts .entry-title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.simple-posts .entry-title a {
+    text-decoration: none;
+}
+
+.simple-posts .entry-title a:hover {
+    text-decoration: underline;
+}
+
+.simple-posts footer {
+    font-size: 14px;
+    font-weight: 100;
+    margin: 0 0 1em;
+}
+
+.simple-posts .more-link {
+    background: #fff;
+    color: #1c798c;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 6px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.simple-posts li:nth-child(even) {
+    background: #fff;
+    color: #1c798c;
+}
+
+.simple-posts li:nth-child(even) a {
+    color: #1c798c;
+}
+
+.simple-posts li:nth-child(even) figure {
+    float: left;
+}
+
+.simple-posts li:nth-child(even) .content {
+    float: right;
+}
+
+.simple-posts li:nth-child(even) .content::after {
+    border: solid transparent;
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #fff;
+    border-width: 15px;
+    left: auto;
+    right: 100%;
+}
+
+.simple-posts li:nth-child(even) .more-link {
+    background: #1c798c;
+    color: #fff;
+}
+
+.pagination {
+    margin: 0 0 2em;
+    padding: 2em 0 0;
+    text-align: center;
+}
+
+.pagination .page-numbers {
+    border: 1px solid #909;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.pagination .page-numbers.current {
+    background: #909;
+    color: #fff;
+}
 
  /**
  * 10.2 - Single
