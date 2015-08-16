@@ -40,6 +40,7 @@ if ( ! function_exists('inspira_setup') ) :
     function inspira_setup() {
         add_theme_support('automatic-feed-links');
         add_theme_support('title-tag');
+        add_theme_support('html5', array( 'search-form' ));
 
         add_theme_support('post-thumbnails');
         set_post_thumbnail_size(660, 320, false);
@@ -55,7 +56,7 @@ endif;
 add_action('after_setup_theme', 'inspira_setup');
 
 function inspira_scripts() {
-    wp_enqueue_style('inspira-fonts', '//fonts.googleapis.com/css?family=Raleway:100,300,900,700,400,600,500|Lato:300,700,400,900|Josefin+Sans:700');
+    wp_enqueue_style('inspira-fonts', '//fonts.googleapis.com/css?family=Raleway:100,300,900,700,400,600,500|Lato:300,700,400,900|Josefin+Sans:400');
     wp_enqueue_style('inspira-styles', get_stylesheet_uri());
 
     wp_register_script('inspira-scripts', get_template_directory_uri().'/js/scripts.js');

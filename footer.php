@@ -6,6 +6,7 @@
  */
 ?>
 
+    </main><!-- /main content -->
 </div><!-- /#no-footer -->
 
 <footer class="mastfoot" role="contentinfo"><div class="contents">
