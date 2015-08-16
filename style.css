@@ -172,7 +172,7 @@ del {
 
 .contents {
     margin: 0 auto;
-    width: 950px;
+    max-width: 1000px;
 }
 .clear::after,
 .contents::after {
@@ -492,15 +492,58 @@ html, body {height: 100%; margin: 0;}
     height: 100%;
 }
 .mastfoot {
-    background: #7a1275;
-    color: #fff;
     display: table-row;
-    text-align: center;
 }
 
 .mastfoot .contents {
     overflow: hidden;
+}
+
+.mastfoot .footer-sections a {
+    color: #fff;
+    display: block;
+    font-size: 22px;
+    font-weight: 400;
+    float: left;
+    overflow: hidden;
+    text-decoration: none;
+    width: 25%;
+}
+
+.mastfoot .footer-sections a img {
+    display: block;
+}
+
+.mastfoot .footer-sections a.conoce {
+    background: #6ac5d8;
+}
+
+.mastfoot .footer-sections a.participa {
+    background: #56529d;
+}
+
+.mastfoot .footer-sections a.contribuye {
+    background: #1b87b2;
+}
+
+.mastfoot .footer-sections a.inspirate {
+    background: #954398;
+}
+
+.mastfoot .footer-sections a strong {
+    background: url('./img/ico-arrow.png') no-repeat right 9px;
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    margin-right: 10px;
+    padding: 0 15px;
+}
+
+.mastfoot .foot-box {
+    background: #7a1275;
+    color: #fff;
     padding: 30px 0;
+    text-align: center;
 }
 
 .mastfoot .facebook,

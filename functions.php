@@ -44,7 +44,7 @@ if ( ! function_exists('inspira_setup') ) :
 
         add_theme_support('post-thumbnails');
         set_post_thumbnail_size(660, 320, false);
-        add_image_size('index-thumb', 475, 300, true);
+        add_image_size('index-thumb', 500, 300, true);
         add_image_size('mini-thumb', 150, 150, true);
 
         register_nav_menus( array(
