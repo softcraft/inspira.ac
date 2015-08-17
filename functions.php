@@ -46,6 +46,7 @@ if ( ! function_exists('inspira_setup') ) :
         set_post_thumbnail_size(660, 320, false);
         add_image_size('index-thumb', 500, 300, true);
         add_image_size('logros-thumb', 200, 160, true);
+        add_image_size('logros-list', 211, 211, true);
         add_image_size('facebook-thumb', 1000, 350, true);
 
         register_nav_menus( array(
@@ -268,6 +269,41 @@ if ( function_exists('register_field_group') ) {
                     'param'     => 'post_type',
                     'operator'  => '==',
                     'value'     => 'inspira_logros_home',
+                    'order_no'  => 0,
+                    'group_no'  => 0
+                ),
+            ),
+        ),
+        'options' => array (
+            'position'          => 'normal',
+            'layout'            => 'no_box',
+            'hide_on_screen'    => array ()
+        ),
+        'menu_order' => 0
+    ));
+
+    register_field_group(array (
+        'id' => 'acf_logro',
+        'title' => 'Logro',
+        'fields' => array (
+            array (
+                'key'           => 'field_55d150c02ddfc',
+                'label'         => 'imagen',
+                'name'          => 'imagen',
+                'type'          => 'image',
+                'instructions'  => 'Imagen del logro',
+                'required'      => 1,
+                'save_format'   => 'object',
+                'preview_size'  => 'logros-list',
+                'library'       => 'uploadedTo'
+            ),
+        ),
+        'location' => array (
+            array (
+                array (
+                    'param'     => 'post_type',
+                    'operator'  => '==',
+                    'value'     => 'inspira_logros',
                     'order_no'  => 0,
                     'group_no'  => 0
                 ),
