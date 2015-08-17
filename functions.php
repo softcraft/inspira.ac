@@ -132,7 +132,7 @@ function create_acciones() {
 }
 add_action('init', 'create_acciones');
 
-function create_logros() {
+function create_logros_home() {
     $labels = array(
         'name'               => _x('Logros Home', 'post type general name'),
         'singular_name'      => _x('Logro', 'post type singular name'),
@@ -155,13 +155,70 @@ function create_logros() {
         '_builtin'          => false,
         'capability_type'   => 'post',
         'hierarchical'      => false,
-        'rewrite'           => array('slug' => 'logros'),
+        'rewrite'           => array('slug' => 'logros_home'),
         'supports'          => array(null),
         'show_in_nav_menus' => false
     );
     register_post_type('inspira_logros_home', $args);
 }
+add_action('init', 'create_logros_home');
+
+function create_logros() {
+    $labels = array(
+        'name'               => _x('Logros', 'post type general name'),
+        'singular_name'      => _x('Logro', 'post type singular name'),
+        'add_new'            => _x('Add New', 'events'),
+        'add_new_item'       => __('Add New Value'),
+        'edit_item'          => __('Edit Value'),
+        'new_item'           => __('New Value'),
+        'view_item'          => __('View Value'),
+        'search_items'       => __('Search Values'),
+        'not_found'          => __('No values found'),
+        'not_found_in_trash' => __('No values found in Trash'),
+        'parent_item_colon'  => ''
+    );
+    $args = array(
+        'label'             => __('Logros'),
+        'labels'            => $labels,
+        'public'            => false,
+        'taxonomies'        => array('category'),
+        'can_export'        => true,
+        'show_ui'           => true,
+        '_builtin'          => false,
+        'capability_type'   => 'post',
+        'hierarchical'      => false,
+        'rewrite'           => array('slug' => 'logros'),
+        'supports'          => array('title', 'editor'),
+        'show_in_nav_menus' => false
+    );
+    register_post_type('inspira_logros', $args);
+}
 add_action('init', 'create_logros');
+
+function create_logros_taxonomies() {
+    register_taxonomy('logro_year', 'inspira_logros', array(
+        'label'        => __( 'Year' ),
+        'rewrite'      => array( 'slug' => 'year' ),
+        'show_ui'      => true,
+        'query_var'    => true,
+        'capabilities' => array(
+            'assign_terms' => 'edit_posts',
+            'edit_terms'   => 'manage_categories'
+        )
+    ));
+
+    register_taxonomy('project', 'inspira_logros', array(
+        'label'        => __( 'Proyecto' ),
+        'rewrite'      => array( 'slug' => 'project' ),
+        'show_ui'      => true,
+        'query_var'    => true,
+        'capabilities' => array(
+            'assign_terms' => 'edit_posts',
+            'edit_terms'   => 'manage_categories'
+        )
+    ));
+}
+add_action( 'init', 'create_logros_taxonomies' );
 
 if ( function_exists('register_field_group') ) {
     register_field_group(array (
@@ -169,60 +226,59 @@ if ( function_exists('register_field_group') ) {
         'title' => 'Logros Fields',
         'fields' => array (
             array (
-                'key' => 'field_55d1067ba3eab',
-                'label' => 'Cantidad',
-                'name' => 'cantidad',
-                'type' => 'text',
-                'instructions' => 'Número que aparece en grande.',
-                'required' => 1,
+                'key'           => 'field_55d1067ba3eab',
+                'label'         => 'Cantidad',
+                'name'          => 'cantidad',
+                'type'          => 'text',
+                'instructions'  => 'Número que aparece en grande.',
+                'required'      => 1,
                 'default_value' => '',
-                'placeholder' => '',
-                'prepend' => '',
-                'append' => '',
-                'formatting' => 'none',
-                'maxlength' => 8,
+                'placeholder'   => '',
+                'prepend'       => '',
+                'append'        => '',
+                'formatting'    => 'none',
+                'maxlength'     => 8
             ),
             array (
-                'key' => 'field_55d1069ba3eac',
-                'label' => 'Etiqueta',
-                'name' => 'etiqueta',
-                'type' => 'wysiwyg',
-                'instructions' => 'La descripción que aparece abajo de la cantidad.',
-                'required' => 1,
+                'key'           => 'field_55d1069ba3eac',
+                'label'         => 'Etiqueta',
+                'name'          => 'etiqueta',
+                'type'          => 'wysiwyg',
+                'instructions'  => 'La descripción que aparece abajo de la cantidad.',
+                'required'      => 1,
                 'default_value' => '',
-                'toolbar' => 'basic',
-                'media_upload' => 'no',
+                'toolbar'       => 'basic',
+                'media_upload'  => 'no'
             ),
             array (
-                'key' => 'field_55d106b7a3ead',
-                'label' => 'Imagen',
-                'name' => 'imagen',
-                'type' => 'image',
-                'instructions' => 'La imagen que aparece.',
-                'required' => 1,
-                'save_format' => 'object',
-                'preview_size' => 'logros-thumb',
-                'library' => 'uploadedTo',
+                'key'           => 'field_55d106b7a3ead',
+                'label'         => 'Imagen',
+                'name'          => 'imagen',
+                'type'          => 'image',
+                'instructions'  => 'La imagen que aparece.',
+                'required'      => 1,
+                'save_format'   => 'object',
+                'preview_size'  => 'logros-thumb',
+                'library'       => 'uploadedTo'
             ),
         ),
         'location' => array (
             array (
                 array (
-                    'param' => 'post_type',
-                    'operator' => '==',
-                    'value' => 'inspira_logros_home',
-                    'order_no' => 0,
-                    'group_no' => 0,
+                    'param'     => 'post_type',
+                    'operator'  => '==',
+                    'value'     => 'inspira_logros_home',
+                    'order_no'  => 0,
+                    'group_no'  => 0
                 ),
             ),
         ),
         'options' => array (
-            'position' => 'normal',
-            'layout' => 'no_box',
-            'hide_on_screen' => array (
-            ),
+            'position'          => 'normal',
+            'layout'            => 'no_box',
+            'hide_on_screen'    => array ()
         ),
-        'menu_order' => 0,
+        'menu_order' => 0
     ));
 
     register_field_group(array (
@@ -268,8 +324,7 @@ if ( function_exists('register_field_group') ) {
         'options' => array (
             'position'       => 'normal',
             'layout'         => 'no_box',
-            'hide_on_screen' => array (
-            )
+            'hide_on_screen' => array ()
         ),
         'menu_order' => 0
     ));

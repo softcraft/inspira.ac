@@ -33,3 +33,9 @@ Tema de Wordpress oficial para Inspira.ac.
 
 ## Blog
 * Es importante que todos los posts tengan una imágen. El diseño depende mucho de ello.
+
+## Conoce
+
+### Logros
+* Es un custom post, se encuentra en el sidebar bajo el nombre de `Logros`.
+* WordPress no hace fácil el limitar la cantidad de taxonomias que pueden agregar a un elemento (cosa buena), así que dependerá de ustedes no ponerle más de un año o más de una ciudad a los logros.
