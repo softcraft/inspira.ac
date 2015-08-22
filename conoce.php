@@ -8,15 +8,34 @@
 get_header(); ?>
 
 <section class="conoce-intro"><div class="contents">
-    <figure>
-    </figure>
+    <?php
+        $projects = get_terms('project', array(
+            hide_empty => '0'
+        ));
 
-    <div class="content">
-        <h1><img src="<?php echo get_template_directory_uri() ?>/img/header-inspira-vida.jpg" alt="Inspira Vida" /></h1>
-        <?php while ( have_posts() ) : the_post(); ?>
-            <?php the_content(); ?>
-        <?php endwhile; ?>
-    </div>
+        if ($projects) { ?>
+            <ul class="categorias-logros">
+                <?php foreach ($projects  as $project ) {
+                    $image     = get_field('logo', $project);
+                    $subtitle  = get_field('subtitle', $project);
+                ?>
+                    <li class="<?php echo $project->slug; ?>">
+                        <div class="text">
+                            <strong><?php echo $project->name; ?></strong>
+                            <span><?php echo $subtitle; ?></span>
+                        </div>
+
+                        <div class="conts">
+                            <h1><img src="<?php echo $image; ?>" alt="" /></h1>
+                            <?php echo $project->description; ?>
+                        </div>
+                    </li>
+                <?php } ?>
+            </ul>
+        <?php }
+    ?>
+
+    <div class="categorias-logros-content"></div>
 </div></section>
 
 <section class="conoce-logros"><div class="contents">

@@ -18,9 +18,18 @@ jQuery(document).ready(function() {
 
     // Home Accordion
     jQuery('.facebook-list').raccordion({
-       speed        : 1000,
-       sliderWidth  : 1000,
-       sliderHeight : 300,
-       autoCollapse : true
+        speed        : 1000,
+        sliderWidth  : 1000,
+        sliderHeight : 300,
+        autoCollapse : true
    });
+
+    // Conoce Categorias
+    jQuery('.categorias-logros').on('click', 'li', function() {
+        var content = jQuery(this).find('.conts').html();
+
+        jQuery('.categorias-logros-content').html(content);
+    });
+
+    jQuery('.categorias-logros').find('.inspira-vida').click();
 });

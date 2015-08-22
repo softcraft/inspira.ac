@@ -17,6 +17,7 @@ Tema de Wordpress oficial para Inspira.ac.
 7. Crear dos páginas estáticas: `Home` (no olviden asignar la plantilla de '`Home`') y `Blog`. Después, en las opciones de `Lectura` seleccionar que la página frontal muestre una página estática, seleccionando `Home`, y `Blog` como la página de entradas.
 
 ## Agregando contenido:
+* Los slugs de las páginas tienen que ser: `descubre`, `conoce`, `participa`, `contribuye`, `blog`.
 
 ### Home > Presencia
 * Es un custom post, se encuentra en el sidebar bajo el nombre de `Acciones`.
@@ -39,3 +40,9 @@ Tema de Wordpress oficial para Inspira.ac.
 ### Logros
 * Es un custom post, se encuentra en el sidebar bajo el nombre de `Logros`.
 * WordPress no hace fácil el limitar la cantidad de taxonomias que pueden agregar a un elemento (cosa buena), así que dependerá de ustedes no ponerle más de un año o más de una ciudad a los logros.
+
+### Conoce > Categorías
+* Esta es la primer sección de la página de conoce (con bolitas a la izquierda y la descripción a la derecha).
+* Estos elementos son parte de una taxonomía custom llamada "Proyecto" que se encuentra en el sidebar bajo "Logros" (porque es una taxonomía de logros).
+* El "Nombre" es el título de la categoría. El slug es importante que sea: `inspira-vida`, `inspira-jovenes`, `inspira-padres-y-maestros`, `inspira-cuidados`, `inspira-animalia`, `inspira-viajes` para que el color de la bolita de la izquierda sea el correcto.
+* Hay un campo extra llamado "Subtitle" que es el texto que aparece abajo del título en la bolita de la izquierda.

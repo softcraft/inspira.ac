@@ -377,6 +377,55 @@ if ( function_exists('register_field_group') ) {
         ),
         'menu_order' => 0
     ));
+
+    register_field_group(array (
+        'id' => 'acf_proyectos',
+        'title' => 'Proyectos',
+        'fields' => array (
+            array (
+                'key' => 'field_55d8ed0307732',
+                'label' => 'Subtitle',
+                'name' => 'subtitle',
+                'type' => 'text',
+                'instructions' => 'Texto corto que aparece abajo del título hasta arriba de la sección "Conoce".',
+                'required' => 1,
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'formatting' => 'html',
+                'maxlength' => '',
+            ),
+            array (
+                'key' => 'field_55d8f2bdff2af',
+                'label' => 'logo',
+                'name' => 'logo',
+                'type' => 'image',
+                'instructions' => 'El logo que aparece en la parte derecha al seleccionar un botón. Sin restricciones de dimensiones, pero no debería pasar de 335px de ancho.',
+                'save_format' => 'url',
+                'preview_size' => 'full',
+                'library' => 'all',
+            ),
+        ),
+        'location' => array (
+            array (
+                array (
+                    'param' => 'ef_taxonomy',
+                    'operator' => '==',
+                    'value' => 'project',
+                    'order_no' => 0,
+                    'group_no' => 0,
+                ),
+            ),
+        ),
+        'options' => array (
+            'position' => 'normal',
+            'layout' => 'no_box',
+            'hide_on_screen' => array (
+            ),
+        ),
+        'menu_order' => 0,
+    ));
 }
 
 include_once('acf-options-page.php');

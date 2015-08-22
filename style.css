@@ -1452,13 +1452,104 @@ html, body {height: 100%; margin: 0;}
 .conoce-intro {
     border-top: 3px solid #7b1275;
     margin: 0 0 30px;
+    padding: 1px 0;
 }
 
-.conoce-intro .content {
+.conoce-intro ul {
+    background: url('./img/bg-logros-categorias.png') no-repeat center center;
+    float: left;
+    height: 341px;
+    list-style: none;
+    margin: 150px 100px 100px;
+    position: relative;
+    width: 341px;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+    -webkit-border-radius: 341px;
+    -moz-border-radius: 341px;
+    border-radius: 341px;
+}
+
+.conoce-intro li {
+    background: #a23393;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    height: 170px;
+    line-height: 1.2;
+    padding: 0 10px;
+    position: absolute;
+    text-align: center;
+    width: 150px;
+
+    -webkit-border-radius: 170px;
+    -moz-border-radius: 170px;
+    border-radius: 170px;
+}
+
+.conoce-intro .text {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.conoce-intro li strong {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+    .conoce-intro li.inspira-vida {
+        margin-left: -85px;
+        top: -100px;
+        left: 50%;
+    }
+
+    .conoce-intro li.inspira-jovenes {
+        background: #49c2cd;
+        right: -80px;
+        margin-top: -85px;
+        top: 22%;
+    }
+
+    .conoce-intro li.inspira-padres-y-maestros {
+        background: #5797ae;
+        right: -80px;
+        bottom: 22%;
+        margin-bottom: -85px;
+    }
+
+    .conoce-intro li.inspira-cuidados {
+        background: #607ca1;
+        bottom: -100px;
+        left: 50%;
+        margin-left: -85px;
+    }
+
+    .conoce-intro li.inspira-animalia {
+        background: #786199;
+        left: -80px;
+        margin-top: -85px;
+        top: 22%;
+    }
+
+    .conoce-intro li.inspira-viajes {
+        background: #905193;
+        left: -80px;
+        bottom: 22%;
+        margin-bottom: -85px;
+    }
+
+.conoce-intro ul .conts {
+    display: none;
+}
+
+.conoce-intro .categorias-logros-content {
     float: right;
     font-size: 19px;
     line-height: 1.3;
-    margin: 50px 50px 0 0;
+    margin: 100px 50px 0 0;
     text-align: center;
     max-width: 380px;
 }
