@@ -1464,6 +1464,8 @@ html, body {height: 100%; margin: 0;}
     position: relative;
     width: 341px;
 
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 
     -webkit-border-radius: 341px;
@@ -1478,14 +1480,20 @@ html, body {height: 100%; margin: 0;}
     font-size: 16px;
     height: 170px;
     line-height: 1.2;
+    opacity: 0.6;
     padding: 0 10px;
     position: absolute;
     text-align: center;
     width: 150px;
 
+    transition: opacity 0.5s ease 0s;
+
     -webkit-border-radius: 170px;
     -moz-border-radius: 170px;
     border-radius: 170px;
+}
+.conoce-intro li.active {
+    opacity: 1;
 }
 
 .conoce-intro .text {

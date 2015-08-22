@@ -26,7 +26,11 @@ jQuery(document).ready(function() {
 
     // Conoce Categorias
     jQuery('.categorias-logros').on('click', 'li', function() {
-        var content = jQuery(this).find('.conts').html();
+        var $el     = jQuery(this),
+            content = $el.find('.conts').html();
+
+        jQuery('.categorias-logros').find('li').removeClass('active');
+        $el.addClass('active');
 
         jQuery('.categorias-logros-content').html(content);
     });
