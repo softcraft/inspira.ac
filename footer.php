@@ -11,17 +11,17 @@
 
 <footer class="mastfoot" role="contentinfo">
     <nav class="footer-sections clear"><div class="contents">
-        <a href="#" class="conoce">
+        <a href="<?php echo get_permalink( get_page_by_path('conoce') ); ?>" class="conoce">
             <img src="<?php echo get_template_directory_uri() ?>/img/footer-conoce.jpg" alt="Conoce" />
             <strong>Qué hacemos</strong>
         </a>
 
-        <a href="#" class="participa">
+        <a href="<?php echo get_permalink( get_page_by_path('participa') ); ?>" class="participa">
             <img src="<?php echo get_template_directory_uri() ?>/img/footer-participa.jpg" alt="Participa" />
             <strong>En las actividades</strong>
         </a>
 
-        <a href="#" class="contribuye">
+        <a href="<?php echo get_permalink( get_page_by_path('contribuye') ); ?>" class="contribuye">
             <img src="<?php echo get_template_directory_uri() ?>/img/footer-contribuye.jpg" alt="Contribuye" />
             <strong>Con tus donativos</strong>
         </a>
