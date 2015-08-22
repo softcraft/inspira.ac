@@ -46,7 +46,7 @@ if ( ! function_exists('inspira_setup') ) :
         set_post_thumbnail_size(660, 320, false);
         add_image_size('index-thumb', 500, 300, true);
         add_image_size('logros-thumb', 200, 160, true);
-        add_image_size('logros-list', 211, 211, true);
+        add_image_size('logros-list', 211, 211, false);
         add_image_size('facebook-thumb', 1000, 350, true);
 
         register_nav_menus( array(
@@ -296,6 +296,19 @@ if ( function_exists('register_field_group') ) {
                 'save_format'   => 'object',
                 'preview_size'  => 'logros-list',
                 'library'       => 'uploadedTo'
+            ),
+            array (
+                'key' => 'field_55d8ea1f423a0',
+                'label' => 'estadisticas',
+                'name' => 'estadisticas',
+                'type' => 'textarea',
+                'instructions' => 'Descripción. Este campo aparecerá en el roll-over de la sección de "Conoce". Una estadística por línea. No más de 4.',
+                'required' => 1,
+                'default_value' => '',
+                'placeholder' => '',
+                'maxlength' => '',
+                'rows' => '',
+                'formatting' => 'br',
             ),
         ),
         'location' => array (

@@ -292,6 +292,16 @@ input[type="submit"] {
     background: #86227b;
 }
 
+.button.white {
+    background: #fff;
+    color: #7a2775;
+    font-weight: 700;
+}
+.button.white:hover {
+    background: #fefefe;
+    color: #7a2775;
+}
+
 button:hover,
 .button:hover,
 input[type="button"]:hover,
@@ -1458,6 +1468,108 @@ html, body {height: 100%; margin: 0;}
  * 12.2 - Conoce Logros
  */
 
+.conoce-logros {
+    background: #1c798c;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.conoce-logros h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.conoce-logros ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.conoce-logros li {
+    float: left;
+    height: 211px;
+    overflow: hidden;
+    position: relative;
+    width: 211px;
+}
+
+.conoce-logros li img {
+    height: 100%;
+    width: 100%;
+}
+
+.conoce-logros li .meta {
+    background: url('./img/bg-logros-meta.png') no-repeat;
+    bottom: 0;
+    color: #fff;
+    height: 21px;
+    font-size: 14px;
+    left: 0;
+    line-height: 21px;
+    padding: 0 2%;
+    position: absolute;
+    text-transform: uppercase;
+    width: 96%;
+}
+
+.conoce-logros li .meta .proyecto {
+    display: inline-block;
+    font-style: normal;
+    font-weight: bold;
+    overflow: hidden;
+    width: 95px;
+}
+
+.conoce-logros li .meta .ciudad {
+    display: inline-block;
+    font-style: normal;
+    overflow: hidden;
+    width: 60px;
+}
+
+.conoce-logros li .meta .year {
+    display: inline-block;
+    font-style: normal;
+    padding-left: 7px;
+    overflow: hidden;
+    width: 33px;
+}
+
+.conoce-logros li .info {
+    background: rgba(122, 39, 117, 0.9);
+    color: #fff;
+    font-size: 14px;
+    height: 171px;
+    left: 0;
+    line-height: 1.1;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    top: -211px;
+    width: 171px;
+    z-index: 2;
+
+    transition: all 0.5s ease 0s;
+}
+
+.conoce-logros li:hover .info {
+    top: 0;
+}
+
+.conoce-logros li .info strong {
+    display: block;
+    margin: 0 0 1em;
+    text-transform: uppercase;
+}
+
+.conoce-logros .button {
+    font-size: 14px;
+    margin: 1.5em 0 0;
+    padding: 7px 10px;
+}
 
  /**
  * 12.3 - Conoce Participa
