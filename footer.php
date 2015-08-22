@@ -33,8 +33,8 @@
     </div></nav>
 
     <div class="foot-box">
-        <a href="<?php echo get_field('facebook', 'option'); ?>" class="facebook">Facebook</a>
-        <a href="<?php echo get_field('twitter', 'option'); ?>" class="twitter">Twitter</a>
+        <a href="<?php echo get_field('facebook', 'option'); ?>" target="_blank" class="facebook">Facebook</a>
+        <a href="<?php echo get_field('twitter', 'option'); ?>" target="_blank" class="twitter">Twitter</a>
 
         <div class="subscribe">
             Suscríbete a nuestra red de Inspiración
