@@ -1949,7 +1949,51 @@ html, body {height: 100%; margin: 0;}
  * 13.2 - Contribuye Form
  */
 
+ .contribuye-form {
+    padding: 30px 0 50px;
+    text-align: center;
+ }
 
+.contribuye-form .wrap {
+    margin: 0 15%;
+}
+
+.contribuye-form h1 {
+    color: #808080;
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.contribuye-form ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contribuye-form ul li {
+    float: left;
+    text-align: left;
+    width: 48%;
+}
+
+.contribuye-form ul li:nth-child(even) {
+    float: right;
+}
+
+
+.contribuye-form .buttons {
+    clear: both;
+    padding-top: 2em;
+}
+
+.contribuye-form input[type="submit"] {
+    background: #9c268f;
+}
+
+.contribuye-form input[type="submit"]:hover {
+    background: #86227b;
+}
 
 
 /**

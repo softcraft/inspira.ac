@@ -47,6 +47,15 @@ get_header(); ?>
     </ul>
 </section>
 
+<section class="contribuye-form"><div class="contents">
+    <div class="wrap">
+        <?php while ( have_posts() ) : the_post(); ?>
+            <h1>Completa tus Datos</h1>
+            <?php the_content(); ?>
+        <?php endwhile; ?>
+    </div>
+</div></section>
+
 <section class="contribuye-foot"><div class="contents">
     <img src="<?php echo get_template_directory_uri(); ?>/img/bg-contribuye-foot.jpg" alt="" />
 

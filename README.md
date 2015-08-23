@@ -5,7 +5,8 @@ Tema de Wordpress oficial para Inspira.ac.
 1. Instalar wordpress normalmente.
 2. Agregar el tema a la carpeta de `wp-themes`.
 3. Instalar y activar el plugin [Advanced Custom Fields](https://wordpress.org/plugins/advanced-custom-fields/)
-4. Descargar [el wordpress mexicano](https://es-mx.wordpress.org) y copiar la carpeta `wp-content/languages` en el servidor (sólo es necesaria esta carpeta).
+4. Instalar y activar el plugin [Contact Form 7](https://wordpress.org/plugins/contact-form-7/screenshots/)
+5. Descargar [el wordpress mexicano](https://es-mx.wordpress.org) y copiar la carpeta `wp-content/languages` en el servidor (sólo es necesaria esta carpeta).
 
 ## Configuración (desde el admin)
 1. Editar las configuraciones generales (nombre del sitio, dirección, etc. etc.). Asegurarse de cambiar el idioma de WordPress a "Español de México".
@@ -46,3 +47,40 @@ Tema de Wordpress oficial para Inspira.ac.
 * Estos elementos son parte de una taxonomía custom llamada "Proyecto" que se encuentra en el sidebar bajo "Logros" (porque es una taxonomía de logros).
 * El "Nombre" es el título de la categoría. El slug es importante que sea: `inspira-vida`, `inspira-jovenes`, `inspira-padres-y-maestros`, `inspira-cuidados`, `inspira-animalia`, `inspira-viajes` para que el color de la bolita de la izquierda sea el correcto.
 * Hay un campo extra llamado "Subtitle" que es el texto que aparece abajo del título en la bolita de la izquierda.
+
+### Contribuye
+* Al crear esta página, lo que se agregue en el WYSIWYG es el contenido que aparecerá en "dona". Por ahora será un formulario de contacto que manejaremos con [Contact Form 7](https://wordpress.org/plugins/contact-form-7/screenshots/). Una vez instalado el plugin hay que crear (o editar) el formulario de contacto (aparece un nuevo menú en el sidebar llamado "Contact"). Esto depende mucho de sus configuraciones, pero el HTML del formulario debe verse como esto:
+
+```
+<ul>
+  <li><label>
+        Nombre Completo
+        [text* nombre]
+    </label></li>
+  <li><label>
+        Fecha de Nacimiento
+        [text* fecha-nacimiento]
+    </label></li>
+  <li><label>
+        Estado
+        [text* estado]
+    </label></li>
+  <li><label>
+        Municipio
+        [text* municipio]
+    </label></li>
+  <li><label>
+        Ciudad
+        [text* ciudad]
+    </label></li>
+  <li><label>
+        CP
+        [text* cp]
+    </label></li>
+</ul>
+<div class="buttons">[submit "Siguiente"]</div>
+```
+
+Básicamente, una lista desordenada con un label que contiene texto y es input por línea. Los asteriscos significan que son campos requeridos. La configuración de cómo y cuando se mandan estos campos queda a su criterio y la pueden editar en la tab de "Mail". Una vez creado y guardado su formulario, copien el short-code (algo como `[contact-form-7 id="71" title="Dona Form"]`) y péguenlo como el contenido de la página de contribuye (en el WYSIWYG).
+
+El formulario se ve distinto al PSD por dos motivos: consistencia con el diseño de los formularios (creo que sólo es el borde que cambia de color, puedo cambiarlo) y tiene labels y no placeholders. Los placeholders no son labels, y usarlos como tal es mala accesibilidad y usabilidad. Puedo cambiarlos, pero no lo recomiendo (usuarios de IE sólo verán inputs sin saber qué tienen que escribir en cada campo).
