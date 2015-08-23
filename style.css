@@ -39,11 +39,15 @@ Text Domain: inspira
  *    11.7 - Home FB
  *    11.8 - Home Footer
  * 12.0 - Conoce
- *   12.1 - Conoce Intro
- *   12.2 - Conoce Logros
- *   12.3 - Conoce Participa
- *   12.4 - Conoce Imagen
- *   12.5 - Conoce Banner
+ *    12.1 - Conoce Intro
+ *    12.2 - Conoce Logros
+ *    12.3 - Conoce Participa
+ *    12.4 - Conoce Imagen
+ *    12.5 - Conoce Banner
+ * 13.0 - Contribuye
+ *    13.1 - Contribuye Intro
+ *    13.2 - Contribuye Form
+ *    13.3 - Contribuye Foot
  */
 
 
@@ -1670,6 +1674,7 @@ html, body {height: 100%; margin: 0;}
     padding: 7px 10px;
 }
 
+
  /**
  * 12.3 - Conoce Participa
  */
@@ -1735,6 +1740,7 @@ html, body {height: 100%; margin: 0;}
     background-position: -534px -260px;
 }
 
+
  /**
  * 12.4 - Conoce Imagen
  */
@@ -1763,7 +1769,8 @@ html, body {height: 100%; margin: 0;}
     font-weight: 100;
 }
 
- /**
+
+/**
  * 12.5 - Conoce Banner
  */
 
@@ -1806,3 +1813,128 @@ html, body {height: 100%; margin: 0;}
     font-weight: 300;
     margin: 0;
 }
+
+
+/**
+ * 13.0 - Contribuye
+ */
+
+
+/**
+ * 13.1 - Contribuye Intro
+ */
+
+.contribuye-intro {
+    padding: 50px 0;
+}
+
+.contribuye-intro hr {
+    background: #0d7b8e;
+    border-top: 2px solid #0d7b8e;
+    clear: both;
+    margin: 0 6.5% 50px;
+}
+
+.contribuye-intro h1 {
+    color: #167a8d;
+    float: left;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 50px;
+    padding-top: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 49%;
+}
+
+.contribuye-intro h1 em {
+    display: block;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 10px 0 0;
+    line-height: 1;
+}
+
+.contribuye-intro h1 strong {
+    display: block;
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.contribuye-intro figure {
+    float: right;
+    margin-bottom: 50px;
+    text-align: center;
+    width: 49%;
+}
+
+.contribuye-intro h2 {
+    color: #7a2775;
+    font-size: 37.82px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/**
+ * 13.2 - Contribuye Form
+ */
+
+
+/**
+ * 13.3 - Contribuye Foot
+ */
+
+.contribuye-foot .contents {
+    position: relative;
+}
+
+.contribuye-foot img {
+    display: block;
+    max-width: 100%;
+}
+
+.contribuye-foot h1 {
+    color: #7b2775;
+    font-size: 31.81px;
+    font-weight: 300;
+    left: 185px;
+    line-height: 1;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 50px;
+    width: 450px;
+}
+
+.contribuye-foot h1 strong {
+    display: block;
+}
+
+.contribuye-foot .conts {
+    background: rgba(0,0,0,0.5);
+    bottom: 0;
+    left: 0;
+    padding: 20px 0;
+    position: absolute;
+    width: 100%;
+}
+
+.contribuye-foot .conts p {
+    background: rgba(122, 18, 117, 0.66);
+    color: #fff;
+    font-size: 30px;
+    font-weight: 200;
+    line-height: 1.1;
+    margin: 0;
+    padding: 40px 15%;
+    text-align: center;
+    width: 70%;
+}
+
+
+.contribuye-foot .conts p strong {font-weight: 700;}
