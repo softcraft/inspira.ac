@@ -84,3 +84,6 @@ Tema de Wordpress oficial para Inspira.ac.
 Básicamente, una lista desordenada con un label que contiene texto y es input por línea. Los asteriscos significan que son campos requeridos. La configuración de cómo y cuando se mandan estos campos queda a su criterio y la pueden editar en la tab de "Mail". Una vez creado y guardado su formulario, copien el short-code (algo como `[contact-form-7 id="71" title="Dona Form"]`) y péguenlo como el contenido de la página de contribuye (en el WYSIWYG).
 
 El formulario se ve distinto al PSD por dos motivos: consistencia con el diseño de los formularios (creo que sólo es el borde que cambia de color, puedo cambiarlo) y tiene labels y no placeholders. Los placeholders no son labels, y usarlos como tal es mala accesibilidad y usabilidad. Puedo cambiarlos, pero no lo recomiendo (usuarios de IE sólo verán inputs sin saber qué tienen que escribir en cada campo).
+
+### Descubre
+* El contenido de esta página es lo que aparecerá hasta arriba (en "Misión").

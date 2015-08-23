@@ -48,6 +48,14 @@ Text Domain: inspira
  *    13.1 - Contribuye Intro
  *    13.2 - Contribuye Form
  *    13.3 - Contribuye Foot
+ * 14.0 - Descubre
+ *    14.1 - Descubre Misión
+ *    14.2 - Descubre Voluntarios
+ *    14.3 - Descubre Valores
+ *    14.4 - Descubre Experiencias
+ *    14.5 - Descubre Centros
+ *    14.6 - Descubre Apoyo
+ *    14.7 - Descubre Foot
  */
 
 
@@ -430,7 +438,7 @@ a:focus {
 
 .main-nav .current_page_item,
 .main-nav .current_page_parent {
-    background: #25cbd3;
+    background: #25cbd3 url('./img/bg-menu.png') no-repeat bottom center;
     position: relative;
 }
 
@@ -2047,5 +2055,138 @@ html, body {height: 100%; margin: 0;}
     width: 70%;
 }
 
-
 .contribuye-foot .conts p strong {font-weight: 700;}
+
+
+/**
+ * 14.0 - Descubre
+ */
+
+
+/**
+ * 14.1 - Descubre Misión
+ */
+
+.descubre-mision {
+    background: #7b1275;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 200;
+    line-height: 1.1;
+    padding: 80px 0 50px;
+    text-align: center;
+}
+
+.descubre-mision h1 {
+    background: url('./img/bg-mision-header.png');
+    color: #7b1275;
+    float: left;
+    font-size: 51.48px;
+    font-weight: 900;
+    height: 257px;
+    line-height: 257px;
+    margin: 0 100px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 258px;
+}
+
+.descubre-mision .conts {
+    padding: 50px 40px 0;
+}
+
+/**
+ * 14.2 - Descubre Voluntarios
+ */
+
+
+/**
+ * 14.3 - Descubre Valores
+ */
+
+
+/**
+ * 14.4 - Descubre Experiencias
+ */
+
+
+/**
+ * 14.5 - Descubre Centros
+ */
+
+
+/**
+ * 14.6 - Descubre Apoyo
+ */
+
+.descubre-apoyo {
+    background: #1d798c;
+    color: #fff;
+    padding: 80px 0;
+}
+
+.descubre-apoyo img {
+    float: left;
+    margin: 0 50px 0 0;
+}
+
+.descubre-apoyo .conts {
+    font-size: 24px;
+    float: right;
+    line-height: 1.2;
+    padding-right: 5%;
+    width: 41%;
+}
+
+.descubre-apoyo h1 {
+    border-bottom: 1px solid #fff;
+    font-size: 42px;
+    font-weight: 200;
+    line-height: 1;
+    margin: 0 0 35px;
+    padding: 0 0 35px;
+    text-transform: uppercase;
+}
+
+.descubre-apoyo h1 strong {
+    display: block;
+    font-size: 67px;
+}
+
+
+/**
+ * 14.7 - Descubre Foot
+ */
+
+.descubre-foot .contents {
+    position: relative;
+}
+
+.descubre-foot img {
+    display: block;
+    max-width: 100%;
+}
+
+.descubre-foot .conts {
+    background: rgba(0,0,0,0.5);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px 0;
+    position: absolute;
+    width: 100%;
+}
+
+.descubre-foot .conts p {
+    background: rgba(122, 18, 117, 0.66);
+    color: #fff;
+    font-size: 28px;
+    font-weight: 200;
+    line-height: 1.1;
+    margin: 0;
+    padding: 40px 10%;
+    text-align: center;
+    width: 80%;
+}
+
+.descubre-foot .conts p strong {font-weight: 700;}

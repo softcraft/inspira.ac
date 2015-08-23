@@ -47,6 +47,7 @@ if ( ! function_exists('inspira_setup') ) :
         add_image_size('index-thumb', 500, 300, true);
         add_image_size('logros-thumb', 200, 160, true);
         add_image_size('logros-list', 211, 211, false);
+        add_image_size('voluntarios-thumb', 95, 95, true);
         add_image_size('facebook-thumb', 1000, 350, true);
 
         register_nav_menus( array(
@@ -221,6 +222,37 @@ function create_logros_taxonomies() {
 }
 add_action( 'init', 'create_logros_taxonomies' );
 
+function create_voluntarios() {
+    $labels = array(
+        'name'               => _x('Voluntarios', 'post type general name'),
+        'singular_name'      => _x('Voluntario', 'post type singular name'),
+        'add_new'            => _x('Add New', 'events'),
+        'add_new_item'       => __('Add New Value'),
+        'edit_item'          => __('Edit Value'),
+        'new_item'           => __('New Value'),
+        'view_item'          => __('View Value'),
+        'search_items'       => __('Search Values'),
+        'not_found'          => __('No values found'),
+        'not_found_in_trash' => __('No values found in Trash'),
+        'parent_item_colon'  => ''
+    );
+    $args = array(
+        'label'             => __('Voluntarios'),
+        'labels'            => $labels,
+        'public'            => false,
+        'can_export'        => true,
+        'show_ui'           => true,
+        '_builtin'          => false,
+        'capability_type'   => 'post',
+        'hierarchical'      => false,
+        'rewrite'           => array('slug' => 'voluntarios'),
+        'supports'          => array(''),
+        'show_in_nav_menus' => false
+    );
+    register_post_type('inspira_voluntarios', $args);
+}
+add_action('init', 'create_voluntarios');
+
 if ( function_exists('register_field_group') ) {
     register_field_group(array (
         'id' => 'acf_logros-fields',
@@ -379,50 +411,109 @@ if ( function_exists('register_field_group') ) {
     ));
 
     register_field_group(array (
-        'id' => 'acf_proyectos',
-        'title' => 'Proyectos',
+        'id'     => 'acf_proyectos',
+        'title'  => 'Proyectos',
         'fields' => array (
             array (
-                'key' => 'field_55d8ed0307732',
-                'label' => 'Subtitle',
-                'name' => 'subtitle',
-                'type' => 'text',
-                'instructions' => 'Texto corto que aparece abajo del título hasta arriba de la sección "Conoce".',
-                'required' => 1,
+                'key'           => 'field_55d8ed0307732',
+                'label'         => 'Subtitle',
+                'name'          => 'subtitle',
+                'type'          => 'text',
+                'instructions'  => 'Texto corto que aparece abajo del título hasta arriba de la sección "Conoce".',
+                'required'      => 1,
                 'default_value' => '',
-                'placeholder' => '',
-                'prepend' => '',
-                'append' => '',
-                'formatting' => 'html',
-                'maxlength' => '',
+                'placeholder'   => '',
+                'prepend'       => '',
+                'append'        => '',
+                'formatting'    => 'html',
+                'maxlength'     => '',
             ),
             array (
-                'key' => 'field_55d8f2bdff2af',
-                'label' => 'logo',
-                'name' => 'logo',
-                'type' => 'image',
-                'instructions' => 'El logo que aparece en la parte derecha al seleccionar un botón. Sin restricciones de dimensiones, pero no debería pasar de 335px de ancho.',
-                'save_format' => 'url',
-                'preview_size' => 'full',
-                'library' => 'all',
+                'key'           => 'field_55d8f2bdff2af',
+                'label'         => 'logo',
+                'name'          => 'logo',
+                'type'          => 'image',
+                'instructions'  => 'El logo que aparece en la parte derecha al seleccionar un botón. Sin restricciones de dimensiones, pero no debería pasar de 335px de ancho.',
+                'save_format'   => 'url',
+                'preview_size'  => 'full',
+                'library'       => 'all',
             ),
         ),
         'location' => array (
             array (
                 array (
-                    'param' => 'ef_taxonomy',
+                    'param'     => 'ef_taxonomy',
+                    'operator'  => '==',
+                    'value'     => 'project',
+                    'order_no'  => 0,
+                    'group_no'  => 0,
+                ),
+            ),
+        ),
+        'options' => array (
+            'position'       => 'normal',
+            'layout'         => 'no_box',
+            'hide_on_screen' => array (),
+        ),
+        'menu_order' => 0,
+    ));
+
+    register_field_group(array (
+        'id'     => 'acf_voluntarios',
+        'title'  => 'Voluntarios',
+        'fields' => array (
+            array (
+                'key'           => 'field_55da3c9eaa442',
+                'label'         => 'Nombre',
+                'name'          => 'nombre',
+                'type'          => 'text',
+                'required'      => 1,
+                'default_value' => '',
+                'placeholder'   => '',
+                'prepend'       => '',
+                'append'        => '',
+                'formatting'    => 'html',
+                'maxlength'     => '',
+            ),
+            array (
+                'key'           => 'field_55da3cbaaa443',
+                'label'         => 'Ocupación',
+                'name'          => 'ocupacion',
+                'type'          => 'text',
+                'required'      => 1,
+                'default_value' => '',
+                'placeholder'   => '',
+                'prepend'       => '',
+                'append'        => '',
+                'formatting'    => 'html',
+                'maxlength'     => '',
+            ),
+            array (
+                'key'           => 'field_55da3cc6aa444',
+                'label'         => 'Imagen',
+                'name'          => 'imagen',
+                'type'          => 'image',
+                'required'      => 1,
+                'save_format'   => 'object',
+                'preview_size'  => 'voluntarios-thumb',
+                'library'       => 'all',
+            ),
+        ),
+        'location' => array (
+            array (
+                array (
+                    'param'    => 'post_type',
                     'operator' => '==',
-                    'value' => 'project',
+                    'value'    => 'inspira_voluntarios',
                     'order_no' => 0,
                     'group_no' => 0,
                 ),
             ),
         ),
         'options' => array (
-            'position' => 'normal',
-            'layout' => 'no_box',
-            'hide_on_screen' => array (
-            ),
+            'position'       => 'normal',
+            'layout'         => 'no_box',
+            'hide_on_screen' => array (),
         ),
         'menu_order' => 0,
     ));

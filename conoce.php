@@ -57,7 +57,7 @@ get_header(); ?>
                 ?>
                     <li><a href="<?php echo get_permalink(); ?>">
                         <?php if( !empty($image) ): ?>
-                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                            <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
                         <?php endif; ?>
 
                         <span class="info">
