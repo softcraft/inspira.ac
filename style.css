@@ -1912,6 +1912,38 @@ html, body {height: 100%; margin: 0;}
     width: 63%;
 }
 
+.contribuye-intro .objetivos li p::after {
+    background-position: center center;
+    background-repeat: no-repeat;
+    content: " ";
+    display: block;
+    height: 118px;
+    margin-top: -59px;
+    position: absolute;
+    right: -118px;
+    top: 50%;
+    width: 118px;
+}
+
+    .contribuye-intro .objetivos li.parque p::after {
+        background-image: url('./img/ico-objetivo-parque.png');
+    }
+
+    .contribuye-intro .objetivos li.voluntarios p::after {
+        background-image: url('./img/ico-objetivo-voluntarios.png');
+    }
+
+    .contribuye-intro .objetivos li.fase-terminal p::after {
+        background-image: url('./img/ico-objetivo-fase-terminal.png');
+    }
+
+    .contribuye-intro .objetivos li.lideres p::after {
+        background-image: url('./img/ico-objetivo-lideres.png');
+    }
+
+    .contribuye-intro .objetivos li.animales p::after {
+        background-image: url('./img/ico-objetivo-animales.png');
+    }
 
 /**
  * 13.2 - Contribuye Form

@@ -36,4 +36,20 @@ jQuery(document).ready(function() {
     });
 
     jQuery('.categorias-logros').find('.inspira-vida').click();
+
+    // Contribuye
+    var $objetivos = jQuery('.objetivos li').hide(),
+        i = 0;
+
+    (function cycle() {
+      $objetivos.eq(i)
+                .fadeIn({
+                  duration: 400,
+                  easing: 'swing'
+                })
+                .delay(5000)
+                .fadeOut(400, cycle);
+
+      i = ++i % $objetivos.length;
+    })();
 });
