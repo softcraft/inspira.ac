@@ -1875,14 +1875,49 @@ html, body {height: 100%; margin: 0;}
     color: #7a2775;
     font-size: 37.82px;
     font-weight: 700;
+    margin: 0 0 10px;
     text-align: center;
     text-transform: uppercase;
+}
+
+.contribuye-intro .objetivos {
+    list-style: none;
+    margin: 0 0 10px;
+}
+
+.contribuye-intro .objetivos li {
+    background: url('./img/bg-objetivos-verde.gif') center center;
+    color: #fff;
+    font-size: 26px;
+    height: 78px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.contribuye-intro .objetivos li.voluntarios,
+.contribuye-intro .objetivos li.lideres {
+    background-image: url('./img/bg-objetivos-morado.gif');
+}
+
+.contribuye-intro .objetivos li .contents {height: 100%;}
+
+.contribuye-intro .objetivos li p {
+    font-weight: 200;
+    line-height: 1;
+    left: -10%;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 63%;
 }
 
 
 /**
  * 13.2 - Contribuye Form
  */
+
+
 
 
 /**
@@ -1902,7 +1937,7 @@ html, body {height: 100%; margin: 0;}
     color: #7b2775;
     font-size: 31.81px;
     font-weight: 300;
-    left: 185px;
+    left: 95px;
     line-height: 1;
     position: absolute;
     text-align: center;
