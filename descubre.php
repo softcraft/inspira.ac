@@ -54,7 +54,9 @@ get_header(); ?>
 </div></section>
 
 <section class="descubre-apoyo"><div class="contents">
-    <img src="<?php echo get_template_directory_uri(); ?>/img/ico-dona-big.png" alt="" />
+    <a href="<?php echo get_permalink( get_page_by_path('contribuye') ); ?>">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/ico-dona-big.png" alt="" />
+    </a>
 
     <div class="conts">
         <h1>Tu apoyo hace la <strong>diferencia</strong></h1>

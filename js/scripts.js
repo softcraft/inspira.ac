@@ -39,7 +39,7 @@ jQuery(document).ready(function() {
 
     // Contribuye
     var $objetivos = jQuery('.objetivos li').hide(),
-        i = 0;
+        i          = 0;
 
     (function cycle() {
       $objetivos.eq(i)
@@ -52,4 +52,11 @@ jQuery(document).ready(function() {
 
       i = ++i % $objetivos.length;
     })();
+
+    // Descubre
+    jQuery('.inspira-voluntarios').slick({
+        accessibility  : false,
+        autoplay       : true,
+        slidesToShow   : 3
+    });
 });
