@@ -53,6 +53,16 @@ get_header(); ?>
     </figure>
 </div></section>
 
+<section class="descubre-experiencias"><div class="contents">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/bg-experiencias.jpg" alt/"" />
+</div></section>
+
+<section class="descubre-centros"><div class="contents">
+    <h1>Centros <strong>Inspira</strong></h1>
+
+    <p>Somos una organización sin fines de lucro, estamos presentes en 11 centros de la República Mexicana</p>
+</div></section>
+
 <section class="descubre-apoyo"><div class="contents">
     <a href="<?php echo get_permalink( get_page_by_path('contribuye') ); ?>">
         <img src="<?php echo get_template_directory_uri(); ?>/img/ico-dona-big.png" alt="" />

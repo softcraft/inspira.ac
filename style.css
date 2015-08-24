@@ -524,6 +524,7 @@ img.aligncenter {
     clear: none;
     float: left;
     height: 100px;
+    margin: 0 0 0 70px;
     width: 121px;
 }
 
@@ -2184,6 +2185,7 @@ html, body {height: 100%; margin: 0;}
     text-align: center;
 }
 
+
 /**
  * 14.3 - Descubre Valores
  */
@@ -2192,6 +2194,11 @@ html, body {height: 100%; margin: 0;}
 /**
  * 14.4 - Descubre Experiencias
  */
+
+.descubre-experiencias img {
+    display: block;
+    width: 100%;
+}
 
 
 /**
