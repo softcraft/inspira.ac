@@ -143,7 +143,7 @@ get_header(); ?>
                     ?>
                         <li>
                             <?php if( !empty($image) ): ?>
-                                <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                <img src="<?php echo $image['sizes']['full']; ?>" alt="<?php echo $image['alt']; ?>" />
                             <?php endif; ?>
 
                             <strong class="cantidad"><?php echo get_field('cantidad'); ?></strong>

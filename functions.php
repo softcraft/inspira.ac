@@ -521,6 +521,45 @@ if ( function_exists('register_field_group') ) {
         ),
         'menu_order' => 0,
     ));
+
+    register_field_group(array (
+        'id'     => 'acf_acciones',
+        'title'  => 'Acciones',
+        'fields' => array (
+            array (
+                'key'           => 'field_55f46294817d5',
+                'label'         => 'Link',
+                'name'          => 'link',
+                'type'          => 'text',
+                'instructions'  => 'EL link a donde va a apuntar el título.',
+                'required'      => 1,
+                'default_value' => '',
+                'placeholder'   => '',
+                'prepend'       => '',
+                'append'        => '',
+                'formatting'    => 'none',
+                'maxlength'     => '',
+            ),
+        ),
+        'location' => array (
+            array (
+                array (
+                    'param'    => 'post_type',
+                    'operator' => '==',
+                    'value'    => 'inspira_acciones',
+                    'order_no' => 0,
+                    'group_no' => 0,
+                ),
+            ),
+        ),
+        'options' => array (
+            'position'       => 'normal',
+            'layout'         => 'no_box',
+            'hide_on_screen' => array (
+            ),
+        ),
+        'menu_order' => 0,
+    ));
 }
 
 include_once('acf-options-page.php');

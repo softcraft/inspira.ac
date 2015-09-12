@@ -524,7 +524,7 @@ img.aligncenter {
     clear: none;
     float: left;
     height: 100px;
-    margin: 0 0 0 70px;
+    margin: 0;
     width: 121px;
 }
 
