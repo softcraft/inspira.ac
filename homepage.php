@@ -35,7 +35,7 @@ get_header(); ?>
             </div>
         </div>
 
-        <a href="#" class="button">¿Quienes somos?</a>
+        <a href="<?php echo get_permalink( get_page_by_path('descubre') ); ?>" class="button">¿Quiénes somos?</a>
     </div></section>
 
     <section class="nuestra-cultura"><div class="contents">
@@ -63,7 +63,7 @@ get_header(); ?>
 
             <p>A los seres humanos se nos <strong>dificulta confiar</strong> en nosotros mismos, en los demás y <strong>en la vida</strong>. Esto es porque nos hemos permitido que <strong>el miedo nos limite</strong> y no asumimos un compromiso real <strong>con nuestras decisiones</strong>.</p>
 
-            <a href="#" class="button">Ver Más</a>
+            <a href="<?php echo get_permalink( get_page_by_path('conoce') ); ?>" class="button">Ver Más</a>
         </div>
 
         <figure>
@@ -109,7 +109,7 @@ get_header(); ?>
                             $class = strtolower(get_the_title());
                         ?>
                         <div class="bigaction bigaction-<?php echo  $class; ?>">
-                            <strong><?php the_title(); ?></strong>
+                            <strong><a href="/<?php echo $class; ?>"><?php the_title(); ?></a></strong>
                             <div class="content">
                                 <?php the_content(); ?>
                             </div>
@@ -155,7 +155,7 @@ get_header(); ?>
             wp_reset_query();
         ?>
 
-        <a href="#" class="button pink">Conoce Más</a>
+        <a href="<?php echo get_permalink( get_page_by_path('participa') ); ?>" class="button pink">Conoce Más</a>
     </div></section>
 
     <section class="home-facebook"><div class="contents">
