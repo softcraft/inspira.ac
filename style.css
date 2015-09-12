@@ -1314,6 +1314,8 @@ html, body {height: 100%; margin: 0;}
     z-index: 10 !important;
 }
 
+.home-presencia .full .bigaction .content {width: 385px;}
+
 .home-presencia .full strong {
     background: url('./img/ico-acciones-grande.png') no-repeat 0 0;
     color: #fff;
