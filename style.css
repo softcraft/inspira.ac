@@ -274,7 +274,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    -webkit-appearance: button;
+    -webkit-appearance: none;
     background-color: #3cc1cc;
     border: 0;
     color: #fff;
@@ -1023,6 +1023,7 @@ html, body {height: 100%; margin: 0;}
     bottom: 0;
     color: #fff;
     font-size: 23px;
+    height: 537px;
     line-height: 1.2;
     padding: 0 1%;
     position: absolute;
