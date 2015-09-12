@@ -45,6 +45,7 @@ if ( ! function_exists('inspira_setup') ) :
         add_theme_support('post-thumbnails');
         set_post_thumbnail_size(660, 320, false);
         add_image_size('index-thumb', 500, 300, true);
+        add_image_size('single-thumb', 605, 330, true);
         add_image_size('logros-thumb', 200, 160, true);
         add_image_size('logros-list', 211, 211, false);
         add_image_size('voluntarios-thumb', 95, 95, true);

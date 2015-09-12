@@ -15,10 +15,6 @@ get_header(); ?>
                     <h1><?php the_title(); ?></h1>
                 </header>
 
-                <figure class="featured-img">
-                    <?php the_post_thumbnail( $size, $attr ); ?>
-                </figure>
-
                 <footer>
                     <date><?php the_date(); ?></date> /
                     <?php
@@ -37,6 +33,10 @@ get_header(); ?>
                 </footer>
 
                 <div class="content">
+                    <figure class="featured-img">
+                        <?php the_post_thumbnail( 'single-thumb' ); ?>
+                    </figure>
+
                     <?php the_content(); ?>
 
                     <?php comments_template(); ?>

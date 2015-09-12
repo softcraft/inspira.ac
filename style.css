@@ -822,6 +822,10 @@ html, body {height: 100%; margin: 0;}
 }
 
 .single-entry .featured-img img {
+    margin: 0 0 1.5em;
+}
+
+.single-entry .featured-img img {
     height: auto;
     max-width: 100%;
 }
@@ -1328,6 +1332,8 @@ html, body {height: 100%; margin: 0;}
     width: 301px;
 }
 
+.home-presencia .full strong a {color: #fff; text-decoration: none;}
+
 .home-presencia .full .bigaction-inspira strong {
     background-position: 0 0;
 }
@@ -1382,6 +1388,7 @@ html, body {height: 100%; margin: 0;}
     display: inline-block;
     font-family: 'Josefin Sans', sans-serif;
     margin: 0 0 1em;
+    text-transform: uppercase;
     width: 24.5%;
 }
 
