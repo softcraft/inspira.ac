@@ -35,6 +35,11 @@ class Menu_With_Description extends Walker_Nav_Menu {
     }
 }
 
+function custom_excerpt_length( $length ) {
+    return 13;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
 if ( ! function_exists('inspira_setup') ) :
 
     function inspira_setup() {
@@ -50,6 +55,7 @@ if ( ! function_exists('inspira_setup') ) :
         add_image_size('logros-list', 211, 211, false);
         add_image_size('voluntarios-thumb', 95, 95, true);
         add_image_size('facebook-thumb', 1000, 350, true);
+        add_image_size('participa-blog', 320, 180, true);
 
         register_nav_menus( array(
             'primary' => __('Main Nav', 'inspira')
