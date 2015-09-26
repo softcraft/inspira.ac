@@ -1992,9 +1992,7 @@ html, body {height: 100%; margin: 0;}
 }
 
 .contribuye-form ul li {
-    float: left;
     text-align: left;
-    width: 48%;
 }
 
 .contribuye-form ul li:nth-child(even) {
