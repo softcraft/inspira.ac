@@ -1608,15 +1608,16 @@ html, body {height: 100%; margin: 0;}
 .conoce-logros ul {
     list-style: none;
     margin: 0;
+    text-align: center;
     padding: 0;
 }
 
 .conoce-logros li {
-    float: left;
+    display: inline-block;
     height: 211px;
     overflow: hidden;
     position: relative;
-    width: 211px;
+    width: 196px;
 }
 
 .conoce-logros li img {
@@ -1634,6 +1635,7 @@ html, body {height: 100%; margin: 0;}
     line-height: 21px;
     padding: 0 2%;
     position: absolute;
+    text-align: left;
     text-transform: uppercase;
     width: 96%;
 }
@@ -1672,7 +1674,7 @@ html, body {height: 100%; margin: 0;}
     position: absolute;
     text-align: center;
     top: -211px;
-    width: 171px;
+    width: 156px;
     z-index: 2;
 
     transition: all 0.5s ease 0s;
