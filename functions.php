@@ -56,7 +56,7 @@ if ( ! function_exists('inspira_setup') ) :
         add_image_size('voluntarios-thumb', 95, 95, true);
         add_image_size('facebook-thumb', 1000, 350, true);
         add_image_size('participa-blog', 320, 180, true);
-        add_image_size('conoce-intro-logo', 380, 9999, false);
+        add_image_size('conoce-intro-logo', 380, 380, false);
 
         register_nav_menus( array(
             'primary' => __('Main Nav', 'inspira')
@@ -445,7 +445,7 @@ if ( function_exists('register_field_group') ) {
                 'name'          => 'logo',
                 'type'          => 'image',
                 'instructions'  => 'El logo que aparece en la parte derecha al seleccionar un botón. Sin restricciones de dimensiones, pero no debería pasar de 335px de ancho.',
-                'save_format'   => 'url',
+                'save_format'   => 'object',
                 'preview_size'  => 'conoce-intro-logo',
                 'library'       => 'all',
             ),

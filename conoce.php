@@ -16,7 +16,7 @@ get_header(); ?>
         if ($projects) { ?>
             <ul class="categorias-logros">
                 <?php foreach ($projects  as $project ) {
-                    $image     = get_field('logo', $project);
+                    $image     = get_field('logo', $project)['sizes']['conoce-intro-logo'];
                     $subtitle  = get_field('subtitle', $project);
                 ?>
                     <li class="<?php echo $project->slug; ?>">
