@@ -2213,6 +2213,15 @@ html, body {height: 100%; margin: 0;}
  * 14.5 - Descubre Centros
  */
 
+#tip {
+    background-color : #efefef;
+    border : 1px solid gray;
+    max-width: 200px;
+    padding : 3px;
+    position : absolute;
+    z-index: 1000;
+}
+
 
 /**
  * 14.6 - Descubre Apoyo

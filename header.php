@@ -19,6 +19,8 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div id="tip"></div>
+
 <div id="page" class="hfeed site"><div id="no-footer">
     <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyfifteen' ); ?></a>
 

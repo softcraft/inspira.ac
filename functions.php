@@ -76,10 +76,12 @@ function inspira_scripts() {
     wp_register_script('inspira-easing', get_template_directory_uri().'/js/jquery.animation.easing.js', array('jquery'));
     wp_register_script('inspira-slick', get_template_directory_uri().'/js/slick.js', array('jquery'));
     wp_register_script('inspira-scripts', get_template_directory_uri().'/js/scripts.js', array('jquery'));
+    wp_register_script('inspira-raphael', get_template_directory_uri().'/js/raphael.js', array('jquery'));
     wp_enqueue_script('inspira-accordion');
     wp_enqueue_script('inspira-easing');
     wp_enqueue_script('inspira-slick');
     wp_enqueue_script('inspira-scripts');
+    wp_enqueue_script('inspira-raphael');
 }
 add_action('wp_enqueue_scripts', 'inspira_scripts');
 

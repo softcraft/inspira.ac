@@ -60,8 +60,16 @@ get_header(); ?>
 <section class="descubre-centros"><div class="contents">
     <h1>Centros <strong>Inspira</strong></h1>
 
+    <div id="map"></div>
+
     <p>Somos una organización sin fines de lucro, estamos presentes en 11 centros de la República Mexicana</p>
 </div></section>
+
+<script type="text/javascript">
+    (function() {
+        window.startMap();
+    })();
+</script>
 
 <section class="descubre-apoyo"><div class="contents">
     <a href="<?php echo get_permalink( get_page_by_path('contribuye') ); ?>">
