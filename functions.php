@@ -57,6 +57,7 @@ if ( ! function_exists('inspira_setup') ) :
         add_image_size('facebook-thumb', 1000, 350, true);
         add_image_size('participa-blog', 320, 180, true);
         add_image_size('conoce-intro-logo', 380, 380, false);
+        add_image_size('centros-thumb', 265, 176, false);
 
         register_nav_menus( array(
             'primary' => __('Main Nav', 'inspira')
@@ -269,7 +270,8 @@ add_action('init', 'create_voluntarios');
 function create_centros_taxonomy() {
     register_taxonomy('centros', array(
             'inspira_acciones',
-            'inspira_logros'
+            'inspira_logros',
+            'inspira_voluntarios'
         ), array(
             'label'        => __( 'Centro' ),
             'rewrite'      => array( 'slug' => 'centro' ),
@@ -637,7 +639,7 @@ if ( function_exists('register_field_group') ) {
                 'name' => 'galeria',
                 'type' => 'gallery',
                 'instructions' => 'Galería de imágenes para el popup.',
-                'preview_size' => 'thumbnail',
+                'preview_size' => 'centros-thumb',
                 'library' => 'all',
             ),
         ),

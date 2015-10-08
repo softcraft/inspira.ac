@@ -80,26 +80,53 @@ get_header(); ?>
                 array_push($centros[$estado], $term);
             }
 
-            foreach ($centros as $estado => $est ) { ?>
+            foreach ($centros as $estado => $est ) : ?>
                 <div class="centros-estado centro-<?php echo $estado; ?>">
                     <ul class="centros-list">
-                        <?php foreach ($est as $centro) {
+                        <?php foreach ($est as $centro) :
                             $telefono  = get_field('telefono', $centro);
                             $direccion = get_field('direccion', $centro);
+                            $galeria   = get_field('galeria', $centro);
                         ?>
-                            <li><a href="#">
-                                <strong><?php echo $centro->name; ?></strong>
-                                <?php echo $telefono; ?>
-                                <br />
-                                <?php echo $direccion; ?>
-                            </a></li>
-                        <?php } ?>
+                            <li>
+                                <a href="#">
+                                    <strong><?php echo $centro->name; ?></strong>
+                                    Teléfono: <?php echo $telefono; ?>
+                                    <br />
+                                    <?php echo $direccion; ?>
+                                </a>
+                                <div class="popup">
+                                    <div class="info">
+                                        <strong><?php echo $centro->name; ?></strong>
+                                        Teléfono: <?php echo $telefono; ?>
+                                        <br />
+                                        <?php echo $direccion; ?>
+                                    </div>
+
+                                    <div class="map">
+
+                                    </div>
+
+                                    <div class="imgs">
+                                        <?php if ($galeria) : ?>
+                                            <ul>
+                                                <?php foreach ($galeria as $image) : ?>
+                                                    <li>
+                                                        <img src="<?php echo $image['sizes']['centros-thumb']; ?>" alt="" />
+                                                    </li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
-            <?php } ?>
+            <?php endforeach; ?>
     </div>
 
-    <p>Somos una organización sin fines de lucro, estamos presentes en 11 centros de la República Mexicana</p>
+    <p class="note">Somos una organización sin fines de lucro, estamos presentes en 11 centros de la República Mexicana</p>
 </div></section>
 
 <script type="text/javascript">

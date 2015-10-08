@@ -2222,6 +2222,71 @@ html, body {height: 100%; margin: 0;}
     z-index: 1000;
 }
 
+.descubre-centros {
+    padding: 50px 0 30px;
+    text-align: center;
+}
+
+.descubre-centros h1 {
+    color: #7a1275;
+    font-size: 59.96px;
+    font-weight: 300;
+    line-height: 1;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+}
+
+.descubre-centros h1 strong {
+    display: block;
+    font-size: 73px;
+}
+
+.descubre-centros .note {
+    color: #7a1275;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.descubre-centros #centros-lists {
+    margin: 0 0 2em;
+}
+
+.descubre-centros .centros-estado ul {
+    list-style: none;
+    margin: 0 auto;
+}
+
+.descubre-centros .centros-estado li {
+    border: 2px dashed #2c7a8a;
+    display: inline-block;
+    line-height: 1;
+    margin: 0 1% 1.5em;
+    width: 30.5%;
+}
+
+.descubre-centros .centros-estado li a {
+    color: #5e5b5e;
+    display: inline-block;
+    font-size: 14px;
+    padding: 1em;
+    text-decoration: none;
+}
+
+.descubre-centros .centros-estado li a strong {
+    color: #7a1275;
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 15px;
+}
+
+.descubre-centros .centros-estado li .popup {
+    display: none;
+}
+
 
 /**
  * 14.6 - Descubre Apoyo
