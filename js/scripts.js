@@ -61,7 +61,7 @@ jQuery(document).ready(function() {
     });
 });
 
-function startMap() {
+function startMap(centros) {
     var r    = Raphael('map', 680, 480),
         $tip = jQuery('#tip').hide(),
         data = {
@@ -225,7 +225,8 @@ function startMap() {
                 title   : 'Zacatecas'
 
             }
-        };
+        },
+        nodes = [];
 
     jQuery(document).mousemove(function(event) {
         $tip.css({
@@ -234,24 +235,44 @@ function startMap() {
         });
     });
 
-    jQuery.each(data, function(key, value) {
-        var style   = jQuery.extend({
-                        fill              : '#ccc',
-                        stroke            : '#fff'
-                    }, value.attr),
-            current = r.path(value.path).attr(style);
+    jQuery('.centros-estado').hide();
 
-        current.click(function() {
-            console.log('CLICK', key);
-        });
+    jQuery.each(data, function(key, value) {
+        var style     = jQuery.extend({
+                            fill              : '#ccc',
+                            stroke            : '#fff',
+                            populated         : '#666466',
+                            selected          : '#9f1796'
+                        }, value.attr),
+            current   = r.path(value.path).attr(style),
+            populated = jQuery.inArray(key, centros) !== -1;
+
+        if (populated) {
+            nodes.push(current);
+
+            current[0].style.cursor = 'pointer';
+            current.animate({fill: style.populated}, 1);
+
+            current.click(function() {
+                var $container = jQuery('#centros-lists');
+
+                jQuery.each(nodes, function(index, node) {
+                    node.attr({fill: style.populated});
+                });
+
+                current.attr({fill: style.selected});
+                $container.find('.centros-estado').hide();
+                $container.find('.centro-' + key).show();
+
+                current.selected = true;
+            });
+        }
 
         current.hover(function() {
             // MouseIn
-            this.animate({fill: '#999'}, 500);
             $tip.stop().text(value.title).fadeIn();
         }, function() {
             // MouseOut
-            this.animate({fill: style.fill}, 500);
             $tip.stop().fadeOut();
         });
     });

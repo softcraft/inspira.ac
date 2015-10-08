@@ -266,6 +266,24 @@ function create_voluntarios() {
 }
 add_action('init', 'create_voluntarios');
 
+function create_centros_taxonomy() {
+    register_taxonomy('centros', array(
+            'inspira_acciones',
+            'inspira_logros'
+        ), array(
+            'label'        => __( 'Centro' ),
+            'rewrite'      => array( 'slug' => 'centro' ),
+            'show_ui'      => true,
+            'query_var'    => true,
+            'capabilities' => array(
+                'assign_terms' => 'edit_posts',
+                'edit_terms'   => 'manage_categories'
+            )
+        )
+    );
+}
+add_action( 'init', 'create_centros_taxonomy' );
+
 if ( function_exists('register_field_group') ) {
     register_field_group(array (
         'id' => 'acf_logros-fields',
@@ -569,7 +587,81 @@ if ( function_exists('register_field_group') ) {
         ),
         'menu_order' => 0,
     ));
+
+    register_field_group(array (
+        'id' => 'acf_centros',
+        'title' => 'Centros',
+        'fields' => array (
+            array (
+                'key' => 'field_56168f57004e0',
+                'label' => 'Dirección',
+                'name' => 'direccion',
+                'type' => 'textarea',
+                'instructions' => 'Direccion del centro.',
+                'default_value' => '',
+                'placeholder' => '',
+                'maxlength' => '',
+                'rows' => '',
+                'formatting' => 'br',
+            ),
+            array (
+                'key' => 'field_56168f68004e1',
+                'label' => 'Teléfono',
+                'name' => 'telefono',
+                'type' => 'text',
+                'instructions' => 'Teléfono del centro.',
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'formatting' => 'none',
+                'maxlength' => '',
+            ),
+            array (
+                'key' => 'field_56168f8b004e2',
+                'label' => 'Estado',
+                'name' => 'estado',
+                'type' => 'text',
+                'instructions' => 'Código de 3 letras del estado. Favor de seguir los estándares. En esta liga hay una referencia del código de 3 letras de cada estado: https://en.wikipedia.org/wiki/Template:Mexico_State-Abbreviation_Codes',
+                'required' => 1,
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'formatting' => 'html',
+                'maxlength' => 3,
+            ),
+            array (
+                'key' => 'field_561695a05e1a3',
+                'label' => 'Galería',
+                'name' => 'galeria',
+                'type' => 'gallery',
+                'instructions' => 'Galería de imágenes para el popup.',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+            ),
+        ),
+        'location' => array (
+            array (
+                array (
+                    'param' => 'ef_taxonomy',
+                    'operator' => '==',
+                    'value' => 'centros',
+                    'order_no' => 0,
+                    'group_no' => 0,
+                ),
+            ),
+        ),
+        'options' => array (
+            'position' => 'acf_after_title',
+            'layout' => 'no_box',
+            'hide_on_screen' => array (
+            ),
+        ),
+        'menu_order' => 0,
+    ));
 }
 
-include_once('acf-options-page.php');
+include_once('acf-options-page/acf-options-page.php');
+include_once('acf-gallery/acf-gallery.php');
 ?>

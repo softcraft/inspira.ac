@@ -62,12 +62,58 @@ get_header(); ?>
 
     <div id="map"></div>
 
+    <div id="centros-lists">
+        <?php
+            $taxonomy = get_terms('centros', array(
+                hide_empty => '0'
+            ));
+            $centros = array();
+
+            foreach ($taxonomy as $term) {
+                $estado = get_field('estado', $term);
+                $estado = strtolower($estado);
+
+                if (!isset($centros[$estado])) {
+                    $centros[$estado] = array();
+                }
+
+                array_push($centros[$estado], $term);
+            }
+
+            foreach ($centros as $estado => $est ) { ?>
+                <div class="centros-estado centro-<?php echo $estado; ?>">
+                    <ul class="centros-list">
+                        <?php foreach ($est as $centro) {
+                            $telefono  = get_field('telefono', $centro);
+                            $direccion = get_field('direccion', $centro);
+                        ?>
+                            <li><a href="#">
+                                <strong><?php echo $centro->name; ?></strong>
+                                <?php echo $telefono; ?>
+                                <br />
+                                <?php echo $direccion; ?>
+                            </a></li>
+                        <?php } ?>
+                    </ul>
+                </div>
+            <?php } ?>
+    </div>
+
     <p>Somos una organización sin fines de lucro, estamos presentes en 11 centros de la República Mexicana</p>
 </div></section>
 
 <script type="text/javascript">
     (function() {
-        window.startMap();
+        var centros = [];
+
+        <?php
+            $keys = array_keys($centros);
+            foreach ($keys as $key) { ?>
+
+            centros.push('<?php echo $key; ?>');
+        <?php } ?>
+
+        window.startMap(centros);
     })();
 </script>
 
