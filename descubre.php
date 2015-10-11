@@ -68,6 +68,7 @@ get_header(); ?>
                 hide_empty => '0'
             ));
             $centros = array();
+            $i       = 0;
 
             foreach ($taxonomy as $term) {
                 $estado = get_field('estado', $term);
@@ -87,15 +88,16 @@ get_header(); ?>
                             $telefono  = get_field('telefono', $centro);
                             $direccion = get_field('direccion', $centro);
                             $galeria   = get_field('galeria', $centro);
+                            $number    = $i++;
                         ?>
                             <li>
-                                <a href="#">
+                                <a href="#centro-<?php echo $number; ?>">
                                     <strong><?php echo $centro->name; ?></strong>
                                     Teléfono: <?php echo $telefono; ?>
                                     <br />
                                     <?php echo $direccion; ?>
                                 </a>
-                                <div class="popup">
+                                <div class="remodal" data-remodal-id="centro-<?php echo $number; ?>" data-remodal-options="modifier: centro-modal">
                                     <div class="info">
                                         <strong><?php echo $centro->name; ?></strong>
                                         Teléfono: <?php echo $telefono; ?>
@@ -104,7 +106,13 @@ get_header(); ?>
                                     </div>
 
                                     <div class="map">
-
+                                        <iframe
+                                            width="431"
+                                            height="227"
+                                            frameborder="0"
+                                            style="border:0"
+                                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCTNAUyFKPosW-FALH34BCuUuqlP9UZNn8&q=Colina+de+La+Gacela+59,+Boulevares,+53140+Naucalpan+de+Juárez,+Méx." allowfullscreen>
+                                        </iframe>
                                     </div>
 
                                     <div class="imgs">

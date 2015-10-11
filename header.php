@@ -18,7 +18,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?>><div class="remodal-bg">
 <div id="tip"></div>
 
 <div id="page" class="hfeed site"><div id="no-footer">
