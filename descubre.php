@@ -98,6 +98,7 @@ get_header(); ?>
                                     <?php echo $direccion; ?>
                                 </a>
                                 <div class="remodal" data-remodal-id="centro-<?php echo $number; ?>" data-remodal-options="modifier: centro-modal">
+                                    <button data-remodal-action="close" class="remodal-close"></button>
                                     <div class="info">
                                         <strong><?php echo $centro->name; ?></strong>
                                         Teléfono: <?php echo $telefono; ?>
