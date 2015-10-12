@@ -2287,6 +2287,13 @@ html, body {height: 100%; margin: 0;}
     display: none;
 }
 
+.acf-map {
+    border: #ccc solid 1px;
+    height: 227px;
+    margin: 20px 0;
+    width: 431px;
+}
+
 
 /**
  * 14.6 - Descubre Apoyo

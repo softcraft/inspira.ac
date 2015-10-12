@@ -364,3 +364,14 @@ html.remodal-is-locked {
   list-style: none;
   margin: 0;
 }
+
+.remodal-wrapper .centro-modal .imgs li {
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+.remodal-wrapper .centro-modal .imgs img {
+  max-height: 176px;
+  max-width: 265px;
+}

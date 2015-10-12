@@ -88,6 +88,7 @@ get_header(); ?>
                             $telefono  = get_field('telefono', $centro);
                             $direccion = get_field('direccion', $centro);
                             $galeria   = get_field('galeria', $centro);
+                            $location  = get_field('google_map', $centro);
                             $number    = $i++;
                         ?>
                             <li>
@@ -107,13 +108,11 @@ get_header(); ?>
                                     </div>
 
                                     <div class="map">
-                                        <iframe
-                                            width="431"
-                                            height="227"
-                                            frameborder="0"
-                                            style="border:0"
-                                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCTNAUyFKPosW-FALH34BCuUuqlP9UZNn8&q=Colina+de+La+Gacela+59,+Boulevares,+53140+Naucalpan+de+Juárez,+Méx." allowfullscreen>
-                                        </iframe>
+                                        <?php if( !empty($location) ): ?>
+                                            <div class="acf-map">
+                                                <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+                                            </div>
+                                        <?php endif; ?>
                                     </div>
 
                                     <div class="imgs">
