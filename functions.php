@@ -184,6 +184,37 @@ function create_logros_home() {
 }
 add_action('init', 'create_logros_home');
 
+function create_beneficios() {
+    $labels = array(
+        'name'               => _x('Beneficios', 'post type general name'),
+        'singular_name'      => _x('Beneficio', 'post type singular name'),
+        'add_new'            => _x('Add New', 'events'),
+        'add_new_item'       => __('Add New Value'),
+        'edit_item'          => __('Edit Value'),
+        'new_item'           => __('New Value'),
+        'view_item'          => __('View Value'),
+        'search_items'       => __('Search Values'),
+        'not_found'          => __('No values found'),
+        'not_found_in_trash' => __('No values found in Trash'),
+        'parent_item_colon'  => ''
+    );
+    $args = array(
+        'label'             => __('Beneficios'),
+        'labels'            => $labels,
+        'public'            => false,
+        'can_export'        => true,
+        'show_ui'           => true,
+        '_builtin'          => false,
+        'capability_type'   => 'post',
+        'hierarchical'      => false,
+        'rewrite'           => array('slug' => 'beneficios'),
+        'supports'          => array('editor'),
+        'show_in_nav_menus' => false
+    );
+    register_post_type('inspira_beneficios', $args);
+}
+add_action('init', 'create_beneficios');
+
 function create_logros() {
     $labels = array(
         'name'               => _x('Logros', 'post type general name'),

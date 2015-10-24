@@ -59,6 +59,13 @@ jQuery(document).ready(function() {
         autoplay       : true,
         slidesToShow   : 3
     });
+
+    // Descubre
+    jQuery('.inspira-beneficios').slick({
+        accessibility  : false,
+        autoplay       : true,
+        slidesToShow   : 3
+    });
 });
 
 function startMap(centros) {

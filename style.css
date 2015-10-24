@@ -59,8 +59,9 @@ Text Domain: inspira
  * 15.0 - Participa
  *    15.1 - Actividades
  *    15.2 - Red de Inspiración
- *    15.3 - Beneficios
- *    15.4 - Blog
+ *    15.3 - Dona
+ *    15.4 - Beneficios
+ *    15.5 - Blog
  */
 
 
@@ -2411,12 +2412,95 @@ html, body {height: 100%; margin: 0;}
 
 
 /**
- * 15.3 - Beneficios
+ * 15.3 - Dona
  */
+
+.participa-dona .contents {
+    background: #7c1275;
+    color: #fff;
+}
 
 
 /**
- * 15.4 - Blog
+ * 15.4 - Beneficios
+ */
+
+.participa-beneficios {
+    padding: 45px 0;
+}
+
+.participa-beneficios h1 {
+    color: #7c1275;
+    font-size: 61.81px;
+    margin: 0 0 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.inspira-beneficios {
+    list-style: none;
+    margin: 0 10%;
+    padding: 0;
+    position: relative;
+}
+
+.inspira-beneficios .slick-arrow {
+    background: url('img/arrow-left-full.png') no-repeat 0 0;
+    display: block;
+    height: 90px;
+    left: -50px;
+    margin-top: -45px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999em;
+    top: 50%;
+    width: 29px;
+}
+
+.inspira-beneficios .slick-next {
+    background-image: url('img/arrow-right-full.png');
+    left: auto;
+    right: -75px;
+}
+
+.inspira-beneficios li {
+    background: #954398;
+    color: #fff;
+    font-size: 20px;
+    height: 10em;
+    line-height: 1.1;
+    margin: 0 7.5px;
+    text-align: center;
+}
+
+.inspira-beneficios li:nth-child(3n+2) {
+    background: #97258b;
+}
+
+.inspira-beneficios li:nth-child(3n+3) {
+    background: #56529d;
+}
+
+.inspira-beneficios li p {
+    margin: 0;
+}
+
+.inspira-beneficios li div {
+    padding: 0 20px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.inspira-beneficios li strong {
+    display: block;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+
+/**
+ * 15.5 - Blog
  */
 
 .participa-blog .contents {
