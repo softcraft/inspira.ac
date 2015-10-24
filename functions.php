@@ -208,7 +208,7 @@ function create_beneficios() {
         'capability_type'   => 'post',
         'hierarchical'      => false,
         'rewrite'           => array('slug' => 'beneficios'),
-        'supports'          => array('editor'),
+        'supports'          => array('title', 'editor'),
         'show_in_nav_menus' => false
     );
     register_post_type('inspira_beneficios', $args);

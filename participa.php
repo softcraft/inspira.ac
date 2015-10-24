@@ -18,7 +18,7 @@ get_header(); ?>
 </div></section>
 
 <section class="participa-dona"><div class="contents">
-    <h1><img src="" alt="Se parte de la comunidad de voluntarios amigos" /></h1>
+    <h1>Se parte de la comunidad de <strong>voluntarios amigos</strong></h1>
     <a href="<?php echo get_permalink( get_page_by_path('contribuye') ); ?>">Dona</a>
 </div></section>
 
@@ -38,15 +38,6 @@ get_header(); ?>
             if ( $query->have_posts() ) { ?>
                 <ul class="inspira-beneficios">
                     <?php while ($query->have_posts()) : $query->the_post(); ?>
-                        <li><div>
-                            <?php the_content(); ?>
-                        </div></li>
-
-                        <li><div>
-                            <?php the_content(); ?>
-                        </div></li>
-
-                        <li><div>
                             <?php the_content(); ?>
                         </div></li>
                     <?php endwhile; ?>
