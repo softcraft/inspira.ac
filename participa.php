@@ -38,6 +38,7 @@ get_header(); ?>
             if ( $query->have_posts() ) { ?>
                 <ul class="inspira-beneficios">
                     <?php while ($query->have_posts()) : $query->the_post(); ?>
+                        <li><div>
                             <?php the_content(); ?>
                         </div></li>
                     <?php endwhile; ?>
