@@ -19,7 +19,7 @@ get_header(); ?>
 
 <section class="participa-dona"><div class="contents">
     <h1>Se parte de la comunidad de <strong>voluntarios amigos</strong></h1>
-    <a href="<?php echo get_permalink( get_page_by_path('contribuye') ); ?>">Dona</a>
+    <a href="<?php echo get_permalink( get_page_by_path('contribuye') ); ?>" class="more-link">Dona</a>
 </div></section>
 
 <section class="participa-beneficios"><div class="contents">

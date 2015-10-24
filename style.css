@@ -2418,6 +2418,24 @@ html, body {height: 100%; margin: 0;}
 .participa-dona .contents {
     background: #7c1275;
     color: #fff;
+    padding: 30px 0;
+}
+
+.participa-dona h1 {
+    float: left;
+    font-size: 45.66px;
+    font-weight: 100;
+    line-height: 1.2;
+    padding: 0 2%;
+    text-transform: uppercase;
+    width: 66%;
+}
+
+.participa-dona a {
+    color: #7c1275;
+    float: right;
+    font-size: 36.9px;
+    margin: 20px 35px 0 0;
 }
 
 
