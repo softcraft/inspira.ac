@@ -14,7 +14,7 @@ get_header(); ?>
 <section class="participa-inspiracion"><div class="contents">
     <h1>Red de <strong>Inspiración</strong></h1>
 
-    <?php juicer_feed('name=inspira'); ?>
+    <?php juicer_feed('name=inspira&per=6'); ?>
 </div></section>
 
 <section class="participa-dona"><div class="contents">
@@ -23,6 +23,7 @@ get_header(); ?>
 </div></section>
 
 <section class="participa-beneficios"><div class="contents">
+    <h1>Beneficios</h1>
 </div></section>
 
 <section class="participa-blog"><div class="contents">
@@ -38,12 +39,14 @@ get_header(); ?>
           setup_postdata($post); ?>
 
             <li>
-                <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail('participa-blog'); ?>
-                    <?php the_title(); ?>
+                <a href="<?php the_permalink(); ?>" class="title">
+                    <span class="thumb">
+                        <?php the_post_thumbnail('participa-blog'); ?>
+                    </span>
+                    <strong class="title"><?php the_title(); ?></strong>
                 </a>
                 <date><?php the_date(); ?></date>
-                <p><?php the_excerpt(); ?></p>
+                <?php the_excerpt(); ?>
 
                 <a class="more-link" href="<?php echo get_permalink(); ?>">Ver más &raquo;</a>
             </li>
