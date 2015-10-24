@@ -1032,6 +1032,7 @@ a.more-link {
     background: rgba(0, 0, 0, 0.85);
     bottom: 0;
     color: #fff;
+    display: none;
     font-size: 23px;
     height: 537px;
     line-height: 1.2;
@@ -1043,6 +1044,10 @@ a.more-link {
     top: 0;
     width: 45%;
     z-index: 2;
+}
+
+.home-inspira .contents:hover .text {
+    display: block;
 }
 
 .home-inspira .text div {
