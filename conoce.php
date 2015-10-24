@@ -55,7 +55,7 @@ get_header(); ?>
                 <?php while ($query->have_posts()) : $query->the_post();
                     $image = get_field('imagen');
                 ?>
-                    <li><a href="<?php echo get_permalink(); ?>">
+                    <li>
                         <?php if( !empty($image) ): ?>
                             <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
                         <?php endif; ?>
@@ -63,8 +63,6 @@ get_header(); ?>
                         <span class="info">
                             <strong><?php the_title(); ?></strong>
                             <?php echo get_field('estadisticas'); ?>
-
-                            <span class="button white">Ver más</span>
                         </span>
 
                         <span class="meta">
@@ -84,7 +82,7 @@ get_header(); ?>
                                 }
                             ?></em>
                         </span>
-                    </a></li>
+                    </li>
                 <?php endwhile; ?>
             </ul>
         <?php }
