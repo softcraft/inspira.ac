@@ -73,7 +73,15 @@ get_header(); ?>
                                     echo $taxitem->name;
                                 }
                             ?></em>
-                            <em class="ciudad"></em>
+                            <em class="ciudad"><?php
+                                $centros = get_the_terms( $post->ID, 'centros' );
+
+                                if ($centros) {
+                                    $centro = array_values($centros)[0];
+                                    $estado = get_field('estado', $centro);
+                                    echo $estado;
+                                }
+                            ?></em>
                             <em class="year"><?php
                                 $year = get_the_terms( $post->ID, 'logro_year' );
 
