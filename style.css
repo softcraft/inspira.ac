@@ -746,7 +746,7 @@ html, body {height: 100%; margin: 0;}
     margin: 0 0 1em;
 }
 
-.more-link {
+a.more-link {
     background: #fff;
     color: #1c798c;
     display: inline-block;
