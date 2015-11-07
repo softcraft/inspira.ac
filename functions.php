@@ -303,11 +303,43 @@ function create_voluntarios() {
 }
 add_action('init', 'create_voluntarios');
 
+function create_eventos() {
+    $labels = array(
+        'name'               => _x('Eventos', 'post type general name'),
+        'singular_name'      => _x('Evento', 'post type singular name'),
+        'add_new'            => _x('Add New', 'events'),
+        'add_new_item'       => __('Add New Value'),
+        'edit_item'          => __('Edit Value'),
+        'new_item'           => __('New Value'),
+        'view_item'          => __('View Value'),
+        'search_items'       => __('Search Values'),
+        'not_found'          => __('No values found'),
+        'not_found_in_trash' => __('No values found in Trash'),
+        'parent_item_colon'  => ''
+    );
+    $args = array(
+        'label'             => __('Eventos'),
+        'labels'            => $labels,
+        'public'            => false,
+        'can_export'        => true,
+        'show_ui'           => true,
+        '_builtin'          => false,
+        'capability_type'   => 'post',
+        'hierarchical'      => false,
+        'rewrite'           => array('slug' => 'eventos'),
+        'supports'          => array('title', 'editor'),
+        'show_in_nav_menus' => false
+    );
+    register_post_type('inspira_eventos', $args);
+}
+add_action('init', 'create_eventos');
+
 function create_centros_taxonomy() {
     register_taxonomy('centros', array(
             'inspira_acciones',
             'inspira_logros',
-            'inspira_voluntarios'
+            'inspira_voluntarios',
+            'inspira_eventos'
         ), array(
             'label'        => __( 'Centro' ),
             'rewrite'      => array( 'slug' => 'centro' ),
@@ -703,6 +735,66 @@ if ( function_exists('register_field_group') ) {
         ),
         'options' => array (
             'position' => 'acf_after_title',
+            'layout' => 'no_box',
+            'hide_on_screen' => array (
+            ),
+        ),
+        'menu_order' => 0,
+    ));
+
+    register_field_group(array (
+        'id' => 'acf_eventos',
+        'title' => 'Eventos',
+        'fields' => array (
+            array (
+                'key' => 'field_563e08ceb0c0d',
+                'label' => 'Fecha y hora',
+                'name' => 'fecha',
+                'type' => 'text',
+                'instructions' => 'Fecha y hora del evento',
+                'required' => 1,
+                'default_value' => '',
+                'placeholder' => '12 de Mayo - 8:00pm',
+                'prepend' => '',
+                'append' => '',
+                'formatting' => 'none',
+                'maxlength' => '',
+            ),
+            array (
+                'key'           => 'field_55da3cc5bb433',
+                'label'         => 'Imagen',
+                'name'          => 'imagen',
+                'type'          => 'image',
+                'required'      => 1,
+                'save_format'   => 'object',
+                'preview_size'  => 'voluntarios-thumb',
+                'library'       => 'all',
+            ),
+            array (
+                'key' => 'field_561bd91780d88',
+                'label' => 'Google map',
+                'name' => 'google_map',
+                'type' => 'google_map',
+                'instructions' => 'Busca el centro inspira en el mapa y da click para colocar el marcador del lugar.',
+                'center_lat' => '19.3910038',
+                'center_lng' => '-99.2836968',
+                'zoom' => 11,
+                'height' => '',
+            ),
+        ),
+        'location' => array (
+            array (
+                array (
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'inspira_eventos',
+                    'order_no' => 0,
+                    'group_no' => 0,
+                ),
+            ),
+        ),
+        'options' => array (
+            'position' => 'normal',
             'layout' => 'no_box',
             'hide_on_screen' => array (
             ),

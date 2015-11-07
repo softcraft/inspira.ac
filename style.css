@@ -2394,6 +2394,16 @@ a.more-link {
  * 15.1 - Actividades
  */
 
+.participa-actividades .contents {
+    background: #167a8d;
+    color: #fff;
+}
+
+.participa-actividades h1 {
+    font-size: 27.56px;
+    font-weight: 300;
+}
+
 
 /**
  * 15.2 - Red de Inspiración

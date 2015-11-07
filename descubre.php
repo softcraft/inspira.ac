@@ -35,7 +35,7 @@ get_header(); ?>
                 <ul class="inspira-voluntarios">
                     <?php while ($query->have_posts()) : $query->the_post(); ?>
                         <li>
-                            <img src="<?php echo get_field('imagen')['sizes']['thumbnail']; ?>"  alt="" />
+                            <img src="<?php echo get_field('imagen')['sizes']['voluntarios-thumb']; ?>"  alt="" />
                             <strong><?php echo get_field('nombre'); ?></strong>
                             <?php echo get_field('ocupacion'); ?>
                         </li>
