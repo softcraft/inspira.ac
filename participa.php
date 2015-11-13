@@ -10,33 +10,35 @@ get_header(); ?>
 <section class="participa-actividades"><div class="contents">
     <h1>
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico-eventos.png" alt="" />
-        <strong>Participa</strong> en nuestras próximas <strong>actividades</strong>
+        <span>
+            <strong>Participa</strong> en nuestras próximas <strong>actividades</strong>
+        </span>
     </h1>
 
-    <div class="eventos-wrap">
-        <?php
-            $args = array(
-                        'post_type'      => 'inspira_eventos',
-                        'post_status'    => 'publish',
-                        'order'          => 'asc',
-                        'posts_per_page' => 6
-                    );
-            $query = new WP_Query($args);
+    <?php
+        $args = array(
+                    'post_type'      => 'inspira_eventos',
+                    'post_status'    => 'publish',
+                    'order'          => 'asc',
+                    'posts_per_page' => 6
+                );
+        $query = new WP_Query($args);
 
-            if ( $query->have_posts() ) { ?>
-                <ul class="inspira-eventos">
-                    <?php while ($query->have_posts()) : $query->the_post(); ?>
-                        <li><div>
-                            <img src="<?php echo get_field('imagen')['sizes']['voluntarios-thumb']; ?>"  alt="" />
-                            <strong><?php the_title(); ?></strong>
-                            <?php the_content(); ?>
-                        </div></li>
-                    <?php endwhile; ?>
-                </ul>
-            <?php }
-            wp_reset_query();
-        ?>
-    </div>
+        if ( $query->have_posts() ) { ?>
+            <ul class="inspira-eventos">
+                <?php while ($query->have_posts()) : $query->the_post(); ?>
+                    <li><div><a href="<?php echo the_permalink(); ?>">
+                        <img src="<?php echo get_field('imagen')['sizes']['voluntarios-thumb']; ?>"  alt="" />
+                        <strong><?php the_title(); ?></strong>
+                        <date><?php echo get_field('fecha'); ?></date>
+
+                        <span class="button white">Participar</span>
+                    </a></div></li>
+                <?php endwhile; ?>
+            </ul>
+        <?php }
+        wp_reset_query();
+    ?>
 </div></section>
 
 <section class="participa-inspiracion"><div class="contents">

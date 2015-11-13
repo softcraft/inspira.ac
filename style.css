@@ -2400,8 +2400,88 @@ a.more-link {
 }
 
 .participa-actividades h1 {
+    float: left;
     font-size: 27.56px;
     font-weight: 300;
+    line-height: 1;
+    padding: 20px 3%;
+    text-align: center;
+    width: 28%;
+}
+
+.participa-actividades h1 img {
+    diplay: block;
+    margin: 0 0 15px;
+    max-width: 100%;
+}
+
+.participa-actividades h1 span {
+    display: block;
+    margin: 0 15%;
+}
+
+.participa-actividades .inspira-eventos {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 20px 3% 20px 0;
+    width: 63%;
+}
+
+.participa-actividades .inspira-eventos li {
+    float: left;
+    font-size: 14px;
+    line-height: 1.3;
+    margin: 0 0 25px;
+    padding: 0 1.5%;
+    text-align: center;
+    width: 30%;
+}
+
+.participa-actividades .inspira-eventos li:nth-child(3n+4) {
+    clear: left;
+}
+
+.participa-actividades .inspira-eventos a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
+
+.participa-actividades .inspira-eventos img {
+    border: 3px solid #fff;
+    display: block;
+    margin: 0 auto 10px;
+
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
+
+.participa-actividades .inspira-eventos strong {
+    color: #25cbd3;
+    display: block;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.participa-actividades .inspira-eventos date {
+    display: block;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.participa-actividades .inspira-eventos .button {
+    color: #0d7b8e;
+    display: inline-block;
+    font-size: 14px;
+    padding: 0.5em 0.75em 0.3em;
+    width: auto;
+}
+
+.participa-actividades .inspira-eventos a:hover .button {
+    background: #25cbd3;
+    color: #fff;
 }
 
 
