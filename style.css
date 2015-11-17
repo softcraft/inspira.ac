@@ -1227,7 +1227,7 @@ a.more-link {
  * 11.5 - Home Presencia
  */
 
-.home-presencia {
+.home-presencia .contents {
     background: #1d798c;
     color: #fff;
     line-height: 1;
@@ -1306,6 +1306,7 @@ a.more-link {
     float: right;
     height: 425px;
     overflow: hidden;
+    padding-right: 30px;
     position: relative;
     width: 425px;
 }
@@ -1602,7 +1603,7 @@ a.more-link {
  * 12.2 - Conoce Logros
  */
 
-.conoce-logros {
+.conoce-logros .contents {
     background: #1c798c;
     color: #fff;
     padding: 40px 0;
@@ -1819,7 +1820,7 @@ a.more-link {
  * 12.5 - Conoce Banner
  */
 
-.conoce-banner {
+.conoce-banner .contents {
     background: #71276d url('./img/bg-conoce-banner.jpg') no-repeat center center;
     border-bottom: 10px solid #292527;
     color: #fff;
@@ -2097,7 +2098,7 @@ a.more-link {
  * 14.1 - Descubre Misión
  */
 
-.descubre-mision {
+.descubre-mision .contents {
     background: #7b1275;
     color: #fff;
     font-size: 26px;
@@ -2115,7 +2116,7 @@ a.more-link {
     font-weight: 900;
     height: 257px;
     line-height: 257px;
-    margin: 0 100px 0 0;
+    margin: 0 70px 0 30px;
     text-align: center;
     text-transform: uppercase;
     width: 258px;
@@ -2320,7 +2321,7 @@ a.more-link {
  * 14.6 - Descubre Apoyo
  */
 
-.descubre-apoyo {
+.descubre-apoyo .contents {
     background: #1d798c;
     color: #fff;
     padding: 80px 0;
@@ -2328,7 +2329,7 @@ a.more-link {
 
 .descubre-apoyo img {
     float: left;
-    margin: 0 50px 0 0;
+    margin: 0 50px 0 30px;
 }
 
 .descubre-apoyo .conts {
