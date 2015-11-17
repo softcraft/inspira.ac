@@ -7,7 +7,7 @@
  */
 get_header(); ?>
 
-<section class="participa-actividades"><div class="contents">
+<section class="participa-actividades" id="proximos-eventos"><div class="contents">
     <h1>
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico-eventos.png" alt="" />
         <span>

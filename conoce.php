@@ -106,15 +106,15 @@ get_header(); ?>
     </h1>
 
     <ul>
-        <li class="cursos"><a href="#">
+        <li class="cursos"><a href="<?php echo get_permalink( get_page_by_path('participa') ); ?>#proximos-eventos">
             Cursos
         </a></li>
 
-        <li class="eventos"><a href="#">
+        <li class="eventos"><a href="<?php echo get_permalink( get_page_by_path('participa') ); ?>#proximos-eventos">
             Eventos
         </a></li>
 
-        <li class="voluntariado"><a href="#">
+        <li class="voluntariado"><a href="<?php echo get_permalink( get_page_by_path('contribuye') ); ?>">
             Voluntariado
         </a></li>
     </ul>
