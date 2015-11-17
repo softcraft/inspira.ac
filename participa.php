@@ -20,7 +20,8 @@ get_header(); ?>
                     'post_type'      => 'inspira_eventos',
                     'post_status'    => 'publish',
                     'order'          => 'asc',
-                    'posts_per_page' => 6
+                    'posts_per_page' => 6,
+                    'pagination'     => true
                 );
         $query = new WP_Query($args);
 

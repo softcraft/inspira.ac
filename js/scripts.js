@@ -401,12 +401,22 @@ function startMap(centros) {
         }
     }
 
-    $(document).on('opened', '.remodal', function(event) {
+    jQuery(document).on('opened', '.remodal', function(event) {
         var $el  = $(this),
             $map = $el.find('.acf-map');
 
         if ( $map.length && $map.not('.mapped').length ) {
             new_map( $map );
+        }
+    });
+
+    // Event Map
+    jQuery(document).ready(function() {
+        var $event_map = jQuery('.event_map');
+
+        if ( $event_map.length ) {
+            console.log("HOLABB");
+            new_map( $event_map );
         }
     });
 

@@ -1775,6 +1775,16 @@ a.more-link {
     background-position: -534px -260px;
 }
 
+.event_map.acf-map {
+    height: 350px;
+    width: 100%;
+}
+
+.confirmar-asistencia h2 {
+    font-size: 26px;
+    margin-bottom: 0.5em;
+}
+
 
  /**
  * 12.4 - Conoce Imagen

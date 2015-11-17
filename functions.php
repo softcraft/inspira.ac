@@ -320,7 +320,7 @@ function create_eventos() {
     $args = array(
         'label'             => __('Eventos'),
         'labels'            => $labels,
-        'public'            => false,
+        'public'            => true,
         'can_export'        => true,
         'show_ui'           => true,
         '_builtin'          => false,
@@ -775,7 +775,7 @@ if ( function_exists('register_field_group') ) {
                 'label' => 'Google map',
                 'name' => 'google_map',
                 'type' => 'google_map',
-                'instructions' => 'Busca el centro inspira en el mapa y da click para colocar el marcador del lugar.',
+                'instructions' => 'Busca el lugar del evento.',
                 'center_lat' => '19.3910038',
                 'center_lng' => '-99.2836968',
                 'zoom' => 11,
