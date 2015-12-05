@@ -747,18 +747,19 @@ if ( function_exists('register_field_group') ) {
         'title' => 'Eventos',
         'fields' => array (
             array (
-                'key' => 'field_563e08ceb0c0d',
-                'label' => 'Fecha y hora',
-                'name' => 'fecha',
-                'type' => 'text',
-                'instructions' => 'Fecha y hora del evento',
-                'required' => 1,
-                'default_value' => '',
-                'placeholder' => '12 de Mayo - 8:00pm',
-                'prepend' => '',
-                'append' => '',
-                'formatting' => 'none',
-                'maxlength' => '',
+                'key'               => 'field_56625e601078c',
+                'label'             => 'Fecha y hora',
+                'name'              => 'fecha',
+                'type'              => 'date_time_picker',
+                'instructions'      => 'Fecha y hora del evento',
+                'required'          => 1,
+                'show_date'         => 'true',
+                'date_format'       => 'MM d yy',
+                'time_format'       => 'h:mm tt',
+                'show_week_number'  => 'false',
+                'picker'            => 'slider',
+                'save_as_timestamp' => 'true',
+                'get_as_timestamp'  => 'true',
             ),
             array (
                 'key'           => 'field_55da3cc5bb433',
@@ -806,4 +807,5 @@ if ( function_exists('register_field_group') ) {
 include_once(rtrim( dirname( __FILE__ ), '/' ) . '/acf-options-page/acf-options-page.php');
 include_once(rtrim( dirname( __FILE__ ), '/' ) . '/acf-gallery/acf-gallery.php');
 include_once(rtrim( dirname( __FILE__ ), '/' ) . '/acf-location-field/location-field.php');
+include_once(rtrim( dirname( __FILE__ ), '/' ) . '/acf-date-time/acf-date_time_picker.php');
 ?>

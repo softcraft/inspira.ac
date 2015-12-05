@@ -16,14 +16,24 @@ get_header(); ?>
     </h1>
 
     <?php
-        $args = array(
+        $today = time();
+        $args  = array(
                     'post_type'      => 'inspira_eventos',
                     'post_status'    => 'publish',
                     'order'          => 'asc',
                     'posts_per_page' => 6,
-                    'pagination'     => true
+                    'pagination'     => true,
+                    'meta_query'     => array(
+                        array(
+                            'key'       => 'fecha',
+                            'compare'   => '>=',
+                            'value'     => $today,
+                        )
+                    ),
+                    'meta_key' => 'fecha',
+                    'orderby' => 'fecha',
                 );
-        $query = new WP_Query($args);
+        $query  = new WP_Query($args);
 
         if ( $query->have_posts() ) { ?>
             <ul class="inspira-eventos">
@@ -31,8 +41,7 @@ get_header(); ?>
                     <li><div><a href="<?php echo the_permalink(); ?>">
                         <img src="<?php echo get_field('imagen')['sizes']['voluntarios-thumb']; ?>"  alt="" />
                         <strong><?php the_title(); ?></strong>
-                        <date><?php echo get_field('fecha'); ?></date>
-
+                        <date><?php echo date_i18n('F j Y g:i a', get_field('fecha')); ?></date>
                         <span class="button white">Participar</span>
                     </a></div></li>
                 <?php endwhile; ?>
