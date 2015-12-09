@@ -220,7 +220,7 @@ del {
 .loading-overlay {
     background: url('./img/loading.gif') no-repeat center center;
     background-color: #fff;
-    background-color: rgba(255,255,255, 0.5);
+    background-color: rgba(255,255,255, 0.75);
 }
 
 .pagination-triggers {
