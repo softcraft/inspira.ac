@@ -70,7 +70,7 @@ jQuery(document).ready(function() {
             jQuery('.loading-overlay').remove();
 
             jQuery('html, body').animate({
-                scrollTop: $el.offset().top
+                scrollTop: $el.offset().top - 25
             }, 300);
         });
     };

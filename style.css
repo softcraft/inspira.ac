@@ -2550,6 +2550,10 @@ a.more-link {
     margin: 0 15%;
 }
 
+.participa-actividades .pagination-filter {
+    padding-top: 30px;
+}
+
 .participa-actividades .inspira-eventos {
     float: right;
     list-style: none;

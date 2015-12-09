@@ -7,7 +7,7 @@
  */
 get_header(); ?>
 
-<section class="participa-actividades pagination-content" id="proximos-eventos"><div class="contents">
+<section class="participa-actividades pagination-wrap" id="proximos-eventos"><div class="contents">
     <h1>
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico-eventos.png" alt="" />
         <span>
@@ -15,45 +15,64 @@ get_header(); ?>
         </span>
     </h1>
 
-    <?php
-        $today = time();
-        $paged = get_query_var('paged', 1);
-        $args  = array(
-                    'post_type'      => 'inspira_eventos',
-                    'post_status'    => 'publish',
-                    'order'          => 'asc',
-                    'posts_per_page' => 6,
-                    'pagination'     => true,
-                    'meta_query'     => array(
-                        array(
-                            'key'       => 'fecha',
-                            'compare'   => '>=',
-                            'value'     => $today,
-                        )
-                    ),
-                    'meta_key' => 'fecha',
-                    'orderby' => 'fecha',
-                    'paged'   => $paged
-                );
-        query_posts($args); ?>
+    <div class="pagination-filter">
+        <label class="styled-select year">
+            <span class="text">Ciudad</span>
+            <span class="select-wrap">
+                <?php
+                    wp_dropdown_categories( array(
+                        'show_option_all' => 'Todos',
+                        'taxonomy'        => 'centros',
+                        'class'           => 'centros',
+                        'value_field'     => 'slug'
+                    ) );
+                ?>
+            </span>
+        </label>
+    </div>
 
-        <ul class="inspira-eventos">
-            <?php while (have_posts()) : the_post(); ?>
-                <li><div><a href="<?php echo the_permalink(); ?>">
-                    <img src="<?php echo get_field('imagen')['sizes']['voluntarios-thumb']; ?>"  alt="" />
-                    <strong><?php the_title(); ?></strong>
-                    <date><?php echo date_i18n('F j Y g:i a', get_field('fecha')); ?></date>
-                    <span class="button white">Participar</span>
-                </a></div></li>
-            <?php endwhile; ?>
-        </ul>
+    <div class="pagination-results">
+        <?php
+            $today = time();
+            $paged = get_query_var('paged', 1);
+            $args  = array(
+                        'post_type'      => 'inspira_eventos',
+                        'post_status'    => 'publish',
+                        'order'          => 'asc',
+                        'posts_per_page' => 6,
+                        'pagination'     => true,
+                        'meta_query'     => array(
+                            array(
+                                'key'       => 'fecha',
+                                'compare'   => '>=',
+                                'value'     => $today,
+                            )
+                        ),
+                        'meta_key'       => 'fecha',
+                        'orderby'        => 'fecha',
+                        'paged'          => $paged,
+                        'centros'        => get_query_var('centros'),
+                    );
+            query_posts($args); ?>
 
-        <div class="pagination-triggers">
-            <span class="prev"><?php next_posts_link('Logros Anteriores...') ?></span>
-            <span class="next"><?php previous_posts_link('Logros Recientes...') ?></span>
-        </div>
+            <ul class="inspira-eventos">
+                <?php while (have_posts()) : the_post(); ?>
+                    <li><div><a href="<?php echo the_permalink(); ?>">
+                        <img src="<?php echo get_field('imagen')['sizes']['voluntarios-thumb']; ?>"  alt="" />
+                        <strong><?php the_title(); ?></strong>
+                        <date><?php echo date_i18n('F j Y g:i a', get_field('fecha')); ?></date>
+                        <span class="button white">Participar</span>
+                    </a></div></li>
+                <?php endwhile; ?>
+            </ul>
 
-    <?php wp_reset_query(); ?>
+            <div class="pagination-triggers">
+                <span class="prev"><?php next_posts_link('Logros Anteriores...') ?></span>
+                <span class="next"><?php previous_posts_link('Logros Recientes...') ?></span>
+            </div>
+
+        <?php wp_reset_query(); ?>
+    </div>
 </div></section>
 
 <section class="participa-inspiracion"><div class="contents">
