@@ -403,6 +403,52 @@ input[type="radio"] {
     padding: 0;
 }
 
+.styled-select .select-wrap {
+    background: #fff;
+    border: 1px solid #c90;
+    box-shadow: 0 1px #fbfbfb inset;
+    cursor: pointer;
+    display: block;
+    margin: 0.35em 0 1em;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.styled-select .select-wrap:before {
+    background: #c90 url('img/ico-arrow-down.png') no-repeat center;
+    content: '';
+    display: block;
+    height: 50px;
+    margin-top: -25px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 50px;
+    z-index: 10;
+}
+
+.styled-select select {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    color: #9a9a9a;
+    cursor: pointer;
+    display: block;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    margin: 0;
+    padding: 16px 0 16px 16px;
+    position: relative;
+    text-transform: uppercase;
+    width: 115%;
+    z-index: 10;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 
 /**
  * 5.0 - Navigations

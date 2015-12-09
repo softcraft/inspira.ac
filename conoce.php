@@ -38,71 +38,105 @@ get_header(); ?>
     <div class="categorias-logros-content"></div>
 </div></section>
 
-<section class="conoce-logros pagination-content"><div class="contents">
+<section class="conoce-logros pagination-wrap"><div class="contents">
     <h1>Logros Inspiradores</h1>
 
-    <?php
-        $paged = get_query_var('paged', 1);
-
-        $args = array(
-                    'post_type'      => 'inspira_logros',
-                    'post_status'    => 'publish',
-                    'order'          => 'asc',
-                    'posts_per_page' => 8,
-                    'paged'          => $paged
-                );
-
-        query_posts($args); ?>
-
-            <ul class="logros">
-                <?php while (have_posts()) : the_post();
-                    $image = get_field('imagen');
+    <div class="pagination-filter">
+        <label class="styled-select">
+            <span class="text">Año</span>
+            <span class="select-wrap">
+                <?php
+                    wp_dropdown_categories( array(
+                        'show_option_all' => 'Todos ',
+                        'taxonomy'        => 'logro_year',
+                        'class'           => 'logro_year',
+                        'value_field'     => 'slug'
+                    ) );
                 ?>
-                    <li>
-                        <?php if( !empty($image) ): ?>
-                            <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
-                        <?php endif; ?>
+            </span>
+        </label>
 
-                        <span class="info">
-                            <strong><?php the_title(); ?></strong>
-                            <?php echo get_field('estadisticas'); ?>
-                        </span>
+        <label class="styled-select">
+            <span class="text">Proyecto</span>
+            <span class="select-wrap">
+                <?php
+                    wp_dropdown_categories( array(
+                        'show_option_all' => 'Todos',
+                        'taxonomy'        => 'project',
+                        'class'           => 'project',
+                        'value_field'     => 'slug'
+                    ) );
+                ?>
+            </span>
+        </label>
+    </div>
 
-                        <span class="meta">
-                            <em class="proyecto"><?php
-                                $projects = get_the_terms( $post->ID, 'project' );
+    <div class="pagination-results">
+        <?php
+            $paged = get_query_var('paged', 1);
 
-                                foreach($projects as $taxindex => $taxitem) {
-                                    echo $taxitem->name;
-                                }
-                            ?></em>
-                            <em class="ciudad"><?php
-                                $centros = get_the_terms( $post->ID, 'centros' );
+            $args = array(
+                        'post_type'      => 'inspira_logros',
+                        'post_status'    => 'publish',
+                        'order'          => 'asc',
+                        'posts_per_page' => 8,
+                        'paged'          => $paged,
+                        'logro_year'     => get_query_var('logro_year'),
+                        'project'        => get_query_var('project'),
+                    );
 
-                                if ($centros) {
-                                    $centro = array_values($centros)[0];
-                                    $estado = get_field('estado', $centro);
-                                    echo $estado;
-                                }
-                            ?></em>
-                            <em class="year"><?php
-                                $year = get_the_terms( $post->ID, 'logro_year' );
+            query_posts($args); ?>
 
-                                foreach($year as $taxindex => $taxitem) {
-                                    echo $taxitem->name;
-                                }
-                            ?></em>
-                        </span>
-                    </li>
-                <?php endwhile; ?>
-            </ul>
+                <ul class="logros">
+                    <?php while (have_posts()) : the_post();
+                        $image = get_field('imagen');
+                    ?>
+                        <li>
+                            <?php if( !empty($image) ): ?>
+                                <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+                            <?php endif; ?>
 
-        <div class="pagination-triggers">
-            <span class="prev"><?php next_posts_link('Logros Anteriores...') ?></span>
-            <span class="next"><?php previous_posts_link('Logros Recientes...') ?></span>
-        </div>
+                            <span class="info">
+                                <strong><?php the_title(); ?></strong>
+                                <?php echo get_field('estadisticas'); ?>
+                            </span>
 
-    <?php wp_reset_query(); ?>
+                            <span class="meta">
+                                <em class="proyecto"><?php
+                                    $projects = get_the_terms( $post->ID, 'project' );
+
+                                    foreach($projects as $taxindex => $taxitem) {
+                                        echo $taxitem->name;
+                                    }
+                                ?></em>
+                                <em class="ciudad"><?php
+                                    $centros = get_the_terms( $post->ID, 'centros' );
+
+                                    if ($centros) {
+                                        $centro = array_values($centros)[0];
+                                        $estado = get_field('estado', $centro);
+                                        echo $estado;
+                                    }
+                                ?></em>
+                                <em class="year"><?php
+                                    $year = get_the_terms( $post->ID, 'logro_year' );
+
+                                    foreach($year as $taxindex => $taxitem) {
+                                        echo $taxitem->name;
+                                    }
+                                ?></em>
+                            </span>
+                        </li>
+                    <?php endwhile; ?>
+                </ul>
+
+            <div class="pagination-triggers">
+                <span class="prev"><?php next_posts_link('Logros Anteriores...') ?></span>
+                <span class="next"><?php previous_posts_link('Logros Recientes...') ?></span>
+            </div>
+
+        <?php wp_reset_query(); ?>
+    </div>
 </div></section>
 
 <section class="conoce-participa"><div class="contents">

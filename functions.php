@@ -177,7 +177,7 @@ function create_logros_home() {
         'capability_type'   => 'post',
         'hierarchical'      => false,
         'rewrite'           => array('slug' => 'logros_home'),
-        'supports'          => array(null),
+        'supports'          => array('title'),
         'show_in_nav_menus' => false
     );
     register_post_type('inspira_logros_home', $args);

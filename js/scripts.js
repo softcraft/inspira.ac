@@ -27,8 +27,31 @@ jQuery(document).ready(function() {
     // Paginacion
     jQuery('body').on('click', '.pagination-triggers a', function(event) {
         var $anchor = jQuery(this),
-            $el     = $anchor.closest('.pagination-content');
+            $el     = $anchor.closest('.pagination-wrap');
 
+        loadResults($anchor.attr('href'), $el);
+
+        event.preventDefault();
+    });
+
+    jQuery('body').on('change', '.pagination-filter select', function(event) {
+        var $select = jQuery(this),
+            $el     = $select.closest('.pagination-wrap'),
+            url     = window.location.href,
+            params  = {};
+
+        jQuery.each($el.find('.pagination-filter select'), function(index, el) {
+            var $select = jQuery(this);
+
+            params[$select.attr('class')] = $select.val();
+        });
+
+        loadResults(url + '?' + jQuery.param(params), $el);
+
+        event.preventDefault();
+    });
+
+    function loadResults(url, $el) {
         $el.css('position', 'relative');
 
         jQuery('<div class="loading-overlay" />').css({
@@ -41,17 +64,16 @@ jQuery(document).ready(function() {
         }).appendTo( $el );
 
         jQuery.ajax({
-            url: $anchor.attr('href')
+            url: url
         }).then(function(html) {
-            $el.html( jQuery('.pagination-content', html).html() );
+            $el.find('.pagination-results').html( jQuery('.pagination-results', html).html() );
+            jQuery('.loading-overlay').remove();
 
             jQuery('html, body').animate({
                 scrollTop: $el.offset().top
             }, 300);
         });
-
-        event.preventDefault();
-    });
+    };
 
     // Conoce Categorias
     jQuery('.categorias-logros').on('click', 'li', function() {
