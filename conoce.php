@@ -42,7 +42,7 @@ get_header(); ?>
     <h1>Logros Inspiradores</h1>
 
     <div class="pagination-filter">
-        <label class="styled-select">
+        <label class="styled-select year">
             <span class="text">Año</span>
             <span class="select-wrap">
                 <?php
@@ -56,7 +56,7 @@ get_header(); ?>
             </span>
         </label>
 
-        <label class="styled-select">
+        <label class="styled-select project">
             <span class="text">Proyecto</span>
             <span class="select-wrap">
                 <?php

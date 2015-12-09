@@ -403,20 +403,50 @@ input[type="radio"] {
     padding: 0;
 }
 
-.styled-select .select-wrap {
+.styled-select {
+    display: inline-block;
+    margin: 0 20px 0 0;
+    min-width: 200px;
+}
+
+.styled-select .text {
     background: #fff;
-    border: 1px solid #c90;
+    color: #1c798c;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 35%;
+
+    -webkit-border-radius: 8px 0 0 8px;
+    -moz-border-radius: 8px 0 0 8px;
+    border-radius: 8px 0 0 8px;
+}
+
+.styled-select .select-wrap {
+    background: none;
+    border: 1px solid #fff;
     box-shadow: 0 1px #fbfbfb inset;
     cursor: pointer;
-    display: block;
-    margin: 0.35em 0 1em;
+    display: inline-block;
+    margin: 0 -4px;
     overflow: hidden;
+    padding: 0;
     position: relative;
+    vertical-align: middle;
+    width: 65%;
     z-index: 1;
+
+    -webkit-border-radius: 0 8px 8px 0;
+    -moz-border-radius: 0 8px 8px 0;
+    border-radius: 0 8px 8px 0;
 }
 
 .styled-select .select-wrap:before {
-    background: #c90 url('img/ico-arrow-down.png') no-repeat center;
+    background: url('img/ico-arrow-down.png') no-repeat center;
     content: '';
     display: block;
     height: 50px;
@@ -431,7 +461,7 @@ input[type="radio"] {
 .styled-select select {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
     border: 0 none;
-    color: #9a9a9a;
+    color: #fff;
     cursor: pointer;
     display: block;
     font-family: Helvetica,Arial,sans-serif;
@@ -880,6 +910,20 @@ a.more-link {
     background: #909;
     color: #fff;
 }
+
+.pagination-filter {
+    text-align: center;
+    margin: 0 0 30px;
+}
+
+.pagination-filter .year {
+    width: 200px;
+}
+
+.pagination-filter .project {
+    width: 350px;
+}
+
 
  /**
  * 10.2 - Single
@@ -1731,9 +1775,12 @@ a.more-link {
 .conoce-logros li .meta .ciudad {
     display: inline-block;
     font-style: normal;
+    font-weight: bold;
     overflow: hidden;
     padding-left: 10px;
-    width: 50px;
+    padding-right: 10px;
+    text-align: center;
+    width: 40px;
 }
 
 .conoce-logros li .meta .year {
