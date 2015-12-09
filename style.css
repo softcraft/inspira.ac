@@ -223,6 +223,22 @@ del {
     background-color: rgba(255,255,255, 0.5);
 }
 
+.pagination-triggers {
+    clear: both;
+    height: 1%;
+    margin: 0 3%;
+    overflow: hidden;
+    padding: 10px 0 0;
+}
+
+.pagination-triggers .prev {
+    float: left;
+}
+
+.pagination-triggers .next {
+    float: right;
+}
+
 
 /**
  * 4.0 - Forms
@@ -1716,24 +1732,8 @@ a.more-link {
     padding: 7px 10px;
 }
 
-.conoce-logros .pagination-triggers {
-    clear: both;
-    height: 1%;
-    margin: 0 3%;
-    overflow: hidden;
-    padding: 10px 0 0;
-}
-
 .conoce-logros .pagination-triggers a {
     color: #fff;
-}
-
-.conoce-logros .pagination-triggers .prev {
-    float: left;
-}
-
-.conoce-logros .pagination-triggers .next {
-    float: right;
 }
 
 
@@ -2518,6 +2518,15 @@ a.more-link {
 
 .participa-actividades .inspira-eventos a:hover .button {
     background: #25cbd3;
+    color: #fff;
+}
+
+.participa-actividades .pagination-triggers {
+    color: #fff;
+    padding-bottom: 15px;
+}
+
+.participa-actividades .pagination-triggers a {
     color: #fff;
 }
 
