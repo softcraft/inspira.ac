@@ -217,6 +217,12 @@ del {
     width: 0px;
 }
 
+.loading-overlay {
+    background: url('./img/loading.gif') no-repeat center center;
+    background-color: #fff;
+    background-color: rgba(255,255,255, 0.5);
+}
+
 
 /**
  * 4.0 - Forms
@@ -1619,7 +1625,7 @@ a.more-link {
 
 .conoce-logros ul {
     list-style: none;
-    margin: 0;
+    margin: 0 20px;
     text-align: center;
     padding: 0;
 }
@@ -1708,6 +1714,26 @@ a.more-link {
     font-size: 14px;
     margin: 1.5em 0 0;
     padding: 7px 10px;
+}
+
+.conoce-logros .pagination-triggers {
+    clear: both;
+    height: 1%;
+    margin: 0 3%;
+    overflow: hidden;
+    padding: 10px 0 0;
+}
+
+.conoce-logros .pagination-triggers a {
+    color: #fff;
+}
+
+.conoce-logros .pagination-triggers .prev {
+    float: left;
+}
+
+.conoce-logros .pagination-triggers .next {
+    float: right;
 }
 
 

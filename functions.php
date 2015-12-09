@@ -19,12 +19,12 @@ class Menu_With_Description extends Walker_Nav_Menu {
 
         $output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
 
-        $attributes = ! empty( $item->attr_title ) ? ' title="' . esc_attr( $item->attr_title ) .'"' : '';
+        $attributes  = ! empty( $item->attr_title ) ? ' title="' . esc_attr( $item->attr_title ) .'"' : '';
         $attributes .= ! empty( $item->target ) ? ' target="' . esc_attr( $item->target ) .'"' : '';
         $attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr( $item->xfn ) .'"' : '';
         $attributes .= ! empty( $item->url ) ? ' href="' . esc_attr( $item->url ) .'"' : '';
 
-        $item_output = $args->before;
+        $item_output  = $args->before;
         $item_output .= '<a'. $attributes .'><strong>';
         $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
         $item_output .= '</strong><br /><small>' . $item->description . '</small>';
@@ -356,8 +356,8 @@ add_action( 'init', 'create_centros_taxonomy' );
 
 if ( function_exists('register_field_group') ) {
     register_field_group(array (
-        'id' => 'acf_logros-fields',
-        'title' => 'Logros Fields',
+        'id'     => 'acf_logros-fields',
+        'title'  => 'Logros Fields',
         'fields' => array (
             array (
                 'key'           => 'field_55d1067ba3eab',
@@ -416,8 +416,8 @@ if ( function_exists('register_field_group') ) {
     ));
 
     register_field_group(array (
-        'id' => 'acf_logro',
-        'title' => 'Logro',
+        'id'     => 'acf_logro',
+        'title'  => 'Logro',
         'fields' => array (
             array (
                 'key'           => 'field_55d150c02ddfc',
@@ -431,17 +431,17 @@ if ( function_exists('register_field_group') ) {
                 'library'       => 'uploadedTo'
             ),
             array (
-                'key' => 'field_55d8ea1f423a0',
-                'label' => 'estadisticas',
-                'name' => 'estadisticas',
-                'type' => 'textarea',
-                'instructions' => 'Descripción. Este campo aparecerá en el roll-over de la sección de "Conoce". Una estadística por línea. No más de 4.',
-                'required' => 1,
+                'key'           => 'field_55d8ea1f423a0',
+                'label'         => 'estadisticas',
+                'name'          => 'estadisticas',
+                'type'          => 'textarea',
+                'instructions'  => 'Descripción. Este campo aparecerá en el roll-over de la sección de "Conoce". Una estadística por línea. No más de 4.',
+                'required'      => 1,
                 'default_value' => '',
-                'placeholder' => '',
-                'maxlength' => '',
-                'rows' => '',
-                'formatting' => 'br',
+                'placeholder'   => '',
+                'maxlength'     => '',
+                'rows'          => '',
+                'formatting'    => 'br',
             ),
         ),
         'location' => array (
@@ -659,83 +659,83 @@ if ( function_exists('register_field_group') ) {
     ));
 
     register_field_group(array (
-        'id' => 'acf_centros',
-        'title' => 'Centros',
+        'id'     => 'acf_centros',
+        'title'  => 'Centros',
         'fields' => array (
             array (
-                'key' => 'field_56168f57004e0',
-                'label' => 'Dirección',
-                'name' => 'direccion',
-                'type' => 'textarea',
-                'instructions' => 'Direccion del centro.',
+                'key'           => 'field_56168f57004e0',
+                'label'         => 'Dirección',
+                'name'          => 'direccion',
+                'type'          => 'textarea',
+                'instructions'  => 'Direccion del centro.',
                 'default_value' => '',
-                'placeholder' => '',
-                'maxlength' => '',
-                'rows' => '',
-                'formatting' => 'br',
+                'placeholder'   => '',
+                'maxlength'     => '',
+                'rows'          => '',
+                'formatting'    => 'br',
             ),
             array (
-                'key' => 'field_561bd91990c88',
-                'label' => 'Google map',
-                'name' => 'google_map',
-                'type' => 'google_map',
+                'key'          => 'field_561bd91990c88',
+                'label'        => 'Google map',
+                'name'         => 'google_map',
+                'type'         => 'google_map',
                 'instructions' => 'Busca el centro inspira en el mapa y da click para colocar el marcador del lugar.',
-                'center_lat' => '19.3910038',
-                'center_lng' => '-99.2836968',
-                'zoom' => 11,
-                'height' => '',
+                'center_lat'   => '19.3910038',
+                'center_lng'   => '-99.2836968',
+                'zoom'         => 11,
+                'height'       => '',
             ),
             array (
-                'key' => 'field_56168f68004e1',
-                'label' => 'Teléfono',
-                'name' => 'telefono',
-                'type' => 'text',
-                'instructions' => 'Teléfono del centro.',
+                'key'           => 'field_56168f68004e1',
+                'label'         => 'Teléfono',
+                'name'          => 'telefono',
+                'type'          => 'text',
+                'instructions'  => 'Teléfono del centro.',
                 'default_value' => '',
-                'placeholder' => '',
-                'prepend' => '',
-                'append' => '',
-                'formatting' => 'none',
-                'maxlength' => '',
+                'placeholder'   => '',
+                'prepend'       => '',
+                'append'        => '',
+                'formatting'    => 'none',
+                'maxlength'     => '',
             ),
             array (
-                'key' => 'field_56168f8b004e2',
-                'label' => 'Estado',
-                'name' => 'estado',
-                'type' => 'text',
-                'instructions' => 'Código de 3 letras del estado. Favor de seguir los estándares. En esta liga hay una referencia del código de 3 letras de cada estado: https://en.wikipedia.org/wiki/Template:Mexico_State-Abbreviation_Codes',
-                'required' => 1,
+                'key'           => 'field_56168f8b004e2',
+                'label'         => 'Estado',
+                'name'          => 'estado',
+                'type'          => 'text',
+                'instructions'  => 'Código de 3 letras del estado. Favor de seguir los estándares. En esta liga hay una referencia del código de 3 letras de cada estado: https://en.wikipedia.org/wiki/Template:Mexico_State-Abbreviation_Codes',
+                'required'      => 1,
                 'default_value' => '',
-                'placeholder' => '',
-                'prepend' => '',
-                'append' => '',
-                'formatting' => 'html',
-                'maxlength' => 3,
+                'placeholder'   => '',
+                'prepend'       => '',
+                'append'        => '',
+                'formatting'    => 'html',
+                'maxlength'     => 3,
             ),
             array (
-                'key' => 'field_561695a05e1a3',
-                'label' => 'Galería',
-                'name' => 'galeria',
-                'type' => 'gallery',
+                'key'          => 'field_561695a05e1a3',
+                'label'        => 'Galería',
+                'name'         => 'galeria',
+                'type'         => 'gallery',
                 'instructions' => 'Galería de imágenes para el popup.',
                 'preview_size' => 'centros-thumb',
-                'library' => 'all',
+                'library'      => 'all',
             ),
         ),
         'location' => array (
             array (
                 array (
-                    'param' => 'ef_taxonomy',
+                    'param'    => 'ef_taxonomy',
                     'operator' => '==',
-                    'value' => 'centros',
+                    'value'    => 'centros',
                     'order_no' => 0,
                     'group_no' => 0,
                 ),
             ),
         ),
         'options' => array (
-            'position' => 'acf_after_title',
-            'layout' => 'no_box',
+            'position'       => 'acf_after_title',
+            'layout'         => 'no_box',
             'hide_on_screen' => array (
             ),
         ),
@@ -743,8 +743,8 @@ if ( function_exists('register_field_group') ) {
     ));
 
     register_field_group(array (
-        'id' => 'acf_eventos',
-        'title' => 'Eventos',
+        'id'     => 'acf_eventos',
+        'title'  => 'Eventos',
         'fields' => array (
             array (
                 'key'               => 'field_56625e601078c',
@@ -772,31 +772,31 @@ if ( function_exists('register_field_group') ) {
                 'library'       => 'all',
             ),
             array (
-                'key' => 'field_561bd91780d88',
-                'label' => 'Google map',
-                'name' => 'google_map',
-                'type' => 'google_map',
+                'key'          => 'field_561bd91780d88',
+                'label'        => 'Google map',
+                'name'         => 'google_map',
+                'type'         => 'google_map',
                 'instructions' => 'Busca el lugar del evento.',
-                'center_lat' => '19.3910038',
-                'center_lng' => '-99.2836968',
-                'zoom' => 11,
-                'height' => '',
+                'center_lat'   => '19.3910038',
+                'center_lng'   => '-99.2836968',
+                'zoom'         => 11,
+                'height'       => '',
             ),
         ),
         'location' => array (
             array (
                 array (
-                    'param' => 'post_type',
+                    'param'    => 'post_type',
                     'operator' => '==',
-                    'value' => 'inspira_eventos',
+                    'value'    => 'inspira_eventos',
                     'order_no' => 0,
                     'group_no' => 0,
                 ),
             ),
         ),
         'options' => array (
-            'position' => 'normal',
-            'layout' => 'no_box',
+            'position'       => 'normal',
+            'layout'         => 'no_box',
             'hide_on_screen' => array (
             ),
         ),

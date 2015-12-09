@@ -38,21 +38,24 @@ get_header(); ?>
     <div class="categorias-logros-content"></div>
 </div></section>
 
-<section class="conoce-logros"><div class="contents">
+<section class="conoce-logros pagination-content"><div class="contents">
     <h1>Logros Inspiradores</h1>
 
     <?php
+        $paged = get_query_var('paged', 1);
+
         $args = array(
                     'post_type'      => 'inspira_logros',
                     'post_status'    => 'publish',
                     'order'          => 'asc',
-                    'posts_per_page' => 8
+                    'posts_per_page' => 8,
+                    'paged'          => $paged
                 );
-        $query = new WP_Query($args);
 
-        if ( $query->have_posts() ) { ?>
+        query_posts($args); ?>
+
             <ul class="logros">
-                <?php while ($query->have_posts()) : $query->the_post();
+                <?php while (have_posts()) : the_post();
                     $image = get_field('imagen');
                 ?>
                     <li>
@@ -93,9 +96,13 @@ get_header(); ?>
                     </li>
                 <?php endwhile; ?>
             </ul>
-        <?php }
-        wp_reset_query();
-    ?>
+
+        <div class="pagination-triggers">
+            <span class="prev"><?php next_posts_link('Logros Anteriores...') ?></span>
+            <span class="next"><?php previous_posts_link('Logros Recientes...') ?></span>
+        </div>
+
+    <?php wp_reset_query(); ?>
 </div></section>
 
 <section class="conoce-participa"><div class="contents">

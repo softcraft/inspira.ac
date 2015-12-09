@@ -24,6 +24,35 @@ jQuery(document).ready(function() {
         autoCollapse : true
    });
 
+    // Paginacion
+    jQuery('body').on('click', '.pagination-triggers a', function(event) {
+        var $anchor = jQuery(this),
+            $el     = $anchor.closest('.pagination-content');
+
+        $el.css('position', 'relative');
+
+        jQuery('<div class="loading-overlay" />').css({
+            position   : 'absolute',
+            width      : $el.outerWidth(true),
+            height     : $el.outerHeight(true),
+            left       : 0,
+            top        : 0,
+            zIndex     : 1000000
+        }).appendTo( $el );
+
+        jQuery.ajax({
+            url: $anchor.attr('href')
+        }).then(function(html) {
+            $el.html( jQuery('.pagination-content', html).html() );
+
+            jQuery('html, body').animate({
+                scrollTop: $el.offset().top
+            }, 300);
+        });
+
+        event.preventDefault();
+    });
+
     // Conoce Categorias
     jQuery('.categorias-logros').on('click', 'li', function() {
         var $el     = jQuery(this),
