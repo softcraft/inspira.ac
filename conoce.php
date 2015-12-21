@@ -168,7 +168,7 @@ get_header(); ?>
     </h1>
 
     <figure>
-    <?php echo do_shortcode('[rev_slider alias="youtube-gallery2"]'); ?>
+        <?php putRevSlider( 'youtube-gallery2' ); ?>
     </figure>
 </div></section>
 
