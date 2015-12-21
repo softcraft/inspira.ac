@@ -168,7 +168,7 @@ get_header(); ?>
     </h1>
 
     <figure>
-        <iframe width="308" height="208" src="https://www.youtube.com/embed/6gbiyDHnKx8?list=PLprzt7qzv68xth8M9JXO_Y4BpE8wcSgzr&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+    <?php echo do_shortcode('[rev_slider alias="youtube-gallery2"]'); ?>
     </figure>
 </div></section>
 
