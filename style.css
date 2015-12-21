@@ -1944,8 +1944,7 @@ a.more-link {
     background: #216c73 url('./img/bg-conoce-imagen.jpg') no-repeat center center;
     background-size: cover;
     color: #fff;
-    height: 582px;
-    padding: 40px 0;
+    padding: 40px 0 0;
     position: relative;
     text-align: center;
 }
@@ -1953,7 +1952,7 @@ a.more-link {
 .conoce-imagen h1 {
     font-size: 44.07px;
     line-height: 1;
-    margin: 0 0 150px;
+    margin: 0 0 15px;
     text-align: center;
     text-transform: uppercase;
 }
