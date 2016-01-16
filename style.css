@@ -1193,8 +1193,7 @@ a.more-link {
 
 .home-inspira .text div {
     position: relative;
-    top: 45%;
-    transform: translateY(-50%);
+    top: 30%;
 }
 
 .home-inspira .text strong {
@@ -1611,8 +1610,7 @@ a.more-link {
 
 .home-footer .text div {
     position: relative;
-    top: 45%;
-    transform: translateY(-50%);
+    top: 30%;
 }
 
 
@@ -2908,6 +2906,10 @@ a.more-link {
     .descubre-experiencias {
         display: none;
     }
+
+    .home-footer .text {
+        font-size: 18px;
+    }
 }
 
 @media all and (max-width: 760px) {
@@ -2987,7 +2989,7 @@ a.more-link {
 
     .home-amplia .content {
         float: none;
-        padding: 0;
+        padding: 0 0 30px;
         width: 100%;
     }
 
@@ -3197,6 +3199,10 @@ a.more-link {
 
     .home-footer .text {
         font-size: 14px;
+    }
+
+    .home-footer .text div {
+        top: 15%;
     }
 
 }
