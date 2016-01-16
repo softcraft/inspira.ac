@@ -3246,21 +3246,22 @@ a.more-link {
     }
 
     .contribuye-intro h1 {
-        font-size: 26px;
+        font-size: 22px;
         float: none;
         width: 100%;
     }
 
     .contribuye-intro h1 em {
-        font-size: 40px;
+        font-size: 32px;
     }
 
     .contribuye-intro h1 strong {
-        font-size: 70px;
+        font-size: 60px;
     }
 
     .contribuye-intro h2 {
-        font-size: 26px;
+        font-size: 20px;
+        line-height: 1.1;
         margin: 0 0 30px;
     }
 
@@ -3269,7 +3270,7 @@ a.more-link {
     }
 
     .contribuye-intro .objetivos li {
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .contribuye-foot h1 {
