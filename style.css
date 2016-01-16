@@ -1192,7 +1192,7 @@ a.more-link {
 }
 
 .home-inspira .text div {
-    position: relative;
+    position: absolute;
     top: 30%;
 }
 
@@ -1609,7 +1609,9 @@ a.more-link {
 }
 
 .home-footer .text div {
-    position: relative;
+    left: 10%;
+    position: absolute;
+    right: 10%;
     top: 30%;
 }
 
@@ -2865,6 +2867,21 @@ a.more-link {
 }
 
 @media all and (max-width: 950px) {
+    .conoce-banner blockquote {
+        font-size: 32px;
+    }
+
+    .conoce-banner blockquote strong {
+        font-size: 62px;
+    }
+
+    .conoce-banner blockquote .puedes {
+        font-size: 40px;
+    }
+
+    .conoce-banner blockquote .lograr {
+        font-size: 55px;
+    }
 }
 
 @media all and (max-width: 830px) {
@@ -2920,6 +2937,7 @@ a.more-link {
     .home-footer .text {
         font-size: 18px;
     }
+
 }
 
 @media all and (max-width: 760px) {
@@ -3182,22 +3200,6 @@ a.more-link {
 
     .conoce-imagen h1 {
         font-size: 28px;
-    }
-
-    .conoce-banner blockquote {
-        font-size: 32px;
-    }
-
-    .conoce-banner blockquote strong {
-        font-size: 62px;
-    }
-
-    .conoce-banner blockquote .puedes {
-        font-size: 40px;
-    }
-
-    .conoce-banner blockquote .lograr {
-        font-size: 55px;
     }
 
 }
