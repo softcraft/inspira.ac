@@ -3152,6 +3152,34 @@ a.more-link {
         font-size: 36px;
     }
 
+    .conoce-intro ul {
+        float: none;
+        margin: 150px auto 120px;
+    }
+
+    .conoce-intro .categorias-logros-content {
+        float: none;
+        margin-top: 120px;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .conoce-banner blockquote {
+        font-size: 32px;
+    }
+
+    .conoce-banner blockquote strong {
+        font-size: 62px;
+    }
+
+    .conoce-banner blockquote .puedes {
+        font-size: 40px;
+    }
+
+    .conoce-banner blockquote .lograr {
+        font-size: 55px;
+    }
+
 }
 
 @media all and (max-width: 620px) {
