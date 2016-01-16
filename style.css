@@ -2385,6 +2385,7 @@ a.more-link {
     max-width: 200px;
     padding : 3px;
     position : absolute;
+    top: -10px;
     z-index: 1000;
 }
 
@@ -2892,8 +2893,13 @@ a.more-link {
     }
 
     .descubre-mision h1 {
+        background-size: cover;
         float: none;
+        font-size: 38px;
+        height: 180px;
+        line-height: 180px;
         margin: 0 auto;
+        width: 180px;
     }
 
     .descubre-mision .conts {
