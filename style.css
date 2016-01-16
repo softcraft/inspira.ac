@@ -1736,6 +1736,10 @@ a.more-link {
     max-width: 380px;
 }
 
+.conoce-intro .categorias-logros-content-alt {
+    display: none;
+}
+
 
 /**
  * 12.2 - Conoce Logros
@@ -3153,15 +3157,31 @@ a.more-link {
     }
 
     .conoce-intro ul {
-        float: none;
-        margin: 150px auto 120px;
+        display: none;
     }
 
     .conoce-intro .categorias-logros-content {
-        float: none;
+        display: none;
+    }
+
+    .conoce-intro .categorias-logros-content-alt {
+        display: block;
         margin-top: 120px;
         max-width: 100%;
+        text-align: center;
         width: 100%;
+    }
+
+    .conoce-logros h1 {
+        font-size: 28px;
+    }
+
+    .conoce-participa h1 {
+        font-size: 28px;
+    }
+
+    .conoce-imagen h1 {
+        font-size: 28px;
     }
 
     .conoce-banner blockquote {

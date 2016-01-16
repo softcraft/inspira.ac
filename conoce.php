@@ -36,6 +36,21 @@ get_header(); ?>
     ?>
 
     <div class="categorias-logros-content"></div>
+    <?php
+        if ($projects) { ?>
+            <div class="categorias-logros-content-alt">
+                <?php foreach ($projects  as $project ) {
+                    $image     = get_field('logo', $project)['sizes']['conoce-intro-logo'];
+                    $subtitle  = get_field('subtitle', $project);
+                ?>
+                    <div class="conts">
+                        <h1><img src="<?php echo $image; ?>" alt="" /></h1>
+                        <?php echo $project->description; ?>
+                    </div>
+                <?php } ?>
+            </div>
+        <?php }
+    ?>
 </div></section>
 
 <section class="conoce-logros pagination-wrap"><div class="contents">
