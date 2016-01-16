@@ -3274,6 +3274,7 @@ a.more-link {
     }
 
     .contribuye-foot h1 {
+        display: none;
         left: 0;
         font-size: 20px;
     }
