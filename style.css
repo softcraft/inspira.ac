@@ -3202,6 +3202,48 @@ a.more-link {
         font-size: 28px;
     }
 
+    .participa-actividades {
+        text-align: center;
+    }
+
+    .participa-actividades h1 {
+        float: none;
+        width: 100%;
+    }
+
+    .participa-actividades h1 img {
+        display: none;
+    }
+
+    .participa-actividades .inspira-eventos {
+        float: none;
+        width: 100%;
+    }
+
+    .participa-inspiracion h1 {
+        font-size: 32px;
+    }
+
+    .participa-dona h1 {
+        font-size: 28px;
+    }
+
+    .participa-dona a {
+        font-size: 30px;
+        margin-top: 0;
+    }
+
+    .participa-beneficios h1 {
+        font-size: 40px;
+    }
+
+    .participa-blog li {
+        float: none;
+        margin: 0 auto 2em;
+        text-align: center;
+        width: 90%;
+    }
+
 }
 
 @media all and (max-width: 620px) {
@@ -3259,6 +3301,22 @@ a.more-link {
 
     .home-footer .text div {
         top: 15%;
+    }
+
+    .participa-dona {
+        text-align: center;
+    }
+
+    .participa-dona h1 {
+        float: none;
+        margin: 0 0 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .participa-dona a {
+        float: none;
+        margin: 0 auto;
     }
 
 }

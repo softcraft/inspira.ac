@@ -115,7 +115,13 @@ jQuery(document).ready(function() {
     jQuery('.inspira-beneficios').slick({
         accessibility  : false,
         autoplay       : true,
-        slidesToShow   : 3
+        slidesToShow   : 3,
+        responsive: [
+            {
+              breakpoint: 760,
+              settings: 'unslick'
+            }
+        ]
     });
 });
 
