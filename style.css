@@ -62,6 +62,7 @@ Text Domain: inspira
  *    15.3 - Dona
  *    15.4 - Beneficios
  *    15.5 - Blog
+ * 16.0 - Media Queries
  */
 
 
@@ -206,7 +207,6 @@ del {
 .contents {
     margin: 0 auto;
     max-width: 1000px;
-    min-width: 350px;
 }
 .clear::after,
 .contents::after {
@@ -1176,7 +1176,6 @@ a.more-link {
     color: #fff;
     display: none;
     font-size: 23px;
-    height: 537px;
     line-height: 1.2;
     padding: 0 1%;
     position: absolute;
@@ -1599,7 +1598,6 @@ a.more-link {
     bottom: 0;
     color: #fff;
     font-size: 24px;
-    height: 400px;
     line-height: 1.2;
     padding: 0 10%;
     position: absolute;
@@ -2515,6 +2513,7 @@ a.more-link {
 .descubre-foot img {
     display: block;
     max-width: 100%;
+    width: 100%;
 }
 
 .descubre-foot .conts {
@@ -2852,4 +2851,364 @@ a.more-link {
 
 .participa-blog li p {
     margin: 0 0 1em;
+}
+
+
+/**
+ * 16 - Media Queries
+ */
+
+@media all and (max-width: 999px) {
+}
+
+@media all and (max-width: 950px) {
+}
+
+@media all and (max-width: 830px) {
+
+    .single-entry h1 {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .single-entry  footer {
+        text-align: center;
+    }
+
+    .single-entry .sidebar {
+        display: none;
+    }
+
+    .single-entry .content {
+        float: none;
+        margin: 0 auto;
+        width: 95%;
+    }
+
+    .single-entry .featured-img img {
+        width: 100%;
+    }
+
+    .pagination {
+        margin: 0;
+    }
+
+    .descubre-mision h1 {
+        float: none;
+        margin: 0 auto;
+    }
+
+    .descubre-mision .conts {
+        float: none;
+        font-size: 18px;
+        padding: 20px 0 0;
+        width: auto;
+    }
+
+    .descubre-experiencias {
+        display: none;
+    }
+}
+
+@media all and (max-width: 760px) {
+    .main-nav {
+        float: none;
+        text-align: center;
+    }
+
+    .main-nav li {
+        display: inline-block;
+        float: none;
+        padding: 10px 10px 15px;
+    }
+
+    .main-nav strong {
+        font-size: 14px;
+    }
+
+    .main-nav small {
+        font-size: 12px;
+    }
+
+    #logo {
+        float: none;
+        margin: 0 auto;
+    }
+
+    .mastfoot .footer-sections a {
+        float: none;
+        width: 100%;
+    }
+
+    .mastfoot .footer-sections a img {
+        display: none;
+    }
+
+    .mastfoot .subscribe {
+        font-size: 18px;
+    }
+
+    .home-inspira .text {
+        font-size: 14px;
+    }
+
+    .home-inspira .text strong {
+        display: block;
+        font-size: 22px;
+    }
+
+    .page-intro h1 {
+        font-size: 30px;
+    }
+
+    .home-video {
+        padding: 40px 0;
+    }
+
+    .home-video h1 {
+        font-size: 16px;
+    }
+
+    .home-video figure {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .home-video .content {
+        font-size: 18px;
+        float: none;
+        width: 100%;
+    }
+
+    .home-video h1 strong {
+        font-size: 28px;
+    }
+
+    .home-amplia .content {
+        float: none;
+        padding: 0;
+        width: 100%;
+    }
+
+    .home-amplia figure {
+        float: none;
+        width: 100%;
+    }
+
+    .home-amplia figure img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .home-amplia h1 {
+        font-size: 42px;
+    }
+
+    .home-amplia h1 small {
+        font-size: 18px;
+    }
+
+    .home-presencia h1 {
+        font-size: 22px;
+    }
+
+    .home-presencia h2 {
+        font-size: 24px;
+    }
+
+    .home-presencia .inspira-actions {
+        float: none;
+        margin: 0;
+        width: 100%;
+    }
+
+    .home-presencia .full {
+        float: none;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .home-logros h1 {
+        font-size: 24px;
+    }
+
+    .home-logros h1 small {
+        font-size: 16px;
+    }
+
+    .nuestra-cultura {
+        display: none;
+    }
+
+    .logros-list .cantidad {
+        font-size: 50px;
+    }
+
+    .home-logros li {
+        float: none;
+        width: 100%;
+    }
+
+    .home-facebook h1 {
+        font-size: 18px;
+        padding: 25px 0;
+    }
+
+    .home-facebook h1 strong {
+        font-size: 30px;
+    }
+
+    .descubre-foot .conts p {
+        font-size: 18px;
+    }
+
+    .descubre-voluntarios {
+        padding: 40px 0;
+    }
+
+    .descubre-voluntarios h1 {
+        font-size: 22px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .descubre-voluntarios p {
+        font-size: 18px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .descubre-voluntarios .carousel {
+        float: none;
+        margin: 0 auto 2em;
+        padding-left: 0;
+        width: 350px;
+    }
+
+    .descubre-voluntarios figure {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .descubre-centros h1 {
+        font-size: 34px;
+    }
+
+    .descubre-centros h1 strong {
+        font-size: 42px;
+    }
+
+    .descubre-centros #map {
+        display: none;
+    }
+
+    .descubre-centros #centros-lists .centros-estado {
+        display: block !important;
+    }
+
+    .descubre-centros .centros-estado li {
+        display: block;
+        margin: 0 auto 1em;
+        width: 80%;
+    }
+
+    .descubre-centros .note {
+        font-size: 18px;
+    }
+
+    .descubre-apoyo img {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        max-width: 80%;
+    }
+
+    .descubre-apoyo .conts {
+        float: none;
+        font-size: 18px;
+        padding: 20px 0 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .descubre-apoyo h1 {
+        border: 0;
+        font-size: 18px;
+        margin: 0 0 15px;
+        padding: 0;
+    }
+
+    .descubre-apoyo h1 strong {
+        font-size: 36px;
+    }
+
+}
+
+@media all and (max-width: 620px) {
+
+    .blog-header {
+        display: none;
+    }
+
+    .simple-posts li {
+        height: auto;
+    }
+
+    .simple-posts li:nth-child(2n) .content,
+    .simple-posts li:nth-child(2n) figure {
+        float: none;
+    }
+
+    .simple-posts figure {
+        float: none;
+        height: 200px;
+        width: 100%;
+    }
+
+    .simple-posts .content {
+        float: none;
+        height: auto;
+        padding-bottom: 15px;
+        width: 100%;
+    }
+
+    .single-entry h1 {
+        font-size: 24px;
+    }
+
+    .single-entry footer {
+        font-size: 14px;
+        padding: 10px 0 15px;
+    }
+
+    .comment-list .comment-body {
+        padding: 0;
+    }
+
+    .comment-list .avatar {
+        display: none;
+    }
+
+    .home-inspira .text {
+        display: block;
+    }
+
+    .home-footer .text {
+        font-size: 14px;
+    }
+
+}
+
+@media all and (max-width: 480px) {
+    .descubre-voluntarios .carousel {
+        width: 300px;
+    }
+}
+
+@media all and (max-width: 360px) {
+    .descubre-voluntarios .carousel {
+        width: 250px;
+    }
 }
