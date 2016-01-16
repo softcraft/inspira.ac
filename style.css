@@ -3270,7 +3270,19 @@ a.more-link {
     }
 
     .contribuye-intro .objetivos li {
-        font-size: 18px;
+        font-size: 14px;
+    }
+
+    .contribuye-intro .objetivos li p {
+        display: block;
+        float: none;
+        margin: 0 110px 0 50px;
+        right: 0;
+        width: auto;
+    }
+
+    .contribuye-intro .objetivos li p::after {
+        right: -125px;
     }
 
     .contribuye-foot h1 {
