@@ -1939,7 +1939,7 @@ a.more-link {
  */
 
 .conoce-imagen .contents {
-    background: #216c73 url('./img/bg-conoce-imagen.jpg') no-repeat center center;
+    background: #216c73;
     background-size: cover;
     color: #fff;
     padding: 40px 0 0;

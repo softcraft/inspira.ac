@@ -35,6 +35,8 @@ class Menu_With_Description extends Walker_Nav_Menu {
     }
 }
 
+add_filter( 'show_admin_bar', '__return_false' );
+
 function custom_excerpt_length( $length ) {
     return 13;
 }
