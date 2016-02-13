@@ -134,7 +134,7 @@ get_header(); ?>
             <?php endforeach; ?>
     </div>
 
-    <p class="note">Somos una organización sin fines de lucro, estamos presentes en 11 centros de la República Mexicana</p>
+    <p class="note">Somos una organización sin fines de lucro, estamos presentes en 8 centros de la República Mexicana</p>
 </div></section>
 
 <script type="text/javascript">
