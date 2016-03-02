@@ -15,6 +15,7 @@
     <!--[if lt IE 9]>
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
     <![endif]-->
+    <meta name="google-site-verification" content="BsPT3SuFT7ujgnzp9SK7b_QArTcTslJlv9ja1lGLWKs" />
     <?php wp_head(); ?>
 </head>
 
