@@ -2324,6 +2324,10 @@ a.more-link {
     width: 95px;
 }
 
+.descubre-voluntarios .carousel strong {
+    display: block;
+}
+
 .descubre-voluntarios .carousel img {
     display: block;
     height: 95px;
