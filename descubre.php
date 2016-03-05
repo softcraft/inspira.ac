@@ -48,9 +48,9 @@ get_header(); ?>
         <p>Conoce algunos de nuestros voluntarios</p>
     </div>
 
-    <figure>
+    <!--<figure>
         <iframe width="308" height="208" src="https://www.youtube.com/embed/6gbiyDHnKx8?list=PLprzt7qzv68xth8M9JXO_Y4BpE8wcSgzr&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-    </figure>
+    </figure>-->
 </div></section>
 
 <section class="descubre-experiencias"><div class="contents">
