@@ -55,7 +55,7 @@ if ( ! function_exists('inspira_setup') ) :
         add_image_size('single-thumb', 605, 330, true);
         add_image_size('logros-thumb', 200, 160, false);
         add_image_size('logros-list', 211, 211, false);
-        add_image_size('voluntarios-thumb', 95, 95, true);
+        add_image_size('voluntarios-thumb', 150, 150, true);
         add_image_size('facebook-thumb', 1000, 350, true);
         add_image_size('participa-blog', 320, 180, true);
         add_image_size('conoce-intro-logo', 380, 380, false);
