@@ -113,7 +113,7 @@ get_header(); ?>
     </div>
 </div></section>
 
-<section class="participa-blog"><div class="contents">
+<!-- <section class="participa-blog"><div class="contents">
     <h1>Mira nuestro <strong>Blog</strong></h1>
 
     <ul>
@@ -141,6 +141,6 @@ get_header(); ?>
         <?php endforeach;
         wp_reset_postdata(); ?>
     </ul>
-</div></section>
+</div></section> -->
 
 <?php get_footer(); ?>

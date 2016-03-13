@@ -54,7 +54,7 @@ get_header(); ?>
 </div></section>
 
 <section class="conoce-logros pagination-wrap"><div class="contents">
-    <h1>Logros Inspiradores</h1>
+    <h1>Algunos Logros Inspiradores</h1>
 
     <div class="pagination-filter">
         <label class="styled-select year">

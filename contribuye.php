@@ -47,6 +47,34 @@ get_header(); ?>
     </ul>
 </section>
 
+<section class="participa-beneficios"><div class="contents">
+    <h1>Beneficios</h1>
+
+    <div class="carousel">
+        <?php
+            $args = array(
+                        'post_type'      => 'inspira_beneficios',
+                        'post_status'    => 'publish',
+                        'order'          => 'asc',
+                        'posts_per_page' => 20
+                    );
+            $query = new WP_Query($args);
+
+            if ( $query->have_posts() ) { ?>
+                <ul class="inspira-beneficios">
+                    <?php while ($query->have_posts()) : $query->the_post(); ?>
+                        <li><div>
+                            <?php the_content(); ?>
+                        </div></li>
+                    <?php endwhile; ?>
+                </ul>
+            <?php }
+            wp_reset_query();
+        ?>
+    </div>
+</div></section>
+
+
 <section class="contribuye-form"><div class="contents">
     <div class="wrap">
         <?php while ( have_posts() ) : the_post(); ?>

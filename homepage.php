@@ -26,9 +26,9 @@ get_header(); ?>
         </h1>
 
         <div class="cont clear">
-            <figure>
+            <!--<figure>
                 <iframe width="308" height="208" src="https://www.youtube.com/embed/6gbiyDHnKx8?list=PLprzt7qzv68xth8M9JXO_Y4BpE8wcSgzr&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-            </figure>
+            </figure>-->
 
             <div class="content">
                 <p>que mejore las relaciones con las <em>personas</em>, la <em>naturaleza</em> y la <em>vida</em>, eligiendo vivir desde principios y valores claros para generar realidades positivas.</p>
