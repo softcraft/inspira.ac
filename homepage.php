@@ -109,7 +109,7 @@ get_header(); ?>
                             $class = strtolower(get_the_title());
                         ?>
                         <div class="bigaction bigaction-<?php echo  $class; ?>">
-                            <strong><a href="/<?php echo $class; ?>"><?php the_title(); ?></a></strong>
+                            <strong><a href="<?php echo get_field('link'); ?>"><?php the_title(); ?></a></strong>
                             <div class="content">
                                 <?php the_content(); ?>
                             </div>
