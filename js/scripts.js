@@ -86,8 +86,6 @@ jQuery(document).ready(function() {
         jQuery('.categorias-logros-content').html(content);
     });
 
-    jQuery('.categorias-logros').find('.inspira-vida').click();
-
     // Contribuye
     var $objetivos = jQuery('.objetivos li').hide(),
         i          = 0;

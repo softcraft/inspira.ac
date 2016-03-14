@@ -1739,6 +1739,12 @@ a.more-link {
     max-width: 380px;
 }
 
+.conoce-intro .categorias-logros-content .note {
+    display: block;
+    font-size: 1.35em;
+    padding-top: 180px;
+}
+
 .conoce-intro .categorias-logros-content-alt {
     display: none;
 }
