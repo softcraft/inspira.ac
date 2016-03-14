@@ -108,7 +108,22 @@ jQuery(document).ready(function() {
     jQuery('.inspira-voluntarios').slick({
         accessibility  : false,
         autoplay       : true,
-        slidesToShow   : 3
+        slidesToShow   : 3,
+        responsive: [
+            {
+              breakpoint: 760,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1
+              }
+            }
+        ]
     });
 
     // Descubre
