@@ -3410,6 +3410,6 @@ a.more-link {
   width:100%;
 }
 
-#mc-embedded-subscribe {
+input.button {
   background-color: #3cc1cc;
 }
