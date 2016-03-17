@@ -1739,6 +1739,12 @@ a.more-link {
     max-width: 380px;
 }
 
+.conoce-intro .categorias-logros-content .note {
+    display: block;
+    font-size: 1.35em;
+    padding-top: 180px;
+}
+
 .conoce-intro .categorias-logros-content-alt {
     display: none;
 }
@@ -2328,10 +2334,11 @@ a.more-link {
 }
 
 .descubre-voluntarios .carousel img {
+    background: #333;
     display: block;
-    height: 95px;
-    margin: 0 auto;
-    width: 95px;
+    height: 150px;
+    margin: 0 auto 10px;
+    width: 150px;
 
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;

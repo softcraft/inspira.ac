@@ -35,7 +35,9 @@ get_header(); ?>
         <?php }
     ?>
 
-    <div class="categorias-logros-content"></div>
+    <div class="categorias-logros-content">
+        <strong class="note">&laquo; Da click en los círculos para conocer nuestros proyectos.</strong>
+    </div>
     <?php
         if ($projects) { ?>
             <div class="categorias-logros-content-alt">

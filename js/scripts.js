@@ -86,8 +86,6 @@ jQuery(document).ready(function() {
         jQuery('.categorias-logros-content').html(content);
     });
 
-    jQuery('.categorias-logros').find('.inspira-vida').click();
-
     // Contribuye
     var $objetivos = jQuery('.objetivos li').hide(),
         i          = 0;
@@ -108,7 +106,22 @@ jQuery(document).ready(function() {
     jQuery('.inspira-voluntarios').slick({
         accessibility  : false,
         autoplay       : true,
-        slidesToShow   : 3
+        slidesToShow   : 3,
+        responsive: [
+            {
+              breakpoint: 760,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1
+              }
+            }
+        ]
     });
 
     // Descubre
