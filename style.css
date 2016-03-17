@@ -3406,10 +3406,7 @@ a.more-link {
 }
 
 #mc_embed_signup {
-  clear:left;
-  width:100%;
-}
-
-input.button {
-  background-color: #3cc1cc;
+  clear: left;
+  font: 14px;
+  width: 100%;
 }
