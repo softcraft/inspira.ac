@@ -3404,3 +3404,8 @@ a.more-link {
         width: 250px;
     }
 }
+
+#mc_embed_signup{
+  clear:left;
+  width:100%;
+}
