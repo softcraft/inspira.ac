@@ -759,6 +759,7 @@ html, body {height: 100%; margin: 0;}
     overflow: hidden;
     text-indent: -9999em;
     width: 21px;
+    background-size: 20px;
 }
 
 .mastfoot .twitter {
