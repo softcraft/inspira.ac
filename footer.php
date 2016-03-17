@@ -39,6 +39,7 @@
 
         <div class="subscribe">
             Suscríbete a nuestra red de Inspiración
+            <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
             <div id="mc_embed_signup">
               <form action="//inspira.us7.list-manage.com/subscribe/post?u=0367bbfc22583f07097f56d65&amp;id=88ea1a39f1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
               <div id="mc_embed_signup_scroll">

@@ -3405,7 +3405,11 @@ a.more-link {
     }
 }
 
-#mc_embed_signup{
+#mc_embed_signup {
   clear:left;
   width:100%;
+}
+
+#mc-embedded-subscribe {
+  background-color: #3cc1cc;
 }
