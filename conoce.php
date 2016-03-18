@@ -149,8 +149,8 @@ get_header(); ?>
                 </ul>
 
             <div class="pagination-triggers">
-                <span class="prev"><?php next_posts_link('Logros Anteriores...') ?></span>
-                <span class="next"><?php previous_posts_link('Logros Recientes...') ?></span>
+                <span class="prev"><?php next_posts_link('Anterior..') ?></span>
+                <span class="next"><?php previous_posts_link('Siguiente...') ?></span>
             </div>
 
         <?php wp_reset_query(); ?>
