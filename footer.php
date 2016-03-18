@@ -35,10 +35,15 @@
     <div class="foot-box">
         <a href="<?php echo get_field('facebook', 'option'); ?>" target="_blank" class="facebook">Facebook</a>
         <!--<a href="<?php echo get_field('twitter', 'option'); ?>" target="_blank" class="twitter">Twitter</a>-->
-        <a href="mailto:<?php echo get_field('mail', 'option'); ?>" target="_blank" class="mail">Email</a>
+        <a href="mailto:<?php echo get_field('mail', 'option'); ?>" class="mail">Email</a>
 
         <div class="subscribe">
             Suscríbete a nuestra red de Inspiración
+            <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+            <style type="text/css">
+               #mc_embed_signup{clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+               #mc-embedded-subscribe{background-color:#3cc1cc;}
+             </style>
             <div id="mc_embed_signup">
               <form action="//inspira.us7.list-manage.com/subscribe/post?u=0367bbfc22583f07097f56d65&amp;id=88ea1a39f1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
               <div id="mc_embed_signup_scroll">
@@ -58,6 +63,5 @@
 <?php wp_footer(); ?>
 
 </div>
-<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 </body>
 </html>
