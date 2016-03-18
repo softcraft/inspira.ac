@@ -16,7 +16,7 @@ get_header(); ?>
                 </header>
 
                 <footer>
-                    <date><?php echo get_field('fecha'); ?></date>
+                    <date><?php echo date_i18n(get_option('date_format'), get_field('fecha')); ?></date>
                 </footer>
 
                 <figure class="featured-img">
