@@ -35,9 +35,25 @@
     <div class="foot-box">
         <a href="<?php echo get_field('facebook', 'option'); ?>" target="_blank" class="facebook">Facebook</a>
         <a href="<?php echo get_field('twitter', 'option'); ?>" target="_blank" class="twitter">Twitter</a>
+        <a href="mailto:<?php echo get_field('mail', 'option'); ?>" class="mail">Email</a>
 
         <div class="subscribe">
             Suscríbete a nuestra red de Inspiración
+            <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+            <style type="text/css">
+               #mc_embed_signup{clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+               #mc_embed_signup .button{background-color:#3cc1cc;}
+             </style>
+            <div id="mc_embed_signup">
+              <form action="//inspira.us7.list-manage.com/subscribe/post?u=0367bbfc22583f07097f56d65&amp;id=88ea1a39f1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+              <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Correo electrónico" required>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0367bbfc22583f07097f56d65_88ea1a39f1" tabindex="-1" value=""></div>
+              <div class="clear"><input type="submit" value="Enviar" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+          </div>
+</form>
+</div>
         </div>
     </div>
 </div></footer>
@@ -46,5 +62,6 @@
 
 <?php wp_footer(); ?>
 
-</div></body>
+</div>
+</body>
 </html>

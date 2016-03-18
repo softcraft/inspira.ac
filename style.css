@@ -751,6 +751,17 @@ html, body {height: 100%; margin: 0;}
     width: 21px;
 }
 
+.mastfoot .mail {
+    background: url('./img/ico-mail.png');
+    display: inline-block;
+    height: 20px;
+    margin: 0 0.5em;
+    overflow: hidden;
+    text-indent: -9999em;
+    width: 21px;
+    background-size: 21px;
+}
+
 .mastfoot .twitter {
     background-position: -21px 0;
 }

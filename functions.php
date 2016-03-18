@@ -493,6 +493,18 @@ if ( function_exists('register_field_group') ) {
                 'formatting'    => 'html',
                 'maxlength'     => ''
             ),
+            array (
+                'key'           => 'field_55420c48e0958',
+                'label'         => 'Mail',
+                'name'          => 'mail',
+                'type'          => 'text',
+                'default_value' => '',
+                'placeholder'   => '',
+                'prepend'       => '',
+                'append'        => '',
+                'formatting'    => 'html',
+                'maxlength'     => ''
+            ),
         ),
         'location' => array (
             array (
