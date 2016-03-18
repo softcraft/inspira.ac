@@ -95,8 +95,9 @@ get_header(); ?>
             $args = array(
                         'post_type'      => 'inspira_logros',
                         'post_status'    => 'publish',
-                        'order'          => 'asc',
-                        'posts_per_page' => 8,
+                        'order'          => 'desc',
+                        'orderby'        => 'logro_year',
+                        'posts_per_page' => 12,
                         'paged'          => $paged,
                         'logro_year'     => get_query_var('logro_year'),
                         'project'        => get_query_var('project'),
