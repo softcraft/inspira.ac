@@ -23,6 +23,8 @@ get_header(); ?>
                     <?php the_post_thumbnail( 'single-thumb' ); ?>
                 </figure>
 
+                <?php the_content(); ?>
+
                 <div class="map">
                     <?php  $location = get_field('google_map');
 
@@ -32,8 +34,6 @@ get_header(); ?>
                         </div>
                     <?php endif; ?>
                 </div>
-
-                <?php the_content(); ?>
 
                 <div class="confirmar-asistencia">
                     <h2>Confirma tu asistencia</h2>
