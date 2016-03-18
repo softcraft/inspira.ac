@@ -968,7 +968,7 @@ a.more-link {
 }
 
 .pagination-filter .project {
-    width: 350px;
+    width: 520px;
 }
 
 
@@ -1818,6 +1818,10 @@ a.more-link {
     text-align: left;
     text-transform: uppercase;
     width: 96%;
+}
+
+.conoce-logros li .meta em {
+    vertical-align: top;
 }
 
 .conoce-logros li .meta .proyecto {
