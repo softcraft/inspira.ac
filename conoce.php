@@ -97,7 +97,7 @@ get_header(); ?>
                         'post_status'    => 'publish',
                         'order'          => 'desc',
                         'posts_per_page' => 12,
-                        'orderby'        => 'meta_value_num',
+                        'orderby'        => 'meta_value',
                         'meta_key'       => 'logro_year',
                         'paged'          => $paged,
                         'logro_year'     => get_query_var('logro_year'),
