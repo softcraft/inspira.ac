@@ -27,7 +27,7 @@ get_header(); ?>
 
         <div class="cont clear">
             <figure>
-                <iframe width="308" height="208" src="https://www.youtube.com/embed/C7WaEgkrbVQ&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                <iframe width="308" height="208" src="https://www.youtube.com/embed/C7WaEgkrbVQ" frameborder="0" allowfullscreen></iframe>
             </figure>
 
             <div class="content">
