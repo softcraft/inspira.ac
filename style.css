@@ -643,16 +643,22 @@ img.aligncenter {
 /**
  * 9.0 - Footer
  */
-html, body {height: 100%; margin: 0;}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 #page {
     display: table;
     height: 100%;
     width: 100%
 }
+
 #no-footer {
     display: table-row;
     height: 100%;
 }
+
 .mastfoot {
     display: table-row;
 }
@@ -962,7 +968,7 @@ a.more-link {
 }
 
 .pagination-filter .project {
-    width: 350px;
+    width: 520px;
 }
 
 
@@ -1812,6 +1818,10 @@ a.more-link {
     text-align: left;
     text-transform: uppercase;
     width: 96%;
+}
+
+.conoce-logros li .meta em {
+    vertical-align: top;
 }
 
 .conoce-logros li .meta .proyecto {

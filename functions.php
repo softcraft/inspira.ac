@@ -768,7 +768,7 @@ if ( function_exists('register_field_group') ) {
                 'instructions'      => 'Fecha y hora del evento',
                 'required'          => 1,
                 'show_date'         => 'true',
-                'date_format'       => 'MM d yy',
+                'date_format'       => 'dd/mm/yy',
                 'time_format'       => 'h:mm tt',
                 'show_week_number'  => 'false',
                 'picker'            => 'slider',
