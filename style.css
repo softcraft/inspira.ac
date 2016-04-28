@@ -3233,6 +3233,8 @@ a.more-link {
         font-size: 28px;
     }
 
+    .conoce-logros .project {display: none;}
+
     .conoce-participa h1 {
         font-size: 28px;
     }
@@ -3247,6 +3249,7 @@ a.more-link {
 
     .participa-actividades h1 {
         float: none;
+        padding: 20px 0;
         width: 100%;
     }
 
@@ -3256,7 +3259,7 @@ a.more-link {
 
     .participa-actividades .inspira-eventos {
         float: none;
-        width: 100%;
+        width: 94%;
     }
 
     .participa-inspiracion h1 {
@@ -3265,6 +3268,7 @@ a.more-link {
 
     .participa-dona h1 {
         font-size: 28px;
+        padding: 0;
     }
 
     .participa-dona a {
