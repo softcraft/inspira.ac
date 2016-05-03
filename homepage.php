@@ -61,7 +61,7 @@ get_header(); ?>
                 <small>tu perspectiva de la vida</small>
             </h1>
 
-            <p>A los seres humanos se nos <strong>dificulta confiar</strong> en nosotros mismos, en los demás y <strong>en la vida</strong>. Esto es porque nos hemos permitido que <strong>el miedo nos limite</strong> y no asumimos un compromiso real <strong>con nuestras decisiones</strong>.</p>
+            <p>A los seres humanos se nos <strong>dificulta confiar</strong> en nosotros mismos, en los demás y <strong>en la vida</strong>. Esto es porque permitimos que <strong>el miedo nos limite</strong> y no asumimos un compromiso real <strong>con nuestras decisiones</strong>.</p>
 
             <a href="<?php echo get_permalink( get_page_by_path('conoce') ); ?>" class="button">Ver Más</a>
         </div>
