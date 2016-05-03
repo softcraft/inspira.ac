@@ -2914,6 +2914,11 @@ a.more-link {
     .conoce-banner blockquote .lograr {
         font-size: 55px;
     }
+
+    .home-presencia .full {
+        height: 405px;
+        width: 345px;
+    }
 }
 
 @media all and (max-width: 830px) {
@@ -2968,6 +2973,28 @@ a.more-link {
 
     .home-footer .text {
         font-size: 18px;
+    }
+
+    .home-presencia h1 {
+        font-size: 22px;
+    }
+
+    .home-presencia h2 {
+        font-size: 24px;
+    }
+
+    .home-presencia .inspira-actions {
+        float: none;
+        margin: 0;
+        width: 100%;
+    }
+
+    .home-presencia .full {
+        float: none;
+        height: 425px;
+        margin: 0 auto;
+        padding: 0;
+        width: 425px;
     }
 
 }
@@ -3069,26 +3096,6 @@ a.more-link {
 
     .home-amplia h1 small {
         font-size: 18px;
-    }
-
-    .home-presencia h1 {
-        font-size: 22px;
-    }
-
-    .home-presencia h2 {
-        font-size: 24px;
-    }
-
-    .home-presencia .inspira-actions {
-        float: none;
-        margin: 0;
-        width: 100%;
-    }
-
-    .home-presencia .full {
-        float: none;
-        margin: 0 auto;
-        padding: 0;
     }
 
     .home-logros h1 {
@@ -3226,6 +3233,8 @@ a.more-link {
         font-size: 28px;
     }
 
+    .conoce-logros .project {display: none;}
+
     .conoce-participa h1 {
         font-size: 28px;
     }
@@ -3240,6 +3249,7 @@ a.more-link {
 
     .participa-actividades h1 {
         float: none;
+        padding: 20px 0;
         width: 100%;
     }
 
@@ -3249,7 +3259,7 @@ a.more-link {
 
     .participa-actividades .inspira-eventos {
         float: none;
-        width: 100%;
+        width: 94%;
     }
 
     .participa-inspiracion h1 {
@@ -3258,6 +3268,7 @@ a.more-link {
 
     .participa-dona h1 {
         font-size: 28px;
+        padding: 0;
     }
 
     .participa-dona a {
