@@ -77,7 +77,6 @@ function inspira_scripts() {
     wp_enqueue_style('inspira-styles', get_stylesheet_uri());
 
     wp_register_script('inspira-accordion', get_template_directory_uri().'/js/jquery.raccordion.js', array('jquery'));
-    wp_register_script('inspira-easing', get_template_directory_uri().'/js/jquery.animation.easing.js', array('jquery'));
     wp_register_script('inspira-slick', get_template_directory_uri().'/js/slick.js', array('jquery'));
     wp_register_script('inspira-raphael', get_template_directory_uri().'/js/raphael.js', array('jquery'));
     wp_register_script('inspira-remodal', get_template_directory_uri().'/js/remodal.js', array('jquery'));

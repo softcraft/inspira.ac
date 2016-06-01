@@ -5,7 +5,8 @@
             sliderWidth: 960,
             sliderHeight: 300,
             autoCollapse: true,
-            activeSlide: 0
+            activeSlide: 0,
+            easing: 'linear'
         }, options);
 
         return this.each(function () {
@@ -26,31 +27,31 @@
                     width = w * (($(window).width() / settings.sliderWidth));
                     accordionWrapper.css("width", settings.sliderWidth * ($(window).width() / settings.sliderWidth));
                     accordionWrapper.find('.slide').each(function (index) {
-                        $(this).animate({ left: (index * (accordionWrapper.width()) / totalSlides) }, { queue: false, speed: settings.speed, easing: 'quadEaseOut' });
+                        $(this).animate({ left: (index * (accordionWrapper.width()) / totalSlides) }, { queue: false, speed: settings.speed, easing: settings.easing });
                     });
                 } else {
                     width = w;
                     accordionWrapper.css("width", settings.sliderWidth);
                     accordionWrapper.find('.slide').each(function (index) {
-                        $(this).animate({ left: (index * (accordionWrapper.width()) / totalSlides) }, { queue: false, speed: settings.speed, easing: 'quadEaseOut' });
+                        $(this).animate({ left: (index * (accordionWrapper.width()) / totalSlides) }, { queue: false, speed: settings.speed, easing: settings.easing });
                     });
                 }
                 if (settings.sliderHeight > $(window).height()) {
 
-                    accordionWrapper.animate({ height: settings.sliderHeight * ($(window).height() / settings.sliderHeight) }, { queue: false, speed: settings.speed, easing: 'quadEaseOut' });
+                    accordionWrapper.animate({ height: settings.sliderHeight * ($(window).height() / settings.sliderHeight) }, { queue: false, speed: settings.speed, easing: settings.easing });
 
-                    accordionWrapper.find('.slide').animate({ height: settings.sliderHeight * ($(window).height() / settings.sliderHeight) }, { queue: false, speed: settings.speed, easing: 'quadEaseOut' });
+                    accordionWrapper.find('.slide').animate({ height: settings.sliderHeight * ($(window).height() / settings.sliderHeight) }, { queue: false, speed: settings.speed, easing: settings.easing });
                 }
                 else {
-                    accordionWrapper.animate({ height: settings.sliderHeight }, { queue: false, speed: settings.speed, easing: 'quadEaseOut' });
-                    accordionWrapper.find('.slide').animate({ height: settings.sliderHeight }, { queue: false, speed: settings.speed, easing: 'quadEaseOut' });
+                    accordionWrapper.animate({ height: settings.sliderHeight }, { queue: false, speed: settings.speed, easing: settings.easing });
+                    accordionWrapper.find('.slide').animate({ height: settings.sliderHeight }, { queue: false, speed: settings.speed, easing: settings.easing });
                 }
                 accordionWrapper.find('.caption').css({ opacity: 0 });
             }
 
             $(window).resize(function () {
                 accordionWrapper.find('.slide').each(function (index) {
-                    $(this).stop().animate({ left: (index * (accordionWrapper.width()) / totalSlides) }, { queue: false, speed: settings.speed, easing: 'quadEaseOut' });
+                    $(this).stop().animate({ left: (index * (accordionWrapper.width()) / totalSlides) }, { queue: false, speed: settings.speed, easing: settings.easing });
                 });
                 animateCaption();
                 initiliaze();
@@ -58,8 +59,8 @@
 
 
             function animateCaption() {
-                accordionWrapper.find('.caption').stop().animate({ opacity: 0, bottom: 0 }, { queue: false, speed: settings.speed, easing: 'quadEaseOut' });
-                accordionWrapper.find('.active').find('.caption').stop().animate({ opacity: 1 }, { queue: false, speed: settings.speed, easing: 'quadEaseOut' });
+                accordionWrapper.find('.caption').stop().animate({ opacity: 0, bottom: 0 }, { queue: false, speed: settings.speed, easing: settings.easing });
+                accordionWrapper.find('.active').find('.caption').stop().animate({ opacity: 1 }, { queue: false, speed: settings.speed, easing: settings.easing });
             }
 
 
@@ -71,16 +72,16 @@
                     var currentIndex = accordionWrapper.find('.slide').index(this);
                     accordionWrapper.find('.slide').each(function (index) {
                         if (index == 0) {
-                            $(this).animate({ left: 0 }, { queue: false, speed: settings.speed, easing: 'quadEaseOut' });
+                            $(this).animate({ left: 0 }, { queue: false, speed: settings.speed, easing: settings.easing });
                         }
                         else if (index == currentIndex) {
-                            $(this).animate({ left: (index) * ratio }, { queue: false, speed: settings.speed, easing: 'quadEaseOut' });
+                            $(this).animate({ left: (index) * ratio }, { queue: false, speed: settings.speed, easing: settings.easing });
                         }
                         else if (index < currentIndex) {
-                            $(this).animate({ left: (index) * ratio }, { queue: false, speed: settings.speed, easing: 'quadEaseOut' });
+                            $(this).animate({ left: (index) * ratio }, { queue: false, speed: settings.speed, easing: settings.easing });
                         }
                         else if (index > currentIndex) {
-                            $(this).animate({ left: width + (index - 1) * ratio }, { queue: false, speed: settings.speed, easing: 'quadEaseOut' });
+                            $(this).animate({ left: width + (index - 1) * ratio }, { queue: false, speed: settings.speed, easing: settings.easing });
                         }
 
                     });
@@ -92,7 +93,7 @@
             if (settings.autoCollapse) {
                 accordionWrapper.mouseleave(function () {
                     accordionWrapper.find('.slide').each(function (index) {
-                        $(this).stop().animate({ left: (index * (accordionWrapper.width()) / totalSlides) }, { queue: false, speed: settings.speed, easing: 'quadEaseOut' });
+                        $(this).stop().animate({ left: (index * (accordionWrapper.width()) / totalSlides) }, { queue: false, speed: settings.speed, easing: settings.easing });
                     });
                     accordionWrapper.find('.caption').css({ opacity: 0, bottom: 0 });
                 });
