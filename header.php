@@ -17,7 +17,6 @@
     <![endif]-->
     <meta name="google-site-verification" content="BsPT3SuFT7ujgnzp9SK7b_QArTcTslJlv9ja1lGLWKs" />
     <link rel="alternate" href="http://inspira.ac" hreflang="es-mx" />
-    <link rel="alternate" href="http://www.inspira.ac" hreflang="es-mx" />
     <?php wp_head(); ?>
 </head>
 
