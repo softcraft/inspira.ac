@@ -1352,9 +1352,9 @@ a.more-link {
     font-size: 18px;
     float: left;
     line-height: 1.2;
-    padding: 30px 10% 0;
+    padding: 30px 5% 30px;
     text-align: center;
-    width: 30%;
+    width: 40%;
 }
 
 .home-amplia figure {
