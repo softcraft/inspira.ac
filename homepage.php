@@ -65,7 +65,7 @@ get_header(); ?>
 
             <p>En <strong>Inspira</strong> creemos que elegir y decidir vivir desde <strong>principios y valores claros</strong>, honrando y valorando nuestro poder interior y grandeza, <strong>nos conecta con nuestra capacidad transformadora<strong> y generadora de realidades positivas.</p>
 
-            <a href="<?php echo get_permalink( get_page_by_path('conoce') ); ?>" class="button">Ver Más</a>
+            <a href="http://inspiratuvida.org" target="_blank" class="button">Inspira tu vida</a>
         </div>
 
         <figure>
