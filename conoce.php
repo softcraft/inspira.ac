@@ -193,10 +193,10 @@ get_header(); ?>
 <section class="conoce-banner"><div class="contents">
     <div class="content">
         <blockquote>
-            Si lo puedes
-            <strong>soñar</strong>
-            <span class="puedes">lo puedes</span>
-            <strong class="lograr">lograr</strong>
+            Con
+            <strong>amor</strong>
+            <span class="puedes">todo</span>
+            <strong class="lograr">crece</strong>
         </blockquote>
         <p class="author">Lidia Pérez</p>
     </div>
