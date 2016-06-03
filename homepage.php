@@ -63,7 +63,7 @@ get_header(); ?>
 
             <p>En ocasiones a los seres humanos se nos <strong>dificulta confiar</strong> en nosotros mismos, en los demás y <strong>en la vida</strong>, permitimos que <strong>el miedo nos limite</strong> y no asumimos un compromiso real <strong>con nuestras decisiones</strong>.</p>
 
-            <p>En <strong>Inspira</strong> creemos que elegir y decidir vivir desde <strong>principios y valores claros</strong>, honrando y valorando nuestro poder interior y grandeza, <strong>nos conecta con nuestra capacidad transformadora<strong> y generadora de realidades positivas.</p>
+            <p>En <strong>Inspira</strong> creemos que elegir y decidir vivir desde <strong>principios y valores claros</strong>, honrando y valorando nuestro poder interior y grandeza, <strong>nos conecta con nuestra capacidad transformadora</strong> y generadora de realidades positivas.</p>
 
             <a href="http://inspiratuvida.org" target="_blank" class="button">Inspira tu vida</a>
         </div>
