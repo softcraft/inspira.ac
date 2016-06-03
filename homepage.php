@@ -57,11 +57,13 @@ get_header(); ?>
     <section class="home-amplia"><div class="contents">
         <div class="content">
             <h1>
-                Amplía
+                Ampl&iacute;a
                 <small>tu perspectiva de la vida</small>
             </h1>
 
-            <p>A los seres humanos se nos <strong>dificulta confiar</strong> en nosotros mismos, en los demás y <strong>en la vida</strong>. Hemos permitido que <strong>el miedo nos limite</strong> y no asumimos un compromiso real <strong>con nuestras decisiones</strong>.</p>
+            <p>En ocasiones a los seres humanos se nos <strong>dificulta confiar</strong> en nosotros mismos, en los demás y <strong>en la vida</strong>, permitimos que <strong>el miedo nos limite</strong> y no asumimos un compromiso real <strong>con nuestras decisiones</strong>.</p>
+
+            <p>En <strong>Inspira</strong> creemos que elegir y decidir vivir desde <strong>principios y valores claros</strong>, honrando y valorando nuestro poder interior y grandeza, <strong>nos conecta con nuestra capacidad transformadora<strong> y generadora de realidades positivas.</p>
 
             <a href="<?php echo get_permalink( get_page_by_path('conoce') ); ?>" class="button">Ver Más</a>
         </div>
