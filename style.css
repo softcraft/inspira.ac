@@ -1349,10 +1349,10 @@ a.more-link {
  */
 
 .home-amplia .content {
-    font-size: 18px;
+    font-size: 17px;
     float: left;
     line-height: 1.2;
-    padding: 30px 5% 30px;
+    padding: 0 5% 30px;
     text-align: center;
     width: 40%;
 }
