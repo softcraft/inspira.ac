@@ -193,10 +193,10 @@ get_header(); ?>
 <section class="conoce-banner"><div class="contents">
     <div class="content">
         <blockquote>
-            Con
-            <strong>amor</strong>
-            <span class="puedes">todo</span>
-            <strong class="lograr">crece</strong>
+            Hay que
+            <strong>moverse</strong>
+            <span class="puedes">en la direcci&oacute;n</span>
+            <strong class="lograr">de los sueños</strong>
         </blockquote>
         <p class="author">Lidia Pérez</p>
     </div>
