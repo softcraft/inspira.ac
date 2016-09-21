@@ -78,7 +78,7 @@ get_header(); ?>
 <section class="contribuye-form"><div class="contents">
     <div class="wrap">
         <?php while ( have_posts() ) : the_post(); ?>
-            <h1>Completa tus Datos</h1>
+            <h1>Aporta un donativo</h1>
             <?php the_content(); ?>
         <?php endwhile; ?>
     </div>
